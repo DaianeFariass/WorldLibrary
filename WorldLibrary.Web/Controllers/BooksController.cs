@@ -7,22 +7,26 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WorldLibrary.Web.Data;
 using WorldLibrary.Web.Data.Entities;
+using WorldLibrary.Web.Helper;
+using WorldLibrary.Web.Repositories;
 
 namespace WorldLibrary.Web.Controllers
 {
     public class BooksController : Controller
     {
-        private readonly DataContext _context;
-
-        public BooksController(DataContext context)
+        private readonly IBookRepository _bookRepository;
+        private readonly IUserHelper _userHelper;
+        public BooksController(IBookRepository bookRepository,
+            IUserHelper userHelper)
         {
-            _context = context;
+            _bookRepository = bookRepository;
+            _userHelper = userHelper;
         }
 
         // GET: Books
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Books.ToListAsync());
+            return View(_bookRepository.GetAll().OrderBy(b => b.Title));
         }
 
         // GET: Books/Details/5
@@ -33,8 +37,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var book = await _context.Books
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var book = await _bookRepository.GetByIdAsync(id.Value);
             if (book == null)
             {
                 return NotFound();
@@ -54,12 +57,12 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Author,Year,Synopsis,Category,IsAvailable,ImageUrl")] Book book)
+        public async Task<IActionResult> Create(Book book)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(book);
-                await _context.SaveChangesAsync();
+                book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
+                await _bookRepository.CreateAsync(book);
                 return RedirectToAction(nameof(Index));
             }
             return View(book);
@@ -73,7 +76,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var book = await _context.Books.FindAsync(id);
+            var book = await _bookRepository.GetByIdAsync(id.Value);
             if (book == null)
             {
                 return NotFound();
@@ -86,7 +89,7 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Author,Year,Synopsis,Category,IsAvailable,ImageUrl")] Book book)
+        public async Task<IActionResult> Edit(int id, Book book)
         {
             if (id != book.Id)
             {
@@ -97,12 +100,12 @@ namespace WorldLibrary.Web.Controllers
             {
                 try
                 {
-                    _context.Update(book);
-                    await _context.SaveChangesAsync();
+                    book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
+                    await _bookRepository.UpdateAsync(book);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BookExists(book.Id))
+                    if (!await _bookRepository.ExistAsync(book.Id))
                     {
                         return NotFound();
                     }
@@ -124,8 +127,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var book = await _context.Books
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var book = await _bookRepository.GetByIdAsync(id.Value);
             if (book == null)
             {
                 return NotFound();
@@ -139,15 +141,11 @@ namespace WorldLibrary.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var book = await _context.Books.FindAsync(id);
-            _context.Books.Remove(book);
-            await _context.SaveChangesAsync();
+            var book = await _bookRepository.GetByIdAsync(id);
+            await _bookRepository.DeleteAsync(book);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool BookExists(int id)
-        {
-            return _context.Books.Any(e => e.Id == id);
-        }
+       
     }
 }

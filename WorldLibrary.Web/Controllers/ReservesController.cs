@@ -7,22 +7,27 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WorldLibrary.Web.Data;
 using WorldLibrary.Web.Data.Entities;
+using WorldLibrary.Web.Helper;
+using WorldLibrary.Web.Repositories;
 
 namespace WorldLibrary.Web.Controllers
 {
     public class ReservesController : Controller
     {
-        private readonly DataContext _context;
+        private readonly IReserveRepository _reserveRepository;
+        private readonly IUserHelper _userHelper;
 
-        public ReservesController(DataContext context)
+        public ReservesController(IReserveRepository reserveRepository,
+            IUserHelper userHelper)
         {
-            _context = context;
+            _reserveRepository = reserveRepository;
+            _userHelper = userHelper;
         }
 
         // GET: Reserves
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Reserves.ToListAsync());
+            return View(_reserveRepository.GetAll());
         }
 
         // GET: Reserves/Details/5
@@ -33,8 +38,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var reserve = await _context.Reserves
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var reserve = await _reserveRepository.GetByIdAsync(id.Value);
             if (reserve == null)
             {
                 return NotFound();
@@ -54,12 +58,12 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Book,BookingDate,DeliveryDate,Rate")] Reserve reserve)
+        public async Task<IActionResult> Create(Reserve reserve)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(reserve);
-                await _context.SaveChangesAsync();
+                reserve.User = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
+                await _reserveRepository.CreateAsync(reserve);
                 return RedirectToAction(nameof(Index));
             }
             return View(reserve);
@@ -73,7 +77,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var reserve = await _context.Reserves.FindAsync(id);
+            var reserve = await _reserveRepository.GetByIdAsync(id.Value);
             if (reserve == null)
             {
                 return NotFound();
@@ -86,7 +90,7 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Book,BookingDate,DeliveryDate,Rate")] Reserve reserve)
+        public async Task<IActionResult> Edit(int id, Reserve reserve)
         {
             if (id != reserve.Id)
             {
@@ -97,12 +101,12 @@ namespace WorldLibrary.Web.Controllers
             {
                 try
                 {
-                    _context.Update(reserve);
-                    await _context.SaveChangesAsync();
+                    reserve.User = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
+                    await _reserveRepository.UpdateAsync(reserve);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ReserveExists(reserve.Id))
+                    if (!await _reserveRepository.ExistAsync(reserve.Id))
                     {
                         return NotFound();
                     }
@@ -124,8 +128,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var reserve = await _context.Reserves
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var reserve = await _reserveRepository.GetByIdAsync(id.Value);
             if (reserve == null)
             {
                 return NotFound();
@@ -139,15 +142,11 @@ namespace WorldLibrary.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var reserve = await _context.Reserves.FindAsync(id);
-            _context.Reserves.Remove(reserve);
-            await _context.SaveChangesAsync();
+            var reserve = await _reserveRepository.GetByIdAsync(id);
+            await _reserveRepository.DeleteAsync(reserve);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ReserveExists(int id)
-        {
-            return _context.Reserves.Any(e => e.Id == id);
-        }
+        
     }
 }

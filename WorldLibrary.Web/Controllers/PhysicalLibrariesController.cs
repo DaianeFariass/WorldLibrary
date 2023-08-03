@@ -7,22 +7,28 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WorldLibrary.Web.Data;
 using WorldLibrary.Web.Data.Entities;
+using WorldLibrary.Web.Helper;
+using WorldLibrary.Web.Repositories;
 
 namespace WorldLibrary.Web.Controllers
 {
     public class PhysicalLibrariesController : Controller
     {
-        private readonly DataContext _context;
+        private readonly IPhysicalLibraryRepository _physicalLibraryRepository;
+        private readonly IUserHelper _userHelper;
 
-        public PhysicalLibrariesController(DataContext context)
+        public PhysicalLibrariesController(IPhysicalLibraryRepository physicalLibraryRepository,
+            IUserHelper userHelper)
         {
-            _context = context;
+
+            _physicalLibraryRepository = physicalLibraryRepository;
+            _userHelper = userHelper;
         }
 
         // GET: PhysicalLibraries
         public async Task<IActionResult> Index()
         {
-            return View(await _context.PhysicalLibraries.ToListAsync());
+            return View(_physicalLibraryRepository.GetAll().OrderBy(p => p.Name));
         }
 
         // GET: PhysicalLibraries/Details/5
@@ -33,8 +39,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var physicalLibrary = await _context.PhysicalLibraries
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var physicalLibrary = await _physicalLibraryRepository.GetByIdAsync(id.Value);
             if (physicalLibrary == null)
             {
                 return NotFound();
@@ -54,12 +59,12 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Country,Email,PhoneNumber,ImageUrl")] PhysicalLibrary physicalLibrary)
+        public async Task<IActionResult> Create(PhysicalLibrary physicalLibrary)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(physicalLibrary);
-                await _context.SaveChangesAsync();
+                physicalLibrary.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
+                await _physicalLibraryRepository.CreateAsync(physicalLibrary);
                 return RedirectToAction(nameof(Index));
             }
             return View(physicalLibrary);
@@ -73,7 +78,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var physicalLibrary = await _context.PhysicalLibraries.FindAsync(id);
+            var physicalLibrary = await _physicalLibraryRepository.GetByIdAsync(id.Value);
             if (physicalLibrary == null)
             {
                 return NotFound();
@@ -86,7 +91,7 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Country,Email,PhoneNumber,ImageUrl")] PhysicalLibrary physicalLibrary)
+        public async Task<IActionResult> Edit(int id, PhysicalLibrary physicalLibrary)
         {
             if (id != physicalLibrary.Id)
             {
@@ -97,12 +102,12 @@ namespace WorldLibrary.Web.Controllers
             {
                 try
                 {
-                    _context.Update(physicalLibrary);
-                    await _context.SaveChangesAsync();
+                    physicalLibrary.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
+                    await _physicalLibraryRepository.UpdateAsync(physicalLibrary);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PhysicalLibraryExists(physicalLibrary.Id))
+                    if (!await _physicalLibraryRepository.ExistAsync(physicalLibrary.Id))
                     {
                         return NotFound();
                     }
@@ -124,8 +129,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var physicalLibrary = await _context.PhysicalLibraries
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var physicalLibrary = await _physicalLibraryRepository.GetByIdAsync(id.Value);
             if (physicalLibrary == null)
             {
                 return NotFound();
@@ -139,15 +143,10 @@ namespace WorldLibrary.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var physicalLibrary = await _context.PhysicalLibraries.FindAsync(id);
-            _context.PhysicalLibraries.Remove(physicalLibrary);
-            await _context.SaveChangesAsync();
+            var physicalLibrary = await _physicalLibraryRepository.GetByIdAsync(id);
+            await _physicalLibraryRepository.DeleteAsync(physicalLibrary);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PhysicalLibraryExists(int id)
-        {
-            return _context.PhysicalLibraries.Any(e => e.Id == id);
-        }
     }
 }

@@ -4,7 +4,7 @@ using WorldLibrary.Web.Data.Entities;
 
 namespace WorldLibrary.Web.Data
 {
-    public class DataContext : DbContext
+    public class DataContext : IdentityDbContext<User>
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }

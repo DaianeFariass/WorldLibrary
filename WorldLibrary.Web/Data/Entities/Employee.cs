@@ -7,23 +7,28 @@ namespace WorldLibrary.Web.Data.Entities
     {
         public int Id { get; set; }
 
-        [Display(Name = "Full Name")]
         [Required]
-        [MaxLength(100, ErrorMessage = "The field {0} can contain {1} characters length.")]
+        [Display(Name = "Full Name")]
         public string FullName { get; set; }
 
         [Required]
+        public string Document { get; set; }
+
+        [Required]
         public string Address { get; set; }
+
+        [Required]
+        public string CellPhone { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Required]
-        public string Phone { get; set; }
+        public string JobPosition { get; set; }
 
-        [Required]
-        public string Document { get; set; }
+        [Display(Name = "Image")]
+        public string ImageUrl { get; set; }
 
         public User User { get; set; }
     }

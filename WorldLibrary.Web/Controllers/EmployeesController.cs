@@ -7,22 +7,28 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WorldLibrary.Web.Data;
 using WorldLibrary.Web.Data.Entities;
+using WorldLibrary.Web.Helper;
+using WorldLibrary.Web.Repositories;
 
 namespace WorldLibrary.Web.Controllers
 {
     public class EmployeesController : Controller
     {
-        private readonly DataContext _context;
+        private readonly IEmployeeRepository _employeeRepository;
+        private readonly IUserHelper _userHelper;
 
-        public EmployeesController(DataContext context)
+        public EmployeesController(IEmployeeRepository employeeRepository,
+            IUserHelper userHelper)
         {
-            _context = context;
+
+            _employeeRepository = employeeRepository;
+            _userHelper = userHelper;
         }
 
         // GET: Employees
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Employees.ToListAsync());
+            return View(_employeeRepository.GetAll().OrderBy(e => e.FullName));
         }
 
         // GET: Employees/Details/5
@@ -33,8 +39,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var employee = await _employeeRepository.GetByIdAsync(id.Value);
             if (employee == null)
             {
                 return NotFound();
@@ -54,12 +59,12 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FullName,Address,Email,Phone,Document")] Employee employee)
+        public async Task<IActionResult> Create(Employee employee)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(employee);
-                await _context.SaveChangesAsync();
+                employee.User = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
+                await _employeeRepository.CreateAsync(employee);
                 return RedirectToAction(nameof(Index));
             }
             return View(employee);
@@ -73,7 +78,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var employee = await _context.Employees.FindAsync(id);
+            var employee = await _employeeRepository.GetByIdAsync(id.Value);
             if (employee == null)
             {
                 return NotFound();
@@ -86,7 +91,7 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FullName,Address,Email,Phone,Document")] Employee employee)
+        public async Task<IActionResult> Edit(int id, Employee employee)
         {
             if (id != employee.Id)
             {
@@ -97,12 +102,12 @@ namespace WorldLibrary.Web.Controllers
             {
                 try
                 {
-                    _context.Update(employee);
-                    await _context.SaveChangesAsync();
+                    employee.User = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
+                    await _employeeRepository.UpdateAsync(employee);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EmployeeExists(employee.Id))
+                    if (!await _employeeRepository.ExistAsync(employee.Id))
                     {
                         return NotFound();
                     }
@@ -124,8 +129,7 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var employee = await _employeeRepository.GetByIdAsync(id.Value);
             if (employee == null)
             {
                 return NotFound();
@@ -139,15 +143,10 @@ namespace WorldLibrary.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var employee = await _context.Employees.FindAsync(id);
-            _context.Employees.Remove(employee);
-            await _context.SaveChangesAsync();
+            var employee = await _employeeRepository.GetByIdAsync(id);
+            await _employeeRepository.DeleteAsync(employee);
             return RedirectToAction(nameof(Index));
         }
-
-        private bool EmployeeExists(int id)
-        {
-            return _context.Employees.Any(e => e.Id == id);
-        }
+                
     }
 }
