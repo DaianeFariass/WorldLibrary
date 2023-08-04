@@ -1,4 +1,4 @@
-﻿@model WorldLibrary.Web.Data.Entities.PhysicalLibrary
+﻿@model WorldLibrary.Web.Models.PhysicalLibraryViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -33,9 +33,9 @@
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ImageUrl" class="control-label"></label>
-                <input asp-for="ImageUrl" class="form-control" />
-                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" class="form-control" type="file" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

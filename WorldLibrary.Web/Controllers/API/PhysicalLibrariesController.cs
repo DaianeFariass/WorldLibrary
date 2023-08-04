@@ -17,7 +17,7 @@ namespace WorldLibrary.Web.Controllers.API
         [HttpGet]
         public IActionResult GetPhysicalLibraries()
         {
-            return Ok(_physicalLibraryRepository.GetAll());
+            return Ok(_physicalLibraryRepository.GetAllWithUsers());
         }
     }
 }

@@ -17,7 +17,7 @@ namespace WorldLibrary.Web.Controllers.API
         [HttpGet]
         public IActionResult GetReserves()
         {
-            return Ok(_reserveRepository.GetAll());
+            return Ok(_reserveRepository.GetAllWithUsers());
         }
     }
 }

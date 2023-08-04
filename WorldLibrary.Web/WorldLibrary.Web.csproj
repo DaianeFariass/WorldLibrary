@@ -17,4 +17,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\image\books\" />
+    <Folder Include="wwwroot\image\employees\" />
+    <Folder Include="wwwroot\image\libraries\" />
+  </ItemGroup>
+
 </Project>

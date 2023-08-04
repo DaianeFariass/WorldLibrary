@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using WorldLibrary.Web.Data;
 using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
+using WorldLibrary.Web.Models;
 using WorldLibrary.Web.Repositories;
 
 namespace WorldLibrary.Web.Controllers
@@ -59,15 +61,50 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(PhysicalLibrary physicalLibrary)
+        public async Task<IActionResult> Create(PhysicalLibraryViewModel model)
         {
             if (ModelState.IsValid)
             {
+                var path = string.Empty;
+                if (model.ImageFile != null && model.ImageFile.Length > 0)
+                {
+                    var guid = Guid.NewGuid().ToString();
+                    var file = $"{guid}.jpg";
+
+                    path= Path.Combine(
+                        Directory.GetCurrentDirectory(),
+                        "wwwroot\\image\\libraries",
+                       file);
+
+                    using (var strem = new FileStream(path, FileMode.Create))
+                    {
+                        await model.ImageFile.CopyToAsync(strem);
+                    }
+
+                    path = $"~/image/libraries/{file}";
+                }
+
+                var physicalLibrary = this.ToLibrary(model, path);
+
                 physicalLibrary.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
                 await _physicalLibraryRepository.CreateAsync(physicalLibrary);
                 return RedirectToAction(nameof(Index));
             }
-            return View(physicalLibrary);
+            return View(model);
+        }
+
+        private PhysicalLibrary ToLibrary(PhysicalLibraryViewModel model, string path)
+        {
+            return new PhysicalLibrary
+            {
+                Id = model.Id,
+                ImageUrl= path,
+                Country =model.Country,
+                Email=model.Email,
+                Name= model.Name,
+                PhoneNumber= model.PhoneNumber,
+                User= model.User,
+            };
         }
 
         // GET: PhysicalLibraries/Edit/5
@@ -83,7 +120,23 @@ namespace WorldLibrary.Web.Controllers
             {
                 return NotFound();
             }
-            return View(physicalLibrary);
+
+            var model = this.ToLibraryViewModel(physicalLibrary);
+            return View(model);
+        }
+
+        private PhysicalLibraryViewModel ToLibraryViewModel(PhysicalLibrary physicalLibrary)
+        {
+            return new PhysicalLibraryViewModel
+            {
+                Id = physicalLibrary.Id,
+                Country=physicalLibrary.Country,
+                Name=physicalLibrary.Name,
+                Email=physicalLibrary.Email,
+                PhoneNumber=physicalLibrary.PhoneNumber,
+                ImageUrl=physicalLibrary.ImageUrl,
+                User=physicalLibrary.User,
+            };
         }
 
         // POST: PhysicalLibraries/Edit/5
@@ -91,23 +144,40 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, PhysicalLibrary physicalLibrary)
+        public async Task<IActionResult> Edit(PhysicalLibraryViewModel model)
         {
-            if (id != physicalLibrary.Id)
-            {
-                return NotFound();
-            }
+
 
             if (ModelState.IsValid)
             {
                 try
                 {
+                    var path = model.ImageUrl;
+                    if (model.ImageFile != null && model.ImageFile.Length > 0)
+                    {
+                        var guid = Guid.NewGuid().ToString();
+                        var file = $"{guid}.jpg";
+
+                        path= Path.Combine(
+                            Directory.GetCurrentDirectory(),
+                            "wwwroot\\image\\libraries",
+                           file);
+
+                        using (var strem = new FileStream(path, FileMode.Create))
+                        {
+                            await model.ImageFile.CopyToAsync(strem);
+                        }
+
+                        path = $"~/image/libraries/{file}";
+                    }
+
+                    var physicalLibrary = this.ToLibrary(model, path);
                     physicalLibrary.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
                     await _physicalLibraryRepository.UpdateAsync(physicalLibrary);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!await _physicalLibraryRepository.ExistAsync(physicalLibrary.Id))
+                    if (!await _physicalLibraryRepository.ExistAsync(model.Id))
                     {
                         return NotFound();
                     }
@@ -118,7 +188,7 @@ namespace WorldLibrary.Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(physicalLibrary);
+            return View(model);
         }
 
         // GET: PhysicalLibraries/Delete/5

@@ -17,7 +17,7 @@ namespace WorldLibrary.Web.Controllers.API
         [HttpGet]
         public IActionResult GetBooks()
         {
-            return Ok(_customerRepository.GetAll());
+            return Ok(_customerRepository.GetAllWithUsers());
         }
     }
 }

@@ -17,7 +17,7 @@ namespace WorldLibrary.Web.Controllers.API
         [HttpGet]
         public IActionResult GetEmployess()
         {
-            return Ok(_employeeRepository.GetAll());
+            return Ok(_employeeRepository.GetAllWithUsers());
         }
     }
 }

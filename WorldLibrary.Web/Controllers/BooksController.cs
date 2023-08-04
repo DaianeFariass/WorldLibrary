@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using WorldLibrary.Web.Data;
 using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
+using WorldLibrary.Web.Models;
 using WorldLibrary.Web.Repositories;
 
 namespace WorldLibrary.Web.Controllers
@@ -57,15 +59,52 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Book book)
+        public async Task<IActionResult> Create(BookViewModel model)
         {
             if (ModelState.IsValid)
             {
+                var path = string.Empty;
+                if (model.ImageFile != null && model.ImageFile.Length > 0)
+                {
+                    var guid = Guid.NewGuid().ToString();
+                    var file = $"{guid}.jpg";
+
+                    path= Path.Combine(
+                        Directory.GetCurrentDirectory(),
+                        "wwwroot\\image\\books",
+                        file);
+
+                    using (var strem = new FileStream(path, FileMode.Create))
+                    {
+                        await model.ImageFile.CopyToAsync(strem);
+                    }
+
+                    path = $"~/image/books/{file}";
+                }
+
+                var book = this.ToBook(model, path);
+
                 book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
                 await _bookRepository.CreateAsync(book);
                 return RedirectToAction(nameof(Index));
             }
-            return View(book);
+            return View(model);
+        }
+
+        private Book ToBook(BookViewModel model, string path)
+        {
+            return new Book
+            {
+                Id = model.Id,
+                ImageUrl = path,
+                Title = model.Title,
+                Author = model.Author,
+                Category=model.Category,
+                IsAvailable=model.IsAvailable,
+                Synopsis=model.Synopsis,
+                Year=model.Year,
+                User=model.User,
+            };
         }
 
         // GET: Books/Edit/5
@@ -81,7 +120,25 @@ namespace WorldLibrary.Web.Controllers
             {
                 return NotFound();
             }
-            return View(book);
+
+            var model = this.ToBookViewModel(book);
+            return View(model);
+        }
+
+        private BookViewModel ToBookViewModel(Book book)
+        {
+            return new BookViewModel
+            {
+                Id=book.Id,
+                Title = book.Title,
+                Author=book.Author,
+                Category=book.Category,
+                ImageUrl=book.ImageUrl,
+                IsAvailable=book.IsAvailable,
+                Synopsis=book.Synopsis,
+                Year=book.Year,
+                User = book.User,
+            };
         }
 
         // POST: Books/Edit/5
@@ -89,23 +146,40 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Book book)
+        public async Task<IActionResult> Edit(BookViewModel model)
         {
-            if (id != book.Id)
-            {
-                return NotFound();
-            }
 
             if (ModelState.IsValid)
             {
                 try
                 {
+                    var path = string.Empty;
+                    if (model.ImageFile != null && model.ImageFile.Length > 0)
+                    {
+                        var guid = Guid.NewGuid().ToString();
+                        var file = $"{guid}.jpg";
+
+                        path= Path.Combine(
+                            Directory.GetCurrentDirectory(),
+                            "wwwroot\\image\\books",
+                            file);
+
+                        using (var strem = new FileStream(path, FileMode.Create))
+                        {
+                            await model.ImageFile.CopyToAsync(strem);
+                        }
+
+                        path = $"~/image/books/{file}";
+                    }
+
+                    var book = this.ToBook(model, path);
+
                     book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
                     await _bookRepository.UpdateAsync(book);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!await _bookRepository.ExistAsync(book.Id))
+                    if (!await _bookRepository.ExistAsync(model.Id))
                     {
                         return NotFound();
                     }
@@ -116,7 +190,7 @@ namespace WorldLibrary.Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(book);
+            return View(model);
         }
 
         // GET: Books/Delete/5
