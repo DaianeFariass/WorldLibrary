@@ -18,17 +18,23 @@ namespace WorldLibrary.Web.Controllers
     {
         private readonly IPhysicalLibraryRepository _physicalLibraryRepository;
         private readonly IUserHelper _userHelper;
+        private readonly IImageHelper _imageHelper;
+        private readonly IConverterHelper _converterHelper;
 
         public PhysicalLibrariesController(IPhysicalLibraryRepository physicalLibraryRepository,
-            IUserHelper userHelper)
+            IUserHelper userHelper,
+            IImageHelper imageHelper,
+            IConverterHelper converterHelper)
         {
 
             _physicalLibraryRepository = physicalLibraryRepository;
             _userHelper = userHelper;
+            _imageHelper = imageHelper;
+            _converterHelper=converterHelper;
         }
 
         // GET: PhysicalLibraries
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View(_physicalLibraryRepository.GetAll().OrderBy(p => p.Name));
         }
@@ -68,23 +74,10 @@ namespace WorldLibrary.Web.Controllers
                 var path = string.Empty;
                 if (model.ImageFile != null && model.ImageFile.Length > 0)
                 {
-                    var guid = Guid.NewGuid().ToString();
-                    var file = $"{guid}.jpg";
-
-                    path= Path.Combine(
-                        Directory.GetCurrentDirectory(),
-                        "wwwroot\\image\\libraries",
-                       file);
-
-                    using (var strem = new FileStream(path, FileMode.Create))
-                    {
-                        await model.ImageFile.CopyToAsync(strem);
-                    }
-
-                    path = $"~/image/libraries/{file}";
+                    path =  await _imageHelper.UploadImageAsync(model.ImageFile, "libraries");
                 }
 
-                var physicalLibrary = this.ToLibrary(model, path);
+                var physicalLibrary = _converterHelper.ToLibrary(model, path, true);
 
                 physicalLibrary.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
                 await _physicalLibraryRepository.CreateAsync(physicalLibrary);
@@ -93,20 +86,7 @@ namespace WorldLibrary.Web.Controllers
             return View(model);
         }
 
-        private PhysicalLibrary ToLibrary(PhysicalLibraryViewModel model, string path)
-        {
-            return new PhysicalLibrary
-            {
-                Id = model.Id,
-                ImageUrl= path,
-                Country =model.Country,
-                Email=model.Email,
-                Name= model.Name,
-                PhoneNumber= model.PhoneNumber,
-                User= model.User,
-            };
-        }
-
+       
         // GET: PhysicalLibraries/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -121,23 +101,10 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var model = this.ToLibraryViewModel(physicalLibrary);
+            var model = _converterHelper.ToPhysicalLibraryViewModel(physicalLibrary);
             return View(model);
         }
-
-        private PhysicalLibraryViewModel ToLibraryViewModel(PhysicalLibrary physicalLibrary)
-        {
-            return new PhysicalLibraryViewModel
-            {
-                Id = physicalLibrary.Id,
-                Country=physicalLibrary.Country,
-                Name=physicalLibrary.Name,
-                Email=physicalLibrary.Email,
-                PhoneNumber=physicalLibrary.PhoneNumber,
-                ImageUrl=physicalLibrary.ImageUrl,
-                User=physicalLibrary.User,
-            };
-        }
+                
 
         // POST: PhysicalLibraries/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -155,23 +122,11 @@ namespace WorldLibrary.Web.Controllers
                     var path = model.ImageUrl;
                     if (model.ImageFile != null && model.ImageFile.Length > 0)
                     {
-                        var guid = Guid.NewGuid().ToString();
-                        var file = $"{guid}.jpg";
-
-                        path= Path.Combine(
-                            Directory.GetCurrentDirectory(),
-                            "wwwroot\\image\\libraries",
-                           file);
-
-                        using (var strem = new FileStream(path, FileMode.Create))
-                        {
-                            await model.ImageFile.CopyToAsync(strem);
-                        }
-
-                        path = $"~/image/libraries/{file}";
+                        path =  await _imageHelper.UploadImageAsync(model.ImageFile, "libraries");
                     }
 
-                    var physicalLibrary = this.ToLibrary(model, path);
+                    var physicalLibrary = _converterHelper.ToLibrary(model, path, false);
+
                     physicalLibrary.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
                     await _physicalLibraryRepository.UpdateAsync(physicalLibrary);
                 }

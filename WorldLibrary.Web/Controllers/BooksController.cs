@@ -18,15 +18,22 @@ namespace WorldLibrary.Web.Controllers
     {
         private readonly IBookRepository _bookRepository;
         private readonly IUserHelper _userHelper;
+        private readonly IImageHelper _imageHelper;
+        private readonly IConverterHelper _converterHelper;
+
         public BooksController(IBookRepository bookRepository,
-            IUserHelper userHelper)
+            IUserHelper userHelper,
+            IImageHelper imageHelper,
+            IConverterHelper converterHelper)
         {
             _bookRepository = bookRepository;
             _userHelper = userHelper;
+            _imageHelper=imageHelper;
+            _converterHelper=converterHelper;
         }
 
         // GET: Books
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View(_bookRepository.GetAll().OrderBy(b => b.Title));
         }
@@ -66,23 +73,10 @@ namespace WorldLibrary.Web.Controllers
                 var path = string.Empty;
                 if (model.ImageFile != null && model.ImageFile.Length > 0)
                 {
-                    var guid = Guid.NewGuid().ToString();
-                    var file = $"{guid}.jpg";
-
-                    path= Path.Combine(
-                        Directory.GetCurrentDirectory(),
-                        "wwwroot\\image\\books",
-                        file);
-
-                    using (var strem = new FileStream(path, FileMode.Create))
-                    {
-                        await model.ImageFile.CopyToAsync(strem);
-                    }
-
-                    path = $"~/image/books/{file}";
+                    path =  await _imageHelper.UploadImageAsync(model.ImageFile, "books");
                 }
 
-                var book = this.ToBook(model, path);
+                var book = _converterHelper.ToBook(model, path, true);
 
                 book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
                 await _bookRepository.CreateAsync(book);
@@ -91,22 +85,7 @@ namespace WorldLibrary.Web.Controllers
             return View(model);
         }
 
-        private Book ToBook(BookViewModel model, string path)
-        {
-            return new Book
-            {
-                Id = model.Id,
-                ImageUrl = path,
-                Title = model.Title,
-                Author = model.Author,
-                Category=model.Category,
-                IsAvailable=model.IsAvailable,
-                Synopsis=model.Synopsis,
-                Year=model.Year,
-                User=model.User,
-            };
-        }
-
+       
         // GET: Books/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -121,26 +100,11 @@ namespace WorldLibrary.Web.Controllers
                 return NotFound();
             }
 
-            var model = this.ToBookViewModel(book);
+            var model = _converterHelper.ToBookViewModel(book);
             return View(model);
         }
 
-        private BookViewModel ToBookViewModel(Book book)
-        {
-            return new BookViewModel
-            {
-                Id=book.Id,
-                Title = book.Title,
-                Author=book.Author,
-                Category=book.Category,
-                ImageUrl=book.ImageUrl,
-                IsAvailable=book.IsAvailable,
-                Synopsis=book.Synopsis,
-                Year=book.Year,
-                User = book.User,
-            };
-        }
-
+        
         // POST: Books/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -153,26 +117,14 @@ namespace WorldLibrary.Web.Controllers
             {
                 try
                 {
-                    var path = string.Empty;
+                    var path = model.ImageUrl;
+
                     if (model.ImageFile != null && model.ImageFile.Length > 0)
                     {
-                        var guid = Guid.NewGuid().ToString();
-                        var file = $"{guid}.jpg";
-
-                        path= Path.Combine(
-                            Directory.GetCurrentDirectory(),
-                            "wwwroot\\image\\books",
-                            file);
-
-                        using (var strem = new FileStream(path, FileMode.Create))
-                        {
-                            await model.ImageFile.CopyToAsync(strem);
-                        }
-
-                        path = $"~/image/books/{file}";
+                        path =  await _imageHelper.UploadImageAsync(model.ImageFile, "books");
                     }
 
-                    var book = this.ToBook(model, path);
+                    var book = _converterHelper.ToBook(model, path, false);
 
                     book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
                     await _bookRepository.UpdateAsync(book);

@@ -56,7 +56,8 @@ namespace WorldLibrary.Web
             services.AddScoped<IPhysicalLibraryRepository, PhysicalLibraryRepository>();
             services.AddScoped<IReserveRepository, ReserveRepository>();
             services.AddScoped<IUserHelper, UserHelper>();
-
+            services.AddScoped<IConverterHelper, ConverterHelper>();
+            services.AddScoped<IImageHelper, ImageHelper>();
             services.AddControllersWithViews();
         }
 

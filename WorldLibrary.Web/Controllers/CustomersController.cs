@@ -25,7 +25,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: Customers
-        public async Task<IActionResult> Index()
+        public  IActionResult Index()
         {
             return View(_customerRepository.GetAll().OrderBy(c => c.FullName));
         }

@@ -25,7 +25,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: Reserves
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View(_reserveRepository.GetAll());
         }
