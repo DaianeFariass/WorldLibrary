@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System;
 using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
+using Microsoft.EntityFrameworkCore;
 
 namespace WorldLibrary.Web.Data
 {
@@ -22,7 +23,13 @@ namespace WorldLibrary.Web.Data
         }
         public async Task SeedAsync()
         {
-            await _context.Database.EnsureCreatedAsync();
+            await _context.Database.MigrateAsync();
+
+            await _userHelper.CheckRoleAsync("Admin");
+
+            await _userHelper.CheckRoleAsync("Employee");
+
+            await _userHelper.CheckRoleAsync("Customer");
 
             var userAdmin = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
 
@@ -44,6 +51,7 @@ namespace WorldLibrary.Web.Data
                 {
                     throw new InvalidOperationException("Could not create the user in seeder");
                 }
+                await _userHelper.AddUserToRoleAsync(userAdmin, "Admin");
 
             }
             var userEmployee = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
@@ -67,7 +75,7 @@ namespace WorldLibrary.Web.Data
                 {
                     throw new InvalidOperationException("Could not create the user in seeder");
                 }
-
+                await _userHelper.AddUserToRoleAsync(userEmployee, "Employee");
             }
             var userCustomer = await _userHelper.GetUserByEmailAsync("livania.viegas@cinel.pt");
             if (userCustomer == null)
@@ -88,6 +96,25 @@ namespace WorldLibrary.Web.Data
                 {
                     throw new InvalidOperationException("Could not create the user in seeder");
                 }
+                //await _userHelper.AddUserToRoleAsync(userCustomer, "Customer");
+            }
+            var isInRoleAdmin = await _userHelper.IsUserInRoleAsync(userAdmin, "Admin");
+            var isInRoleEmployee = await _userHelper.IsUserInRoleAsync(userEmployee, "Vet");
+            var isInRoleCustomer = await _userHelper.IsUserInRoleAsync(userCustomer, "Customer");
+
+            if (!isInRoleAdmin)
+            {
+                await _userHelper.AddUserToRoleAsync(userAdmin, "Admin");
+
+            }
+            if (!isInRoleEmployee)
+            {
+                await _userHelper.AddUserToRoleAsync(userEmployee, "Employee");
+
+            }
+            if (!isInRoleCustomer)
+            {
+                await _userHelper.AddUserToRoleAsync(userCustomer, "Customer");
 
             }
 

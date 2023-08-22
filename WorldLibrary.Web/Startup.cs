@@ -31,7 +31,6 @@ namespace WorldLibrary.Web
         {
             services.AddIdentity<User, IdentityRole>(cfg =>
             {
-                cfg.SignIn.RequireConfirmedEmail = true;
                 cfg.User.RequireUniqueEmail = true;
                 cfg.Password.RequireDigit = false;
                 cfg.Password.RequiredUniqueChars = 0;
@@ -79,6 +78,7 @@ namespace WorldLibrary.Web
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
