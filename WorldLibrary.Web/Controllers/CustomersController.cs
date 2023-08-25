@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,7 @@ using WorldLibrary.Web.Repositories;
 
 namespace WorldLibrary.Web.Controllers
 {
+    
     public class CustomersController : Controller
     {
         private readonly ICustomerRepository _customerRepository;
@@ -35,13 +37,13 @@ namespace WorldLibrary.Web.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("CustomerNotFound");
             }
 
             var customer = await _customerRepository.GetByIdAsync(id.Value);
             if (customer == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("CustomerNotFound");
             }
 
             return View(customer);
@@ -74,13 +76,13 @@ namespace WorldLibrary.Web.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("CustomerNotFound");
             }
 
             var customer = await _customerRepository.GetByIdAsync(id.Value);
             if (customer == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("CustomerNotFound");
             }
             return View(customer);
         }
@@ -108,7 +110,7 @@ namespace WorldLibrary.Web.Controllers
                 {
                     if (!await _customerRepository.ExistAsync(customer.Id))
                     {
-                        return NotFound();
+                        return new NotFoundViewResult("CustomerNotFound");
                     }
                     else
                     {
@@ -125,13 +127,13 @@ namespace WorldLibrary.Web.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("CustomerNotFound");
             }
 
             var customer = await _customerRepository.GetByIdAsync(id.Value);
             if (customer == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("CustomerNotFound");
             }
 
             return View(customer);
@@ -145,6 +147,11 @@ namespace WorldLibrary.Web.Controllers
             var customer = await _customerRepository.GetByIdAsync(id);
             await _customerRepository.DeleteAsync(customer);
             return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult CustomerNotFound()
+        {
+            return View();
         }
 
     }

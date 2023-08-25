@@ -44,13 +44,13 @@ namespace WorldLibrary.Web.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("EmployeeNotFound");
             }
 
             var employee = await _employeeRepository.GetByIdAsync(id.Value);
             if (employee == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("EmployeeNotFound");
             }
 
             return View(employee);
@@ -92,13 +92,13 @@ namespace WorldLibrary.Web.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("EmployeeNotFound");
             }
 
             var employee = await _employeeRepository.GetByIdAsync(id.Value);
             if (employee == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("EmployeeNotFound");
             }
 
             var model = _converterHelper.ToEmployeeViewModel(employee);
@@ -134,7 +134,7 @@ namespace WorldLibrary.Web.Controllers
                 {
                     if (!await _employeeRepository.ExistAsync(model.Id))
                     {
-                        return NotFound();
+                        return new NotFoundViewResult("EmployeeNotFound");
                     }
                     else
                     {
@@ -151,13 +151,13 @@ namespace WorldLibrary.Web.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("EmployeeNotFound");
             }
 
             var employee = await _employeeRepository.GetByIdAsync(id.Value);
             if (employee == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("EmployeeNotFound");
             }
 
             return View(employee);
@@ -172,6 +172,10 @@ namespace WorldLibrary.Web.Controllers
             await _employeeRepository.DeleteAsync(employee);
             return RedirectToAction(nameof(Index));
         }
-                
+
+        public IActionResult EmployeeNotFound()
+        {
+            return View();
+        }
     }
 }

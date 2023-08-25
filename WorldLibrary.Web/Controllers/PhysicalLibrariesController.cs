@@ -44,13 +44,13 @@ namespace WorldLibrary.Web.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("LibraryNotFound");
             }
 
             var physicalLibrary = await _physicalLibraryRepository.GetByIdAsync(id.Value);
             if (physicalLibrary == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("LibraryNotFound");
             }
 
             return View(physicalLibrary);
@@ -92,13 +92,13 @@ namespace WorldLibrary.Web.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("LibraryNotFound");
             }
 
             var physicalLibrary = await _physicalLibraryRepository.GetByIdAsync(id.Value);
             if (physicalLibrary == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("LibraryNotFound");
             }
 
             var model = _converterHelper.ToPhysicalLibraryViewModel(physicalLibrary);
@@ -134,7 +134,7 @@ namespace WorldLibrary.Web.Controllers
                 {
                     if (!await _physicalLibraryRepository.ExistAsync(model.Id))
                     {
-                        return NotFound();
+                        return new NotFoundViewResult("LibraryNotFound");
                     }
                     else
                     {
@@ -151,13 +151,13 @@ namespace WorldLibrary.Web.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("LibraryNotFound");
             }
 
             var physicalLibrary = await _physicalLibraryRepository.GetByIdAsync(id.Value);
             if (physicalLibrary == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("LibraryNotFound");
             }
 
             return View(physicalLibrary);
@@ -173,5 +173,9 @@ namespace WorldLibrary.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public IActionResult LibraryNotFound()
+        {
+            return View();
+        }
     }
 }

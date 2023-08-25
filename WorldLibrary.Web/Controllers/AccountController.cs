@@ -74,7 +74,7 @@ namespace WorldLibrary.Web.Controllers
                         LastName = model.LastName,
                         Email = model.Username,
                         UserName = model.Username,
-
+                        
 
                     };
 
@@ -178,6 +178,10 @@ namespace WorldLibrary.Web.Controllers
             }
 
             return this.View(model);
+        }
+        public IActionResult NotAuthorized()
+        {
+            return View();
         }
     }
 }
