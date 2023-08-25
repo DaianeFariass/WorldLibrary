@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WorldLibrary.Web.Data;
-using WorldLibrary.Web.Data.Entities;
+using System;
+using System.Threading.Tasks;
 using WorldLibrary.Web.Helper;
+using WorldLibrary.Web.Models;
 using WorldLibrary.Web.Repositories;
 
 namespace WorldLibrary.Web.Controllers
@@ -15,138 +11,165 @@ namespace WorldLibrary.Web.Controllers
     public class ReservesController : Controller
     {
         private readonly IReserveRepository _reserveRepository;
-        private readonly IUserHelper _userHelper;
+        private readonly IBookRepository _bookRepository;
 
         public ReservesController(IReserveRepository reserveRepository,
-            IUserHelper userHelper)
+           IBookRepository bookRepository)
         {
-            _reserveRepository = reserveRepository;
-            _userHelper = userHelper;
+            _reserveRepository=reserveRepository;
+            _bookRepository=bookRepository;
+            ;
+        }
+        public async Task<IActionResult> Index()
+        {
+            var model = await _reserveRepository.GetReserveAsync(this.User.Identity.Name);
+            return View(model);
         }
 
-        // GET: Reserves
-        public IActionResult Index()
+        public async Task<IActionResult> Create()
         {
-            return View(_reserveRepository.GetAll());
+            var model = await _reserveRepository.GetDetailsTempAsync(this.User.Identity.Name);
+            return View(model);
         }
 
-        // GET: Reserves/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult AddReserve()
         {
-            if (id == null)
+            var model = new AddReserveViewModel
             {
-                return NotFound();
-            }
+                Books = _bookRepository.GetComboBooks(),
+                BookDate = _reserveRepository.GetBookingDate(),
+                DeliveryDate = _reserveRepository.GetDeliveryDate(),
 
-            var reserve = await _reserveRepository.GetByIdAsync(id.Value);
-            if (reserve == null)
-            {
-                return NotFound();
-            }
-
-            return View(reserve);
+            };
+            return View(model);
         }
 
-        // GET: Reserves/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Reserves/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Reserve reserve)
+        public async Task<IActionResult> AddReserve(AddReserveViewModel model)
         {
             if (ModelState.IsValid)
             {
-                reserve.User = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
-                await _reserveRepository.CreateAsync(reserve);
-                return RedirectToAction(nameof(Index));
+                await _reserveRepository.AddItemReserveAsync(model, this.User.Identity.Name);
+                return RedirectToAction("Create");
             }
-            return View(reserve);
+            return View(model);
         }
 
-        // GET: Reserves/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> EditReserve(int? id)
         {
             if (id == null)
             {
-                return NotFound();
-            }
 
-            var reserve = await _reserveRepository.GetByIdAsync(id.Value);
-            if (reserve == null)
+                return new NotFoundViewResult("ReserveNotFound");
+
+            }
+            var reserveToEdit = await _reserveRepository.GetReserveDetailTempAsync(id.Value);
+
+            if (reserveToEdit == null)
             {
                 return NotFound();
+
             }
-            return View(reserve);
+            var model = new AddReserveViewModel
+            {
+                Books = _bookRepository.GetComboBooks(),
+                BookDate = reserveToEdit.BookingDate,
+                DeliveryDate = reserveToEdit.DeliveryDate,
+                Quantity = Convert.ToInt32(reserveToEdit.Quantity),
+            };
+
+            return View(model);
         }
 
-        // POST: Reserves/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Reserve reserve)
+        public async Task<IActionResult> EditReserve(AddReserveViewModel model)
         {
-            if (id != reserve.Id)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try
                 {
-                    reserve.User = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
-                    await _reserveRepository.UpdateAsync(reserve);
+                    if (model.DeliveryDate.Date < DateTime.Now.Date)
+                    {
+
+                        //_flashMessage.Warning("Date Invalid!");
+                        model = new AddReserveViewModel
+                        {
+                            Books = _bookRepository.GetComboBooks(),
+                            BookDate = DateTime.Now.Date,
+                            DeliveryDate = DateTime.Now.Date,
+                            Quantity= Convert.ToInt32(model.Quantity),
+
+                        };
+                        return View(model);
+                    }
+                    else
+                    {
+                        await _reserveRepository.EditReserveDetailTempAsync(model, this.User.Identity.Name);
+
+                    }
+
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!await _reserveRepository.ExistAsync(reserve.Id))
+
+                    if (!await _reserveRepository.ExistAsync(model.BookId))
                     {
-                        return NotFound();
+                        return new NotFoundViewResult("ReserveNotFound");
                     }
                     else
                     {
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Create");
             }
-            return View(reserve);
+            return View(model);
         }
-
-        // GET: Reserves/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> DeleteItem(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("ReserveNotFound");
             }
+            await _reserveRepository.DeleteDetailTempAsync(id.Value);
+            return RedirectToAction("Create");
+        }
 
-            var reserve = await _reserveRepository.GetByIdAsync(id.Value);
+        public async Task<IActionResult> Deliver(int? id)
+        {
+            if (id == null)
+            {
+                return new NotFoundViewResult("ReserveNotFound");
+
+            }
+            var reserve = await _reserveRepository.GetReserveAsync(id.Value);
             if (reserve == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("ReserveNotFound");
+
             }
+            var model = new DeliveryViewModel
+            {
+                Id = reserve.Id,
+                DeliveryDate = DateTime.Today
+            };
 
-            return View(reserve);
+            return View(model);
         }
 
-        // POST: Reserves/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [HttpPost]
+        public async Task<IActionResult> Deliver(DeliveryViewModel model)
         {
-            var reserve = await _reserveRepository.GetByIdAsync(id);
-            await _reserveRepository.DeleteAsync(reserve);
-            return RedirectToAction(nameof(Index));
+            if (ModelState.IsValid)
+            {
+                await _reserveRepository.DeliverReserve(model);
+                return RedirectToAction("Index");
+            }
+            return View();
         }
-
-        
+        public IActionResult ReserveNotFound()
+        {
+            return View();
+        }
     }
 }

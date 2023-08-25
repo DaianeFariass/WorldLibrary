@@ -11,7 +11,8 @@ namespace WorldLibrary.Web.Data
         public DbSet<Book> Books { get; set; }
         public DbSet<Reserve> Reserves { get; set; }
         public DbSet<PhysicalLibrary> PhysicalLibraries { get; set; }
-
+        public DbSet<ReserveDetail> ReserveDetails { get; set; }
+        public DbSet<ReserveDetailTemp> ReserveDetailsTemp { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
