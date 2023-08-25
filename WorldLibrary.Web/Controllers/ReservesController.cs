@@ -135,6 +135,36 @@ namespace WorldLibrary.Web.Controllers
             return RedirectToAction("Create");
         }
 
+        public async Task<IActionResult> Increase(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            await _reserveRepository.ModifyReserveDetailTempQuantityAsync(id.Value, 1);
+            return RedirectToAction("Create");
+
+        }
+        public async Task<IActionResult> Decrease(int? id)
+        {
+            if (id == null)
+            {
+                return new NotFoundViewResult("ReserveNotFound");
+            }
+            await _reserveRepository.ModifyReserveDetailTempQuantityAsync(id.Value, -1);
+            return RedirectToAction("Create");
+
+        }
+        public async Task<IActionResult> ConfirmReserve()
+        {
+            var response = await _reserveRepository.ConfirmReservAsync(this.User.Identity.Name);
+            if (response)
+            {
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Create");
+        }
+
         public async Task<IActionResult> Deliver(int? id)
         {
             if (id == null)

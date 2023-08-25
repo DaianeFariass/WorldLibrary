@@ -37,7 +37,7 @@
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.User.FullName)
-                </td>
+                </td> 
                 <td>
                     @Html.DisplayFor(modelItem => item.Book.Title)
                 </td>
@@ -53,7 +53,7 @@
                 <td id="@item.Id">
                     <a asp-action="Increase" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-plus"></i></a>
                     <a asp-action="Decrease" asp-route-id="@item.Id" class="btn btn-info"><i class="fa fa-minus"></i></a>
-                    <a asp-action="EditReserve" asp-route-id="@item.Id" class="btn btn-warning"><i class="far fa-edit"></i></a>
+                    <a asp-action="EditReserve" asp-route-id="@item.Id" class="btn btn-warning" id="btnEditItem">Edit</a>
                     <a asp-action="DeleteItem" asp-route-id="@item.Id" class="btn btn-danger" id="btnDeleteItem">Delete</a>
                 </td>
             </tr>
@@ -64,7 +64,7 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Confirm Order</h4>
+                <h4 class="modal-title">Confirm Reserve</h4>
                 <button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close"></i></button>
             </div>
             <div class="modal-body">
