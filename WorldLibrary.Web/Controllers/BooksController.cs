@@ -171,8 +171,26 @@ namespace WorldLibrary.Web.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var book = await _bookRepository.GetByIdAsync(id);
-            await _bookRepository.DeleteAsync(book);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _bookRepository.DeleteAsync(book);
+                return RedirectToAction(nameof(Index));
+
+            }
+            catch (DbUpdateException ex)
+            {
+
+                if (ex.InnerException != null && ex.InnerException.Message.Contains("DELETE"))
+                {
+                    ViewBag.ErrorTitle = $"{book.Title} probably in been used!!!";
+                    ViewBag.ErrorMessage = $"{book.Title} can not be deleted because there are reserves with this book.</br></br>" +
+                        $"First delete all the reserves with this book" +
+                        $" and please try again delete it!";
+
+                }
+
+                return View("Error");
+            }
         }
 
         public IActionResult BookNotFound()

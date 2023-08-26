@@ -169,8 +169,24 @@ namespace WorldLibrary.Web.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var physicalLibrary = await _physicalLibraryRepository.GetByIdAsync(id);
-            await _physicalLibraryRepository.DeleteAsync(physicalLibrary);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _physicalLibraryRepository.DeleteAsync(physicalLibrary);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+
+                if (ex.InnerException != null && ex.InnerException.Message.Contains("DELETE"))
+                {
+                    ViewBag.ErrorTitle = $"{physicalLibrary.Name} probably in been used!!!";
+                    ViewBag.ErrorMessage = $"{physicalLibrary.Name} can not be deleted because there are reserves in this library.</br></br>" +
+                        $"First delete all the reserves in this library" +
+                        $" and please try again delete it!";
+
+                }
+                return View("Error");
+            }
         }
 
         public IActionResult LibraryNotFound()

@@ -169,8 +169,24 @@ namespace WorldLibrary.Web.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var employee = await _employeeRepository.GetByIdAsync(id);
-            await _employeeRepository.DeleteAsync(employee);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _employeeRepository.DeleteAsync(employee);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+                if (ex.InnerException != null && ex.InnerException.Message.Contains("DELETE"))
+                {
+                    ViewBag.ErrorTitle = $"{employee.FullName} probably in been used!!!";
+                    ViewBag.ErrorMessage = $"{employee.FullName} can not be deleted because there are reserves with this customer!</br></br>" +
+                        $"First delete all the reserves with this customer" +
+                        $" and please try again delete it!";
+
+                }
+                return View("Error");
+
+            }
         }
 
         public IActionResult EmployeeNotFound()
