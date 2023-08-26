@@ -13,6 +13,8 @@ namespace WorldLibrary.Web.Data
         public DbSet<PhysicalLibrary> PhysicalLibraries { get; set; }
         public DbSet<ReserveDetail> ReserveDetails { get; set; }
         public DbSet<ReserveDetailTemp> ReserveDetailsTemp { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<City> Cities { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 

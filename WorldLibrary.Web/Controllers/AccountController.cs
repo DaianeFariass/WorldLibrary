@@ -5,16 +5,19 @@ using System.Threading.Tasks;
 using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
 using WorldLibrary.Web.Models;
+using WorldLibrary.Web.Repositories;
 
 namespace WorldLibrary.Web.Controllers
 {
     public class AccountController : Controller
     {
         private readonly IUserHelper _userHelper;
+        private readonly ICountryRepository _countryRepository;
 
-        public AccountController(IUserHelper userHelper)
+        public AccountController(IUserHelper userHelper, ICountryRepository countryRepository)
         {
             _userHelper = userHelper;
+            _countryRepository = countryRepository;
         }
         
         public IActionResult Login()
@@ -182,6 +185,15 @@ namespace WorldLibrary.Web.Controllers
         public IActionResult NotAuthorized()
         {
             return View();
+        }
+
+        [HttpPost]
+        [Route("Account/GetCitiesAsync")]
+        public async Task<JsonResult> GetCitiesAsync(int countryId)
+        {
+            var country = await _countryRepository.GetCountryWithCitiesAsync(countryId);
+            return Json(country.Cities.OrderBy(c => c.Name));
+
         }
     }
 }
