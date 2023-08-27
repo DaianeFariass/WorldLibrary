@@ -4,7 +4,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css" />
+
+<br />
 
 <p>
     <a asp-action="AddReserve" class="btn btn-success">Add Reservation</a>
@@ -53,7 +55,7 @@
                 <td id="@item.Id">
                     <a asp-action="Increase" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-plus"></i></a>
                     <a asp-action="Decrease" asp-route-id="@item.Id" class="btn btn-info"><i class="fa fa-minus"></i></a>
-                    <a asp-action="EditReserve" asp-route-id="@item.Id" class="btn btn-warning" id="btnEditItem">Edit</a>
+                    <a asp-action="EditReserve" asp-route-id="@item.Id" class="btn btn-warning"><i class="far fa-edit"></i></a>
                     <a asp-action="DeleteItem" asp-route-id="@item.Id" class="btn btn-danger" id="btnDeleteItem">Delete</a>
                 </td>
             </tr>
@@ -96,6 +98,13 @@
     </div>
 </div>
 @section Scripts{
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#MyTable').DataTable();
+        });
+    </script>
     <script type="text/javascript">
         $(document).ready(function () {
             var id = 0;

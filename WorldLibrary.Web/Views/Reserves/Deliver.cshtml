@@ -36,4 +36,18 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var userLang = navigator.language || navigator.userLanguage;
+            console.log(userLang);
+            var options = $.extend({}, // empty object
+                $.datepicker.regional[pt - Pt], {
+                dateFormat: "dd/MM/yyyy",
+                orientation: "bottom",
+                autoclose = true
+            } // your custom options
+            );
+            $(".date").datepicker(options);
+        });
+    </script>
 }

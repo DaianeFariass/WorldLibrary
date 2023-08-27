@@ -14,8 +14,12 @@ namespace WorldLibrary.Web.Data.Entities
         public string LastName { get; set; }
 
 
-        [MaxLength(100, ErrorMessage = "The field {0} only can contain {1} characters lenght.")]
+        [MaxLength(100, ErrorMessage = "The fild {0} only can contain {1} characters length.")]
         public string Address { get; set; }
+
+        public int CityId { get; set; }
+
+        public City City { get; set; }
 
 
         [Display(Name = "Full Name")]

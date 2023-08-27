@@ -6,10 +6,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using Vereyon.Web;
 using WorldLibrary.Web.Data;
 using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
@@ -40,13 +43,29 @@ namespace WorldLibrary.Web
                 cfg.Password.RequiredLength = 6;
 
             })
+                .AddDefaultTokenProviders()
                .AddEntityFrameworkStores<DataContext>();
+
+            services.AddAuthentication()
+                .AddCookie()
+                .AddJwtBearer(cfg =>
+                {
+                    cfg.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidIssuer = this.Configuration["Token:Issuer"],
+                        ValidAudience = this.Configuration["Token:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(
+                            Encoding.UTF8.GetBytes(this.Configuration["Tokens:Key"]))
+                    };
+
+                });
 
             services.AddDbContext<DataContext>(cfg =>
             {
                 cfg.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection"));
             });
 
+            services.AddFlashMessage();
 
             services.AddTransient<SeedDb>();
             services.AddScoped<IBookRepository, BookRepository>();
@@ -55,8 +74,10 @@ namespace WorldLibrary.Web
             services.AddScoped<IPhysicalLibraryRepository, PhysicalLibraryRepository>();
             services.AddScoped<IReserveRepository, ReserveRepository>();
             services.AddScoped<IUserHelper, UserHelper>();
+            services.AddScoped<IMailHelper, MailHelper>();
             services.AddScoped<IConverterHelper, ConverterHelper>();
             services.AddScoped<IImageHelper, ImageHelper>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddControllersWithViews();
         }
 

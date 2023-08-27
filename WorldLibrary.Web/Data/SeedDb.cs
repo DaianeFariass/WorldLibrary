@@ -5,6 +5,7 @@ using System;
 using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace WorldLibrary.Web.Data
 {
@@ -31,6 +32,22 @@ namespace WorldLibrary.Web.Data
 
             await _userHelper.CheckRoleAsync("Customer");
 
+            if (!_context.Countries.Any())
+            {
+                var cities = new List<City>();
+                cities.Add(new City { Name = "Lisboa" });
+                cities.Add(new City { Name = "Porto" });
+                cities.Add(new City { Name = "Faro" });
+
+                _context.Countries.Add(new Country
+                {
+                    Cities = cities,
+                    Name = "Portugal"
+                });
+
+                await _context.SaveChangesAsync();
+            }
+
             var userAdmin = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
 
             if (userAdmin == null)
@@ -43,6 +60,8 @@ namespace WorldLibrary.Web.Data
                     UserName = "evelyn.nunes@cinel.pt",
                     PhoneNumber = GenerateRandomNumbers(9),
                     Address = GenerateRandomAddress(),
+                    CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
+                    City = _context.Countries.FirstOrDefault().Cities.FirstOrDefault()
                 };
 
                 var result = await _userHelper.AddUserAsync(userAdmin, "123456");
@@ -52,8 +71,10 @@ namespace WorldLibrary.Web.Data
                     throw new InvalidOperationException("Could not create the user in seeder");
                 }
                 await _userHelper.AddUserToRoleAsync(userAdmin, "Admin");
-
+                var token = await _userHelper.GenerateEmailConfirmationTokenAsync(userAdmin);
+                await _userHelper.ConfirmEmailAsync(userAdmin, token);
             }
+
             var userEmployee = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
 
             if (userEmployee == null)
@@ -66,7 +87,8 @@ namespace WorldLibrary.Web.Data
                     UserName = "daiane.farias@cinel.pt",
                     PhoneNumber = GenerateRandomNumbers(9),
                     Address = GenerateRandomAddress(),
-
+                    CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
+                    City = _context.Countries.FirstOrDefault().Cities.FirstOrDefault()
                 };
 
                 var result = await _userHelper.AddUserAsync(userEmployee, "123456");
@@ -76,6 +98,8 @@ namespace WorldLibrary.Web.Data
                     throw new InvalidOperationException("Could not create the user in seeder");
                 }
                 await _userHelper.AddUserToRoleAsync(userEmployee, "Employee");
+                var token = await _userHelper.GenerateEmailConfirmationTokenAsync(userEmployee);
+                await _userHelper.ConfirmEmailAsync(userEmployee, token);
             }
             var userCustomer = await _userHelper.GetUserByEmailAsync("livania.viegas@cinel.pt");
             if (userCustomer == null)
@@ -88,6 +112,8 @@ namespace WorldLibrary.Web.Data
                     UserName = "livania.viegas@cinel.pt",
                     PhoneNumber = GenerateRandomNumbers(9),
                     Address = GenerateRandomAddress(),
+                    CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
+                    City = _context.Countries.FirstOrDefault().Cities.FirstOrDefault()
                 };
 
                 var result = await _userHelper.AddUserAsync(userCustomer, "123456");
@@ -96,7 +122,9 @@ namespace WorldLibrary.Web.Data
                 {
                     throw new InvalidOperationException("Could not create the user in seeder");
                 }
-                //await _userHelper.AddUserToRoleAsync(userCustomer, "Customer");
+                await _userHelper.AddUserToRoleAsync(userCustomer, "Customer");
+                var token = await _userHelper.GenerateEmailConfirmationTokenAsync(userCustomer);
+                await _userHelper.ConfirmEmailAsync(userCustomer, token);
             }
             var isInRoleAdmin = await _userHelper.IsUserInRoleAsync(userAdmin, "Admin");
             var isInRoleEmployee = await _userHelper.IsUserInRoleAsync(userEmployee, "Vet");
