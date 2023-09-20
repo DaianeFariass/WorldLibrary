@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
+using Vereyon.Web;
 using WorldLibrary.Web.Helper;
 using WorldLibrary.Web.Models;
 using WorldLibrary.Web.Repositories;
@@ -12,13 +13,15 @@ namespace WorldLibrary.Web.Controllers
     {
         private readonly IReserveRepository _reserveRepository;
         private readonly IBookRepository _bookRepository;
+        private readonly IFlashMessage _flashMessage;
 
         public ReservesController(IReserveRepository reserveRepository,
-           IBookRepository bookRepository)
+           IBookRepository bookRepository,
+           IFlashMessage flashMessage)
         {
             _reserveRepository=reserveRepository;
             _bookRepository=bookRepository;
-            ;
+             _flashMessage=flashMessage;
         }
         public async Task<IActionResult> Index()
         {
@@ -67,7 +70,7 @@ namespace WorldLibrary.Web.Controllers
 
             if (reserveToEdit == null)
             {
-                return NotFound();
+                return new NotFoundViewResult("ReserveNotFound");
 
             }
             var model = new AddReserveViewModel
@@ -91,7 +94,7 @@ namespace WorldLibrary.Web.Controllers
                     if (model.DeliveryDate.Date < DateTime.Now.Date)
                     {
 
-                        //_flashMessage.Warning("Date Invalid!");
+                        _flashMessage.Warning("Date Invalid!");
                         model = new AddReserveViewModel
                         {
                             Books = _bookRepository.GetComboBooks(),

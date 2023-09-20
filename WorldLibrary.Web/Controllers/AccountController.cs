@@ -118,8 +118,8 @@ namespace WorldLibrary.Web.Controllers
                         token = myToken
                     }, protocol: HttpContext.Request.Scheme);
                     Response response = _mailHelper.SendEmail(model.Username, "Email confirmation", $"<h1>Email Confirmation</h1>" +
-                      $"To allow the user, " +
-                      $"plase click in this link:</br></br><a href = \"{tokenLink}\">Confirm Email</a>");
+                      $"Para confirmar o email, " +
+                      $"por favor clique neste link:</br></br><a href = \"{tokenLink}\">Confirm Email</a>");
                     if (response.IsSuccess)
                     {
                         ViewBag.Message = "The instructions to allow you user has been sent to email";
