@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css" />
 
+
 <br />
 
 <p>
@@ -27,14 +28,11 @@
                                 @Html.DisplayNameFor(model => model.User.FullName)
                             </th>
                             <th>
+                                @Html.DisplayNameFor(model => model.Customer.FullName)
+                            </th>
+                            <th>
                                 @Html.DisplayNameFor(model => model.Book.Title)
                             </th>
-                             @*<th>
-                                  @Html.DisplayNameFor(model => model.BookingDate)
-                             </th>
-                             <th>
-                                 @Html.DisplayNameFor(model => model.DeliveryDate)
-                             </th>*@
                             <th>
                                 @Html.DisplayNameFor(model => model.Quantity)
                             </th>
@@ -49,20 +47,16 @@
                                     @Html.DisplayFor(modelItem => item.User.FullName)
                                 </td>
                                 <td>
+                                    @Html.DisplayFor(modelItem => item.Customer.FullName)
+                                </td>
+                                <td>
                                     @Html.DisplayFor(modelItem => item.Book.Title)
                                 </td>
-                                @* <td>
-                                        @Html.DisplayFor(modelItem => item.BookingDate)
-                                 </td>
-                                <td>
-                                     @Html.DisplayFor(modelItem => item.DeliveryDate)
-                                </td>*@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Quantity)
                                 </td>
                                 <td id="@item.Id">
-                                    <a asp-action="Increase" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-plus"></i></a>
-                                    <a asp-action="Decrease" asp-route-id="@item.Id" class="btn btn-info"><i class="fa fa-minus"></i></a>
+
                                     <a asp-action="EditReserve" asp-route-id="@item.Id" class="btn btn-warning"><i class="far fa-edit"></i></a>
                                     <a asp-action="DeleteItem" asp-route-id="@item.Id" class="btn btn-danger" id="btnDeleteItem">Delete</a>
                                 </td>
@@ -75,11 +69,12 @@
         </div>
     </div>
 </div>
+
 <div id="confirmDialog" class="modal fade">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Confirm Reserve</h4>
+                <h4 class="modal-title">Confirm Reservevation </h4>
                 <button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close"></i></button>
             </div>
             <div class="modal-body">

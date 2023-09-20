@@ -5,66 +5,129 @@
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css" />
 
+
 <br />
 
 <p>
     <a asp-action="Create" class="btn btn-primary"><i class="fa fa-save"></i> Create New</a>
+    <a asp-action="Details" class="btn btn-info"><i class="fas fa-list"></i></a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            @if (this.User.IsInRole("Admin") || (this.User.IsInRole("Employee") || (this.User.IsInRole("Customer"))))
+<flash dismissable="true" />
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Reserves</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover table-responsive table-striped" id="MyTable">
+                    <thead>
+                        <tr>
+                            @if (this.User.IsInRole("Admin") || (this.User.IsInRole("Employee") || (this.User.IsInRole("Customer"))))
 
-            {
-                <th>
-                    @Html.DisplayNameFor(model => model.User.FullName)
-                </th>
-            }
-            <th>
-                @Html.DisplayNameFor(model => model.ReserveDateLocal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeliveryDate)
-            </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.Lines)
-            </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.Quantity)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                @if (this.User.IsInRole("Admin") || (this.User.IsInRole("Employee") || (this.User.IsInRole("Customer"))))
-                {
-                    <th>
-                        @Html.DisplayFor(modelItem => item.User.FullName)
-                    </th>
-                }
-                <td>
-                    @Html.DisplayFor(modelItem => item.ReserveDateLocal)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DeliveryDate)
-                </td>
-                @*<th>
-                    @Html.DisplayFor(modelItem => item.Lines)
-                </th>*@
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quantity)
-                </td>
-                <td>
-                    <a asp-action="Deliver" asp-route-id="@item.Id" class="btn btn-info" id="btnDeliver">Deliver</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" id="btnDelete">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+                            {
+                                <th>
+                                    @Html.DisplayNameFor(model => model.User)
+                                </th>
+                            }
+                            <th>
+                                @Html.DisplayNameFor(model => model.Customer)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Book)
+
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ReserveDateLocal)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DeliveryDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ReturnDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ActualReturnDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Quantity)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Rate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.StatusReserve)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                @if (this.User.IsInRole("Admin") || (this.User.IsInRole("Employee") || (this.User.IsInRole("Customer"))))
+                                {
+                                    <th>
+                                        @Html.DisplayFor(modelItem => item.User.FullName)
+                                    </th>
+                                }
+                                <th>
+                                    @Html.DisplayFor(modelItem => item.Customer.FullName)
+                                </th>
+                                <th>
+                                    @Html.DisplayFor(modelItem => item.Book.Title)
+                                </th>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ReserveDateLocal)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DeliveryDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ReturnDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ActualReturnDate)
+                                </td>
+                                <th>
+                                    @Html.DisplayFor(modelItem => item.Quantity)
+                                </th>
+                                <th>
+                                    @Html.DisplayFor(modelItem => item.Rate)
+                                </th>
+                                <th>
+                                    @Html.DisplayFor(modelItem => item.StatusReserve)
+                                </th>
+                                <td>
+                                    <a asp-action="Deliver" asp-route-id="@item.Id" class="btn btn-info" id="btnDeliver">Deliver</a>
+                                    <a asp-action="Cancel" asp-route-id="@item.Id" class="btn btn-danger" id="btnCancel">Cancel</a>
+                                    <a asp-action="BookReturn" asp-route-id="@item.Id" class="btn btn-info"><i class="fas fa-book"></i>Return</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="CancelDialog" class="modal fade">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Cancel Reserve</h4>
+                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure do you want to cancel the reserve ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="btnYesCancel">Yes</button>
+                <button type="button" class="btn btn-success" id="btnNoCancel">No</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section Scripts{
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
@@ -72,6 +135,21 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#MyTable').DataTable();
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnCancel").click(function () {
+                $("#CancelDialog").modal("show");
+                return false;
+            });
+            $("#btnNoCancel").click(function () {
+                $("#CancelDialog").modal("hide");
+                return false;
+            });
+            $("#btnYesCancel").click(function () {
+                window.location.href = "/Reserves/Cancel";
+            });
         });
     </script>
 }

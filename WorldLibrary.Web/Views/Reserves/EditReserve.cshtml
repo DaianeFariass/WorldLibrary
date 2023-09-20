@@ -12,41 +12,17 @@
     <div class="col-md-4">
         <form asp-action="EditReserve" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label"></label>
+                <select asp-for="CustomerId" asp-items="Model.Customers" class="form-control"></select>
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="BookId" class="control-label"></label>
                 <select asp-for="BookId" asp-items="Model.Books" class="form-control"></select>
                 <span asp-validation-for="BookId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="BookDate" class="control-label"></label>
-                <input asp-for="BookDate" class="form-control" id="DateSelected" />
-                <span asp-validation-for="BookDate" class="text-danger"></span>
-            </div>
-            @*  <div class="form-group">
-            <label asp-for="BookDate" class="control-label"></label>
-            <div class="input-group date" data-provide="datepicker">
-            <input type="text" asp-for="BookDate" class="form-control">
-            <div class="input-group-append">
-            <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
-            </div>
-            <span asp-validation-for="BookDate" class="text-danger"></span>
-            </div>
-            </div>*@
-            <div class="form-group">
-                <label asp-for="DeliveryDate" class="control-label"></label>
-                <input asp-for="DeliveryDate" class="form-control" id="DateSelected" />
-                <span asp-validation-for="DeliveryDate" class="text-danger"></span>
-            </div>
-            @*<div class="form-group">
-            <label asp-for="DeliveryDate" class="control-label"></label>
-            <div class="input-group date" data-provide="datepicker">
-            <input type="text" asp-for="DeliveryDate" class="form-control">
-            <div class="input-group-append">
-            <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
-            </div>
-            <span asp-validation-for="DeliveryDate" class="text-danger"></span>
-            </div>
-            </div>*@
             <div class="form-group">
                 <label asp-for="Quantity" class="control-label"></label>
                 <input asp-for="Quantity" class="form-control" />

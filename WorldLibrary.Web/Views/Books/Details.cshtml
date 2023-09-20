@@ -42,12 +42,12 @@
                 <dd class="col-sm-9">
                     @Html.DisplayFor(model => model.Category)
                 </dd>
-                @*<dt class="col-sm-3">
-                    @Html.DisplayNameFor(model => model.IsAvailable)
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.StatusBook)
                 </dt>
                 <dd class="col-sm-9">
-                    @Html.DisplayFor(model => model.IsAvailable)
-                </dd>*@
+                    @Html.DisplayFor(model => model.StatusBook)
+                </dd>
             </dl>
         </div>
         <div class="col-md-4">
@@ -57,8 +57,9 @@
             }
         </div>
     </div>
+</div>
 
-    <div>
-        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-        <a asp-action="Index">Back to List</a>
-    </div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"><i class="far fa-edit"></i>Edit</a>
+    <a asp-action="Index" class="btn btn-success"><i class="fa fa-chevron-left"></i>Back to List</a>
+</div>

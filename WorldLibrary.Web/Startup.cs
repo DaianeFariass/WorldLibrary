@@ -34,6 +34,7 @@ namespace WorldLibrary.Web
         {
             services.AddIdentity<User, IdentityRole>(cfg =>
             {
+
                 cfg.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
                 cfg.SignIn.RequireConfirmedEmail = true;
                 cfg.User.RequireUniqueEmail = true;
@@ -45,7 +46,7 @@ namespace WorldLibrary.Web
                 cfg.Password.RequiredLength = 6;
 
             })
-                .AddDefaultTokenProviders()
+               .AddDefaultTokenProviders()
                .AddEntityFrameworkStores<DataContext>();
 
             services.AddAuthentication()
@@ -70,16 +71,26 @@ namespace WorldLibrary.Web
             services.AddFlashMessage();
 
             services.AddTransient<SeedDb>();
+
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             services.AddScoped<IPhysicalLibraryRepository, PhysicalLibraryRepository>();
             services.AddScoped<IReserveRepository, ReserveRepository>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
+
+            services.AddScoped<IImageHelper, ImageHelper>();
+            services.AddScoped<IConverterHelper, ConverterHelper>();
             services.AddScoped<IUserHelper, UserHelper>();
             services.AddScoped<IMailHelper, MailHelper>();
-            services.AddScoped<IConverterHelper, ConverterHelper>();
-            services.AddScoped<IImageHelper, ImageHelper>();
-            services.AddScoped<ICountryRepository, CountryRepository>();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Account/NotAuthorized";
+                options.AccessDeniedPath = "/Account/NotAuthorized";
+
+            });
+
             services.AddControllersWithViews();
         }
 
@@ -92,16 +103,20 @@ namespace WorldLibrary.Web
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Errors/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseStatusCodePagesWithReExecute("/error/{0}");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
