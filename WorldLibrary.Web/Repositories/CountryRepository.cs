@@ -12,6 +12,7 @@ namespace WorldLibrary.Web.Repositories
     public class CountryRepository : GenericRepository<Country>, ICountryRepository
     {
         private readonly DataContext _context;
+
         public CountryRepository(DataContext context) : base(context)
         {
             _context = context;
@@ -30,7 +31,7 @@ namespace WorldLibrary.Web.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async  Task<int> DeleteCityAsync(City city)
+        public async Task<int> DeleteCityAsync(City city)
         {
             var country = await _context.Countries
                .Where(c => c.Cities.Any(ci => ci.Id == city.Id))
@@ -73,6 +74,7 @@ namespace WorldLibrary.Web.Repositories
             return list;
         }
 
+
         public IEnumerable<SelectListItem> GetComboCountries()
         {
             var list = _context.Countries.Select(c => new SelectListItem
@@ -94,15 +96,15 @@ namespace WorldLibrary.Web.Repositories
         public IQueryable GetCountriesWithCities()
         {
             return _context.Countries
-           .Include(c => c.Cities)
-           .OrderBy(c => c.Name);
+          .Include(c => c.Cities)
+          .OrderBy(c => c.Name);
         }
 
         public async Task<Country> GetCountryAsync(City city)
         {
             return await _context.Countries
-                 .Where(c => c.Cities.Any(ci => ci.Id == city.Id))
-                 .FirstOrDefaultAsync();
+                .Where(c => c.Cities.Any(ci => ci.Id == city.Id))
+                .FirstOrDefaultAsync();
         }
 
         public async Task<Country> GetCountryWithCitiesAsync(int id)

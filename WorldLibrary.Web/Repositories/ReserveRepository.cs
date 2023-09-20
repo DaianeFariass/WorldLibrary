@@ -39,16 +39,20 @@ namespace WorldLibrary.Web.Repositories
             {
                 return;
             }
+            var customer = await _context.Customers.FindAsync(model.CustomerId);
+            if (customer == null)
+            {
+                return;
+            }
             var reserveDetailTemp = await _context.ReserveDetailsTemp
-            .Where(rdt => rdt.User == user && rdt.Book == reserve)
+            .Where(rdt => rdt.User == user && rdt.Book == reserve && rdt.Customer == customer)
             .FirstOrDefaultAsync();
             if (reserveDetailTemp == null)
             {
                 reserveDetailTemp = new ReserveDetailTemp
                 {
+                    Customer = customer,
                     Book = reserve,
-                    //BookingDate = model.BookDate,
-                    //DeliveryDate = model.DeliveryDate,
                     Quantity = model.Quantity,
                     User = user,
                 };
@@ -60,6 +64,16 @@ namespace WorldLibrary.Web.Repositories
                 _context.ReserveDetailsTemp.Update(reserveDetailTemp);
             }
             await _context.SaveChangesAsync();
+        }
+
+        public Task BookReturnAsync(BookReturnViewModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> CancelReserveAsync(BookReturnViewModel model)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<bool> ConfirmReservAsync(string userName)
@@ -120,6 +134,11 @@ namespace WorldLibrary.Web.Repositories
             reserve.DeliveryDate = model.DeliveryDate;
             _context.Reserves.Update(reserve);
             await _context.SaveChangesAsync();
+        }
+
+        public Task DeliverReserveAsync(DeliveryViewModel model)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task EditReserveDetailTempAsync(AddReserveViewModel model, string username)

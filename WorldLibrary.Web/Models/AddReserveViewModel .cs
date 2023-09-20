@@ -10,6 +10,12 @@ namespace WorldLibrary.Web.Models
     {
         public int Id { get; set; }
 
+        [Display(Name = "Customers")]
+        [Range(1, int.MaxValue, ErrorMessage = "You must select the Customer.")]
+        public int CustomerId { get; set; }
+
+        public IEnumerable<SelectListItem> Customers { get; set; }
+
         [Display(Name = "Books")]
         [Range(1, int.MaxValue, ErrorMessage = "You must select a Book.")]
         public int BookId { get; set; }
@@ -25,6 +31,6 @@ namespace WorldLibrary.Web.Models
         public DateTime DeliveryDate { get; set; }
 
         [Range(0.0001, double.MaxValue, ErrorMessage = "The quantity must be a positive number!")]
-        public int Quantity { get; set; }
+        public double Quantity { get; set; }
     }
 }

@@ -8,9 +8,10 @@ namespace WorldLibrary.Web.Repositories
 {
     public interface IReserveRepository : IGenericRepository<Reserve>
     {
+        Task<IQueryable<Reserve>> GetReserveAsync(string userName);
+
         public IQueryable GetAllWithUsers();
 
-        Task<IQueryable<Reserve>> GetReserveAsync(string userName);
         Task<IQueryable<ReserveDetailTemp>> GetDetailsTempAsync(string userName);
 
         Task AddItemReserveAsync(AddReserveViewModel model, string username);
@@ -18,8 +19,6 @@ namespace WorldLibrary.Web.Repositories
         Task<ReserveDetailTemp> GetReserveDetailTempAsync(int id);
 
         Task EditReserveDetailTempAsync(AddReserveViewModel model, string username);
-
-        Task ModifyReserveDetailTempQuantityAsync(int id, double quantity);
 
         Task DeleteDetailTempAsync(int id);
 
@@ -29,8 +28,12 @@ namespace WorldLibrary.Web.Repositories
 
         Task<bool> ConfirmReservAsync(string userName);
 
-        Task DeliverReserve(DeliveryViewModel model);
+        Task DeliverReserveAsync(DeliveryViewModel model);
 
         Task<Reserve> GetReserveAsync(int id);
+
+        Task BookReturnAsync(BookReturnViewModel model);
+
+        Task<bool> CancelReserveAsync(BookReturnViewModel model);
     }
 }
