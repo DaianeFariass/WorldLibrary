@@ -16,7 +16,7 @@ using WorldLibrary.Web.Repositories;
 
 namespace WorldLibrary.Web.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class BooksController : Controller
     {
         private readonly IBookRepository _bookRepository;
@@ -81,6 +81,7 @@ namespace WorldLibrary.Web.Controllers
 
                 var book = _converterHelper.ToBook(model, path, true);
 
+
                 book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
                 await _bookRepository.CreateAsync(book);
                 return RedirectToAction(nameof(Index));
@@ -115,13 +116,11 @@ namespace WorldLibrary.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(BookViewModel model)
         {
-
             if (ModelState.IsValid)
             {
                 try
                 {
-                    var path = model.ImageUrl;
-
+                    var path = string.Empty;
                     if (model.ImageFile != null && model.ImageFile.Length > 0)
                     {
                         path =  await _imageHelper.UploadImageAsync(model.ImageFile, "books");
@@ -129,7 +128,7 @@ namespace WorldLibrary.Web.Controllers
 
                     var book = _converterHelper.ToBook(model, path, false);
 
-                    book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
+                    book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel");
                     await _bookRepository.UpdateAsync(book);
                 }
                 catch (DbUpdateConcurrencyException)
