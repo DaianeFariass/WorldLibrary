@@ -6,6 +6,7 @@ using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using WorldLibrary.Web.Enums;
 
 namespace WorldLibrary.Web.Data
 {
@@ -74,7 +75,6 @@ namespace WorldLibrary.Web.Data
                 var token = await _userHelper.GenerateEmailConfirmationTokenAsync(userAdmin);
                 await _userHelper.ConfirmEmailAsync(userAdmin, token);
             }
-
             var userEmployee = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
 
             if (userEmployee == null)
@@ -89,6 +89,7 @@ namespace WorldLibrary.Web.Data
                     Address = GenerateRandomAddress(),
                     CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
                     City = _context.Countries.FirstOrDefault().Cities.FirstOrDefault()
+
                 };
 
                 var result = await _userHelper.AddUserAsync(userEmployee, "123456");
@@ -100,16 +101,17 @@ namespace WorldLibrary.Web.Data
                 await _userHelper.AddUserToRoleAsync(userEmployee, "Employee");
                 var token = await _userHelper.GenerateEmailConfirmationTokenAsync(userEmployee);
                 await _userHelper.ConfirmEmailAsync(userEmployee, token);
+
             }
-            var userCustomer = await _userHelper.GetUserByEmailAsync("livania.viegas@cinel.pt");
+            var userCustomer = await _userHelper.GetUserByEmailAsync("maria.avelar@cinel.pt");
             if (userCustomer == null)
             {
                 userCustomer = new User
                 {
-                    FirstName = "Livânia",
-                    LastName = "Viegas",
-                    Email = "livania.viegas@cinel.pt",
-                    UserName = "livania.viegas@cinel.pt",
+                    FirstName = "Maria",
+                    LastName = "Avelar",
+                    Email = "maria.avelar@cinel.pt",
+                    UserName = "maria.avelar@cinel.pt",
                     PhoneNumber = GenerateRandomNumbers(9),
                     Address = GenerateRandomAddress(),
                     CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
@@ -125,10 +127,12 @@ namespace WorldLibrary.Web.Data
                 await _userHelper.AddUserToRoleAsync(userCustomer, "Customer");
                 var token = await _userHelper.GenerateEmailConfirmationTokenAsync(userCustomer);
                 await _userHelper.ConfirmEmailAsync(userCustomer, token);
+
             }
             var isInRoleAdmin = await _userHelper.IsUserInRoleAsync(userAdmin, "Admin");
             var isInRoleEmployee = await _userHelper.IsUserInRoleAsync(userEmployee, "Vet");
             var isInRoleCustomer = await _userHelper.IsUserInRoleAsync(userCustomer, "Customer");
+
 
             if (!isInRoleAdmin)
             {
@@ -248,6 +252,7 @@ namespace WorldLibrary.Web.Data
 
         private void AddBook(string title, string author, string year, string synopsis, string category, User user)
         {
+
             _context.Books.Add(new Book
             {
                 Title = title,
@@ -255,7 +260,9 @@ namespace WorldLibrary.Web.Data
                 Year = year,
                 Synopsis = synopsis,
                 Category = category,
-                User= user
+                Quantity = Convert.ToDouble(GenerateRandomNumbers(1)),
+                StatusBook = StatusBook.Available,
+                User = user
 
             });
 
@@ -265,7 +272,7 @@ namespace WorldLibrary.Web.Data
             string phoneNumber = "";
             for (int i = 0; i < value; i++)
             {
-                phoneNumber += _random.Next(10).ToString();
+                phoneNumber += _random.Next(1, 10).ToString();
             }
             return phoneNumber;
         }
@@ -279,5 +286,6 @@ namespace WorldLibrary.Web.Data
 
             return $" {streetSuffix}: {street}, {number}";
         }
+
     }
 }

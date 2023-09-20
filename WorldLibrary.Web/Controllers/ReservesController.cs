@@ -76,8 +76,8 @@ namespace WorldLibrary.Web.Controllers
             var model = new AddReserveViewModel
             {
                 Books = _bookRepository.GetComboBooks(),
-                BookDate = reserveToEdit.BookingDate,
-                DeliveryDate = reserveToEdit.DeliveryDate,
+                //BookDate = reserveToEdit.BookingDate,
+                //DeliveryDate = reserveToEdit.DeliveryDate,
                 Quantity = Convert.ToInt32(reserveToEdit.Quantity),
             };
 

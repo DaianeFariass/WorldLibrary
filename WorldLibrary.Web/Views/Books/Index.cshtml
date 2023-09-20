@@ -29,9 +29,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Category)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.IsAvailable)
-            </th>
+            </th>*@
             
             <th></th>
         </tr>
@@ -54,9 +54,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Category)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.IsAvailable)
-            </td>
+            </td>*@
             <td>
                     @if (!string.IsNullOrEmpty(item.ImageUrl))
                     {

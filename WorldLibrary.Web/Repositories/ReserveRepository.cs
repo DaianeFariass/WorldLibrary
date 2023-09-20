@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using WorldLibrary.Web.Models;
 using System;
 using WorldLibrary.Web.Helper;
+using Vereyon.Web;
 
 namespace WorldLibrary.Web.Repositories
 {
@@ -14,13 +15,16 @@ namespace WorldLibrary.Web.Repositories
         private readonly DataContext _context;
         private readonly IUserHelper _userHelper;
         private readonly IBookRepository _bookRepository;
-        public ReserveRepository(DataContext context, IUserHelper userHelper,
-            IBookRepository bookRepository) : base(context)
+        private readonly IFlashMessage _flashMessage;
+        public ReserveRepository(DataContext context,
+            IUserHelper userHelper,
+            IBookRepository bookRepository,
+            IFlashMessage flashMessage) : base(context)
         {
             _context = context;
             _userHelper = userHelper;
-            _bookRepository = bookRepository;
-
+            _bookRepository= bookRepository;
+            _flashMessage = flashMessage;
         }
 
         public async Task AddItemReserveAsync(AddReserveViewModel model, string username)
@@ -43,8 +47,8 @@ namespace WorldLibrary.Web.Repositories
                 reserveDetailTemp = new ReserveDetailTemp
                 {
                     Book = reserve,
-                    BookingDate = model.BookDate,
-                    DeliveryDate = model.DeliveryDate,
+                    //BookingDate = model.BookDate,
+                    //DeliveryDate = model.DeliveryDate,
                     Quantity = model.Quantity,
                     User = user,
                 };
@@ -77,8 +81,8 @@ namespace WorldLibrary.Web.Repositories
             var details = reserveTemp.Select(r => new ReserveDetail
             {
                 Book = r.Book,
-                BookingDate = r.BookingDate,
-                DeliveryDate = r.DeliveryDate,
+                //BookingDate = r.BookingDate,
+                //DeliveryDate = r.DeliveryDate,
                 Quantity = r.Quantity,
             }).ToList();
 
@@ -86,7 +90,7 @@ namespace WorldLibrary.Web.Repositories
             {
                 BookingDate = DateTime.Now,
                 User = user,
-                Items = details
+                //Items = details
             };
             await CreateAsync(reserve);
             _context.ReserveDetailsTemp.RemoveRange(reserveTemp);
@@ -135,8 +139,8 @@ namespace WorldLibrary.Web.Repositories
 
             reserveDetailTemp.User= user;
             reserveDetailTemp.Book= book;
-            reserveDetailTemp.BookingDate = model.BookDate;
-            reserveDetailTemp.DeliveryDate= model.DeliveryDate;
+            //reserveDetailTemp.BookingDate = model.BookDate;
+            //reserveDetailTemp.DeliveryDate= model.DeliveryDate;
             reserveDetailTemp.Quantity= model.Quantity;
 
             _context.ReserveDetailsTemp.Update(reserveDetailTemp);
@@ -185,14 +189,13 @@ namespace WorldLibrary.Web.Repositories
             {
                 return _context.Reserves
                     .Include(b => b.User)
-                    .Include(m => m.Items)
-                    .ThenInclude(i => i.Book)
+                    .Include(c => c.Customer)
+                    .Include(i => i.Book)
                     .OrderByDescending(m => m.DeliveryDate);
             }
 
             return _context.Reserves
-                    .Include(m => m.Items)
-                    .ThenInclude(i => i.Book)
+                    .Include(i => i.Book)
                     .Where(r => r.User == user)
                     .OrderByDescending(m => m.DeliveryDate);
         }
