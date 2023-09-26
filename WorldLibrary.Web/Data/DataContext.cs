@@ -16,6 +16,7 @@ namespace WorldLibrary.Web.Data
         public DbSet<Country> Countries { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Forum> Forums { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 

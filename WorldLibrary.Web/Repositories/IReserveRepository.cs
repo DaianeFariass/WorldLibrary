@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using WorldLibrary.Web.Data.Entities;
+using WorldLibrary.Web.Enums;
 using WorldLibrary.Web.Models;
 
 namespace WorldLibrary.Web.Repositories
@@ -38,6 +39,7 @@ namespace WorldLibrary.Web.Repositories
 
         Task<Reserve> EditReserveAsync(ReserveViewModel model, string username);
         Task<Reserve> GetReserveByIdAsync(int id);
+        Task SendReserveNotification(Reserve reserve, string username, NotificationType notificationType);
 
     }
 }

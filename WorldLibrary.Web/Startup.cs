@@ -78,6 +78,7 @@ namespace WorldLibrary.Web
             services.AddScoped<IPhysicalLibraryRepository, PhysicalLibraryRepository>();
             services.AddScoped<IReserveRepository, ReserveRepository>();
             services.AddScoped<ICountryRepository, CountryRepository>();
+            services.AddScoped<INotificationRepository, NotificationRepository>();
 
             services.AddScoped<IImageHelper, ImageHelper>();
             services.AddScoped<IConverterHelper, ConverterHelper>();

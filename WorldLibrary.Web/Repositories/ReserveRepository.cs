@@ -169,7 +169,7 @@ namespace WorldLibrary.Web.Repositories
             var book = _context.Books.FindAsync(reserve.Book.Id);
             book.Result.Quantity += reserve.Quantity;
             reserve.StatusReserve = StatusReserve.Cancelled;
-            //await SendReserveNotification(reserve, user.UserName, NotificationType.Cancel);
+            await SendReserveNotification(reserve, user.UserName, NotificationType.Cancel);
             _context.Reserves.Update(reserve);
             _context.Books.Update(book.Result);
             await _context.SaveChangesAsync();
@@ -435,6 +435,35 @@ namespace WorldLibrary.Web.Repositories
         {
             return await _context.ReserveDetailsTemp.FindAsync(id);
         }
-               
+
+        public async Task SendReserveNotification(Reserve reserve, string username, NotificationType notificationType)
+        {
+            var user = await _userHelper.GetUserByEmailAsync(username);
+            if (user == null)
+            {
+                return;
+
+            }
+            var hasCustomerRole = await _userHelper.IsUserInRoleAsync(user, "Customer");
+            var hasEmployeeRole = await _userHelper.IsUserInRoleAsync(user, "Employee");
+
+
+            if (hasCustomerRole == false && hasEmployeeRole == false)
+            {
+                return;
+            }
+
+
+            var notification = new Notification
+            {
+                Reserve = reserve,
+                NotificationType= notificationType,
+
+            };
+
+            _context.Notifications.Add(notification);
+
+            await _context.SaveChangesAsync();
+        }
     }
 }
