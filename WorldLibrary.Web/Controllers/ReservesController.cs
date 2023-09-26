@@ -18,18 +18,21 @@ namespace WorldLibrary.Web.Controllers
         private readonly IBookRepository _bookRepository;
         private readonly ICustomerRepository _customerRepository;
         private readonly IFlashMessage _flashMessage;
+        private readonly IMailHelper _mailHelper;
         private readonly DataContext _context;
 
         public ReservesController(IReserveRepository reserveRepository,
             IBookRepository bookRepository,
             ICustomerRepository customerRepository,
             IFlashMessage flashMessage,
+            IMailHelper mailHelper,
             DataContext context)
         {
             _reserveRepository = reserveRepository;
             _bookRepository = bookRepository;
             _customerRepository = customerRepository;
             _flashMessage = flashMessage;
+            _mailHelper = mailHelper;
             _context = context;
         }
 
@@ -207,6 +210,7 @@ namespace WorldLibrary.Web.Controllers
             {
                 try
                 {
+
                     var book = _context.Books.FindAsync(model.BookId);
                     if (model.Quantity > book.Result.Quantity)
                     {
@@ -277,7 +281,7 @@ namespace WorldLibrary.Web.Controllers
                 catch (DbUpdateConcurrencyException)
                 {
 
-                    if (!await _reserveRepository.ExistAsync(model.BookId))
+                    if (!await _reserveRepository.ExistAsync(model.Id))
                     {
                         return new NotFoundViewResult("ReserveNotFound");
                     }
@@ -304,12 +308,21 @@ namespace WorldLibrary.Web.Controllers
         public async Task<IActionResult> ConfirmReserve()
         {
             var response = await _reserveRepository.ConfirmReservAsync(this.User.Identity.Name);
-            if (response)
+
+            if (response != null)
             {
 
-                return RedirectToAction("Index");
+                _mailHelper.SendEmail(response.Customer.Email,
+                  "Reserve Confirmed", $"<h1>Book World Library</h1>" +
+              $"Dear {response.Customer.FullName}, " +
+                    $"Follow Your Reserve Details</br></br>" +
+                    $"Book:  {response.Book.Title}</br>" +
+                    $"Quantity:  {response.Quantity}</br>" +
+                    $"Date: {response.BookingDate.Date}</br>" +
+                    $"Status: {response.StatusReserve}</br>");
+
             }
-            return RedirectToAction("Create");
+            return RedirectToAction("Index");
         }
         public async Task<IActionResult> Deliver(int? id)
         {
@@ -332,6 +345,101 @@ namespace WorldLibrary.Web.Controllers
             };
 
 
+            return View(model);
+        }
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+
+                return new NotFoundViewResult("ReserveNotFound");
+
+            }
+            var reserveToEdit = await _reserveRepository.GetReserveByIdAsync(id.Value);
+
+            if (reserveToEdit == null)
+            {
+                return new NotFoundViewResult("ReserveNotFound");
+
+            }
+            var model = new ReserveViewModel
+            {
+                Id = reserveToEdit.Id,
+                Customers = _customerRepository.GetComboCustomers(),
+                Books = _bookRepository.GetComboBooks(),
+                Quantity = reserveToEdit.Quantity,
+
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(ReserveViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var reserveToEdit = await _reserveRepository.GetReserveByIdAsync(model.Id);
+                    var book = _context.Books.FindAsync(model.BookId);
+                    if (model.Quantity > book.Result.Quantity)
+                    {
+                        _flashMessage.Danger("Quantity Invalid!");
+
+                        model = new ReserveViewModel
+                        {
+                            Id = reserveToEdit.Id,
+                            Customers = _customerRepository.GetComboCustomers(),
+                            Books = _bookRepository.GetComboBooks(),
+                            Quantity = reserveToEdit.Quantity,
+                            BookingDate = reserveToEdit.BookingDate,
+
+                        };
+                        return View(model);
+                    }
+                    if (model.Quantity > 3)
+                    {
+                        _flashMessage.Danger("Quantity Invalid! Only 3 books per customer");
+
+                        model = new ReserveViewModel
+                        {
+                            Id = reserveToEdit.Id,
+                            Customers = _customerRepository.GetComboCustomers(),
+                            Books = _bookRepository.GetComboBooks(),
+                            Quantity = reserveToEdit.Quantity,
+                            BookingDate = reserveToEdit.BookingDate,
+
+                        };
+                        return View(model);
+                    }
+
+
+                    var response = await _reserveRepository.EditReserveAsync(model, this.User.Identity.Name);
+                    if (response != null)
+                    {
+                        _mailHelper.SendEmail(response.Customer.Email,
+                         "Appointment Modified", $"<h1>Book World Library</h1>" +
+                          $"Dear {response.Customer.FullName}, " +
+                          $"Your reserve was modified! Follow the new details...</br></br>" +
+                          $"Book:  {response.Book.Title}</br>" +
+                          $"Quantity:  {response.Quantity}</br>" +
+                          $"Date: {response.BookingDate.Date}</br>" +
+                          $"Status: {response.StatusReserve}</br>");
+
+
+                    }
+
+
+
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                return RedirectToAction("Index");
+            }
             return View(model);
         }
         [HttpPost]
@@ -453,44 +561,36 @@ namespace WorldLibrary.Web.Controllers
             return View();
 
         }
-        public async Task<IActionResult> Cancel(int id)
+        public async Task<IActionResult> Cancel(int id, string username)
         {
-            var reserve = await _reserveRepository.GetReserveAsync(id);
-            if (reserve.DeliveryDate != null)
+            var response = await _reserveRepository.CancelReserveAsync(id, this.User.Identity.Name);
+            if (response == null)
+            {
+                _flashMessage.Warning("It is not possible to cancel! The reserve is already cancelled...");
+                return RedirectToAction("index");
+            }
+            if (response.DeliveryDate != null)
             {
                 _flashMessage.Warning("It is not possible to cancel! The book is already deliveryed...");
                 return RedirectToAction("index");
             }
-            var model = new BookReturnViewModel
+            else
             {
-                Books = _bookRepository.GetComboBooks(),
-            };
-            return View(model);
-
-        }
-        [HttpPost]
-        public async Task<IActionResult> Cancel(BookReturnViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var reserve = await _reserveRepository.GetReserveAsync(model.Id);
-                if (reserve.DeliveryDate != null)
-                {
-                    _flashMessage.Warning("It is not possible to cancel! The book is already deliveryed...");
-                    return RedirectToAction("index");
-                }
-                var response = await _reserveRepository.CancelReserveAsync(model);
-                if (response)
-                {
-                    return RedirectToAction("index");
-                }
+                _mailHelper.SendEmail(response.Customer.Email,
+                "Appointment Cancelled", $"<h1>Book World Library</h1>" +
+                  $"Dear {response.Customer.FullName}, " +
+                  $"Your reserve was cancelled! Follow the details...</br></br>" +
+                  $"Book:  {response.Book.Title}</br>" +
+                  $"Quantity:  {response.Quantity}</br>" +
+                  $"Date: {response.BookingDate.Date}</br>" +
+                  $"Status: {response.StatusReserve}</br>");
 
 
             }
-
-            return RedirectToAction("index");
+            return RedirectToAction("Index");
 
         }
+        
         public IActionResult ReserveNotFound()
         {
 

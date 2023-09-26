@@ -26,7 +26,7 @@ namespace WorldLibrary.Web.Repositories
 
         DateTime GetDeliveryDate();
 
-        Task<bool> ConfirmReservAsync(string userName);
+        Task<Reserve> ConfirmReservAsync(string userName);
 
         Task DeliverReserveAsync(DeliveryViewModel model);
 
@@ -34,6 +34,10 @@ namespace WorldLibrary.Web.Repositories
 
         Task BookReturnAsync(BookReturnViewModel model);
 
-        Task<bool> CancelReserveAsync(BookReturnViewModel model);
+        Task<Reserve> CancelReserveAsync(int id, string username);
+
+        Task<Reserve> EditReserveAsync(ReserveViewModel model, string username);
+        Task<Reserve> GetReserveByIdAsync(int id);
+
     }
 }

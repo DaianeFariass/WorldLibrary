@@ -11,5 +11,6 @@ namespace WorldLibrary.Web.Helper
         BookViewModel ToBookViewModel(Book book);
         EmployeeViewModel ToEmployeeViewModel(Employee employee);
         PhysicalLibraryViewModel ToPhysicalLibraryViewModel(PhysicalLibrary physicalLibrary);
+        Reserve ToReserve(ReserveViewModel model, bool isNew);
     }
 }

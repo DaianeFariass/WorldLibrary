@@ -17,15 +17,18 @@ namespace WorldLibrary.Web.Repositories
         private readonly IUserHelper _userHelper;
         private readonly IBookRepository _bookRepository;
         private readonly IFlashMessage _flashMessage;
+        private readonly IConverterHelper _converterHelper;
         public ReserveRepository(DataContext context,
             IUserHelper userHelper,
             IBookRepository bookRepository,
-            IFlashMessage flashMessage) : base(context)
+            IFlashMessage flashMessage,
+            IConverterHelper converterHelper) : base(context)
         {
             _context = context;
             _userHelper = userHelper;
             _bookRepository= bookRepository;
             _flashMessage = flashMessage;
+            _converterHelper=converterHelper;
         }
 
         public async Task AddItemReserveAsync(AddReserveViewModel model, string username)
@@ -130,12 +133,56 @@ namespace WorldLibrary.Web.Repositories
             return true;
         }
 
-        public async Task<bool> ConfirmReservAsync(string userName)
+        public async Task<Reserve> CancelReserveAsync(int id, string username)
+        {
+            var reserve = await _context.Reserves.FindAsync(id);
+            if (reserve == null)
+            {
+                return null;
+
+            }
+            if (reserve.StatusReserve == StatusReserve.Cancelled)
+            {
+                return null;
+            }
+            var user = await _userHelper.GetUserByEmailAsync(username);
+            if (user == null)
+            {
+                return null;
+            }
+
+            var customers = _context.Reserves
+                .Include(r => r.Book)
+                .Include(r => r.User)
+                .Include(r => r.Customer)
+                .ToList();
+
+            var details = customers.Select(r => new ReserveViewModel
+            {
+                Book = reserve.Book,
+                User = reserve.User,
+                Customer = reserve.Customer,
+                Quantity= reserve.Quantity,
+                StatusReserve = StatusReserve.Cancelled
+
+            });
+            var book = _context.Books.FindAsync(reserve.Book.Id);
+            book.Result.Quantity += reserve.Quantity;
+            reserve.StatusReserve = StatusReserve.Cancelled;
+            //await SendReserveNotification(reserve, user.UserName, NotificationType.Cancel);
+            _context.Reserves.Update(reserve);
+            _context.Books.Update(book.Result);
+            await _context.SaveChangesAsync();
+
+            return reserve;
+        }
+
+        public async Task<Reserve> ConfirmReservAsync(string userName)
         {
             var user = await _userHelper.GetUserByEmailAsync(userName);
             if (user == null)
             {
-                return false;
+                return null;
             }
             var reserveTemp = await _context.ReserveDetailsTemp
                 .Include(r => r.Book)
@@ -144,7 +191,7 @@ namespace WorldLibrary.Web.Repositories
                 .ToListAsync();
             if (reserveTemp == null || reserveTemp.Count == 0)
             {
-                return false;
+                return null;
             }
 
             var details = reserveTemp.Select(r => new ReserveDetail
@@ -153,27 +200,28 @@ namespace WorldLibrary.Web.Repositories
                 Book = r.Book,
                 Quantity = r.Quantity,
             }).ToList();
-            foreach (ReserveDetail id in details)
+            var reserve = new Reserve();
+            foreach (ReserveDetail reserveDetail in details)
             {
-                var reserve = new Reserve
+                reserve = new Reserve
                 {
-                    Customer = id.Customer,
-                    Book = id.Book,
+                    Customer = reserveDetail.Customer,
+                    Book = reserveDetail.Book,
                     BookingDate = DateTime.Now,
                     User = user,
-                    Quantity = id.Quantity,
+                    Quantity = reserveDetail.Quantity,
                     StatusReserve = StatusReserve.Active
 
 
                 };
                 await CreateAsync(reserve);
-
+                //await SendReserveNotification(reserve, user.UserName, NotificationType.Create);
 
             }
-
             _context.ReserveDetailsTemp.RemoveRange(reserveTemp);
             await _context.SaveChangesAsync();
-            return true;
+
+            return reserve;
         }
 
         public async Task DeleteDetailTempAsync(int id)
@@ -203,6 +251,91 @@ namespace WorldLibrary.Web.Repositories
 
             _context.Reserves.Update(reserve);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<Reserve> EditReserveAsync(ReserveViewModel model, string username)
+        {
+            _converterHelper.ToReserve(model, false);
+            var user = await _userHelper.GetUserByEmailAsync(username);
+            if (user == null)
+            {
+                throw new NotImplementedException();
+
+            }
+            var book = await _context.Books.FindAsync(model.BookId);
+            if (book == null)
+            {
+                throw new NotImplementedException();
+            }
+            var reserve = _context.Reserves.FindAsync(model.Id);
+            double sub;
+
+            if (model.Quantity < reserve.Result.Quantity)
+            {
+                sub = reserve.Result.Quantity - model.Quantity;
+                book.Quantity += sub;
+                book.StatusBook = StatusBook.Available;
+
+
+            }
+            if (model.Quantity > reserve.Result.Quantity)
+            {
+                sub = model.Quantity - reserve.Result.Quantity;
+                book.Quantity -= sub;
+                if (book.Quantity == 0)
+                {
+                    book.StatusBook = StatusBook.Unvailable;
+
+                }
+                else
+                {
+                    book.StatusBook = StatusBook.Available;
+
+
+                }
+
+            }
+            if (model.Quantity == book.Quantity)
+            {
+                book.Quantity -= model.Quantity;
+                book.StatusBook = StatusBook.Unvailable;
+            }
+
+            var customer = await _context.Customers.FindAsync(model.CustomerId);
+            if (customer == null)
+            {
+                throw new NotImplementedException();
+            }
+            var reserves = _context.Reserves
+                .Include(r => r.Book)
+                .Include(r => r.Customer)
+                .Include(r => r.User)
+                .Where(r => r.User == user)
+                .ToList();
+
+            var details = reserves.Select(r => new ReserveViewModel
+            {
+                Id = r.Id,
+                Book = book,
+                Customer = customer,
+                User= user
+
+            });
+
+            reserve.Result.Id = model.Id;
+            reserve.Result.User= user;
+            reserve.Result.Book= book;
+            reserve.Result.Customer= customer;
+            reserve.Result.Quantity = model.Quantity;
+            reserve.Result.BookingDate = DateTime.Now.Date;
+            reserve.Result.StatusReserve = StatusReserve.Active;
+
+
+            _context.Reserves.Update(reserve.Result);
+            _context.Books.Update(book);
+            //await SendReserveNotification(reserve.Result, user.UserName, NotificationType.Edit);
+            await _context.SaveChangesAsync();
+            return reserve.Result;
         }
 
         public async Task EditReserveDetailTempAsync(AddReserveViewModel model, string username)
@@ -289,6 +422,11 @@ namespace WorldLibrary.Web.Repositories
         }
 
         public async Task<Reserve> GetReserveAsync(int id)
+        {
+            return await _context.Reserves.FindAsync(id);
+        }
+
+        public async Task<Reserve> GetReserveByIdAsync(int id)
         {
             return await _context.Reserves.FindAsync(id);
         }

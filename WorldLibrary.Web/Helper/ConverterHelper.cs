@@ -1,4 +1,5 @@
-﻿using WorldLibrary.Web.Data.Entities;
+﻿using System;
+using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Models;
 
 namespace WorldLibrary.Web.Helper
@@ -92,6 +93,20 @@ namespace WorldLibrary.Web.Helper
                 PhoneNumber=physicalLibrary.PhoneNumber,
                 ImageUrl=physicalLibrary.ImageUrl,
                 User=physicalLibrary.User,
+            };
+        }
+
+        public Reserve ToReserve(ReserveViewModel model, bool isNew)
+        {
+            return new Reserve
+            {
+                Id = isNew ? 0 : model.Id,
+                User= model.User,
+                Book = model.Book,
+                Quantity= model.Quantity,
+                BookingDate = DateTime.Now.Date,
+
+
             };
         }
     }
