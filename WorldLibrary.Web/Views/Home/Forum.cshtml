@@ -1,0 +1,51 @@
+﻿@model List<WorldLibrary.Web.Data.Entities.Forum>
+
+
+@{
+    ViewData["Title"] = "Forum";
+}
+
+    <h1>Forum</h1>
+    <h4>Leave your comment or a suggestion</h4>
+    <body>
+        <div>
+            <aside id="sidebar">
+                <div class="dark">
+                    <form class="forum" method="post" action="/Home/Forum">
+
+                        <div>
+                            <label for="name">Name:</label><br />
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label><br />
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div>
+                            <label for="menssage">Menssage:</label><br />
+                            <textarea name="menssage" id="mensagem" required></textarea>
+                        </div>
+                        <div>
+                            <label for="assessment">Assessment (1 a 5 estrelas):</label>
+                            <input type="number" name="assessment" id="assessment" min="1" max="5" required>
+                        </div>
+                        <br />
+                        <button class="button_1" type="submit">Send Message</button>
+
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </body>
+    <div>
+        <br />
+        <br />
+        @foreach (var forum in Model)
+        {
+            <div>
+                <p>Name: @forum.Name</p>
+                <p>Menssage: @forum.Menssage</p>
+                <p>Assessment: @forum.Assessment</p>
+            </div>
+        }
+    </div>

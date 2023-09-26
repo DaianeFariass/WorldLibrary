@@ -15,6 +15,7 @@ namespace WorldLibrary.Web.Data
         public DbSet<ReserveDetailTemp> ReserveDetailsTemp { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<City> Cities { get; set; }
+        public DbSet<Forum> Forums { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
