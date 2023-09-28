@@ -1,5 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WorldLibrary.Web.Data.Entities
 {
@@ -21,21 +23,11 @@ namespace WorldLibrary.Web.Data.Entities
         public string PhoneNumber { get; set; }
 
         [Display(Name = "Image")]
-        public string ImageUrl { get; set; }
-
+        public Guid ImageId { get; set; }
         public User User { get; set; }
 
-        public string ImageFullPath
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(ImageUrl))
-                {
-                    return null;
-                }
-
-                return $"https://localhost:44328{ImageUrl.Substring(1)}";
-            }
-        }
+        public string ImageFullPath => ImageId == Guid.Empty ?
+        $"https://worldlibraryweb.blob.core.windows.net/physics/noimage.png"
+        : $"https://worldlibraryweb.blob.core.windows.net/physics/{ImageId}";
     }
 }

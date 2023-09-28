@@ -65,7 +65,7 @@ namespace WorldLibrary.Web
 
             services.AddDbContext<DataContext>(cfg =>
             {
-                cfg.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection"));
+                cfg.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection2"));
             });
 
             services.AddFlashMessage();
@@ -84,6 +84,7 @@ namespace WorldLibrary.Web
             services.AddScoped<IConverterHelper, ConverterHelper>();
             services.AddScoped<IUserHelper, UserHelper>();
             services.AddScoped<IMailHelper, MailHelper>();
+            services.AddScoped<IBlobHelper, BlobHelper>();
 
             services.ConfigureApplicationCookie(options =>
             {

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 using WorldLibrary.Web.Enums;
 
@@ -30,21 +31,14 @@ namespace WorldLibrary.Web.Data.Entities
         public StatusBook? StatusBook { get; set; }
 
         [Display(Name = "Image")]
-        public string ImageUrl { get; set; }
+        public Guid ImageId { get; set; }
 
         public User User { get; set; }
 
-        public string ImageFullPath
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(ImageUrl))
-                {
-                    return null;
-                }
+        public string ImageFullPath => ImageId == Guid.Empty ?
+        $"https://worldlibraryweb.blob.core.windows.net/books/noimage.png"
+        : $"https://worldlibraryweb.blob.core.windows.net/books/{ImageId}";
 
-                return $"https://localhost:44338{ImageUrl.Substring(1)}";
-            }
-        }
+
     }
 }

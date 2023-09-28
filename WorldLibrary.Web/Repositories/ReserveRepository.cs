@@ -370,7 +370,10 @@ namespace WorldLibrary.Web.Repositories
 
         public IQueryable GetAllWithUsers()
         {
-            return _context.PhysicalLibraries.Include(p => p.User);
+            return _context.Reserves
+               .Include(r => r.User)
+               .Include(b => b.Book)
+               .Include(c => c.Customer);
         }
 
         public DateTime GetBookingDate()

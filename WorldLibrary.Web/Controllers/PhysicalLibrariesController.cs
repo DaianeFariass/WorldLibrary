@@ -18,18 +18,18 @@ namespace WorldLibrary.Web.Controllers
     {
         private readonly IPhysicalLibraryRepository _physicalLibraryRepository;
         private readonly IUserHelper _userHelper;
-        private readonly IImageHelper _imageHelper;
+        private readonly IBlobHelper _blobHelper;
         private readonly IConverterHelper _converterHelper;
 
         public PhysicalLibrariesController(IPhysicalLibraryRepository physicalLibraryRepository,
             IUserHelper userHelper,
-            IImageHelper imageHelper,
+            IBlobHelper blobHelper,
             IConverterHelper converterHelper)
         {
 
             _physicalLibraryRepository = physicalLibraryRepository;
             _userHelper = userHelper;
-            _imageHelper = imageHelper;
+           _blobHelper = blobHelper;
             _converterHelper=converterHelper;
         }
 
@@ -71,13 +71,14 @@ namespace WorldLibrary.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var path = string.Empty;
+                Guid imageid = Guid.Empty;
+
                 if (model.ImageFile != null && model.ImageFile.Length > 0)
                 {
-                    path =  await _imageHelper.UploadImageAsync(model.ImageFile, "libraries");
+                    imageid =  await _blobHelper.UploadBlobAsync(model.ImageFile, "libraries");
                 }
 
-                var physicalLibrary = _converterHelper.ToLibrary(model, path, true);
+                var physicalLibrary = _converterHelper.ToLibrary(model, imageid, true);
 
                 physicalLibrary.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
                 await _physicalLibraryRepository.CreateAsync(physicalLibrary);
@@ -119,13 +120,14 @@ namespace WorldLibrary.Web.Controllers
             {
                 try
                 {
-                    var path = model.ImageUrl;
+                    Guid imageid = Guid.Empty;
+
                     if (model.ImageFile != null && model.ImageFile.Length > 0)
                     {
-                        path =  await _imageHelper.UploadImageAsync(model.ImageFile, "libraries");
+                        imageid =  await _blobHelper.UploadBlobAsync(model.ImageFile, "libraries");
                     }
 
-                    var physicalLibrary = _converterHelper.ToLibrary(model, path, false);
+                    var physicalLibrary = _converterHelper.ToLibrary(model, imageid, false);
 
                     physicalLibrary.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
                     await _physicalLibraryRepository.UpdateAsync(physicalLibrary);

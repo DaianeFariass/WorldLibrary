@@ -21,17 +21,17 @@ namespace WorldLibrary.Web.Controllers
     {
         private readonly IBookRepository _bookRepository;
         private readonly IUserHelper _userHelper;
-        private readonly IImageHelper _imageHelper;
+        private readonly IBlobHelper _blobHelper;
         private readonly IConverterHelper _converterHelper;
 
         public BooksController(IBookRepository bookRepository,
             IUserHelper userHelper,
-            IImageHelper imageHelper,
+            IBlobHelper blobHelper,
             IConverterHelper converterHelper)
         {
             _bookRepository = bookRepository;
             _userHelper = userHelper;
-            _imageHelper=imageHelper;
+            _blobHelper= blobHelper;
             _converterHelper=converterHelper;
         }
 
@@ -73,13 +73,14 @@ namespace WorldLibrary.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var path = string.Empty;
+                Guid imageid= Guid.Empty;
+
                 if (model.ImageFile != null && model.ImageFile.Length > 0)
                 {
-                    path =  await _imageHelper.UploadImageAsync(model.ImageFile, "books");
+                    imageid =  await _blobHelper.UploadBlobAsync(model.ImageFile, "books");
                 }
 
-                var book = _converterHelper.ToBook(model, path, true);
+                var book = _converterHelper.ToBook(model, imageid, true);
 
 
                 book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
@@ -120,13 +121,14 @@ namespace WorldLibrary.Web.Controllers
             {
                 try
                 {
-                    var path = string.Empty;
+                    Guid imageId = model.ImageId;
+
                     if (model.ImageFile != null && model.ImageFile.Length > 0)
                     {
-                        path =  await _imageHelper.UploadImageAsync(model.ImageFile, "books");
+                        imageId= await _blobHelper.UploadBlobAsync(model.ImageFile, "books");
                     }
 
-                    var book = _converterHelper.ToBook(model, path, false);
+                    var book = _converterHelper.ToBook(model, imageId, false);
 
                     book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel");
                     await _bookRepository.UpdateAsync(book);

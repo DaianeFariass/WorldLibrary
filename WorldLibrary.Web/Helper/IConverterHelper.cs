@@ -1,13 +1,15 @@
-﻿using WorldLibrary.Web.Data.Entities;
+﻿using System;
+using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Models;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WorldLibrary.Web.Helper
 {
     public interface IConverterHelper
     {
-        Book ToBook(BookViewModel model, string path, bool isNew);
-        Employee ToEmployee(EmployeeViewModel model, string path, bool isNew);
-        PhysicalLibrary ToLibrary(PhysicalLibraryViewModel model, string path, bool isNew);
+        Book ToBook(BookViewModel model, Guid imageId, bool isNew);
+        Employee ToEmployee(EmployeeViewModel model, Guid imageId, bool isNew);
+        PhysicalLibrary ToLibrary(PhysicalLibraryViewModel model, Guid imageId, bool isNew);
         BookViewModel ToBookViewModel(Book book);
         EmployeeViewModel ToEmployeeViewModel(Employee employee);
         PhysicalLibraryViewModel ToPhysicalLibraryViewModel(PhysicalLibrary physicalLibrary);

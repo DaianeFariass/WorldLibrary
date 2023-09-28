@@ -41,9 +41,7 @@
                             <th>
                                 @Html.DisplayNameFor(model => model.JobPosition)
                             </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.ImageUrl)
-                            </th>
+                            
                             <th></th>
                         </tr>
                     </thead>
@@ -72,9 +70,9 @@
                                     @Html.DisplayFor(modelItem => item.JobPosition)
                                 </td>
                                 <td>
-                                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                    @if (!string.IsNullOrEmpty(item.ImageFullPath))
                                     {
-                                        <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto">
+                                        <img src="@Url.Content(item.ImageFullPath)" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto">
                                     }
                                 </td>
                                 <td>

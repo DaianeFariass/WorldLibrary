@@ -6,17 +6,19 @@ namespace WorldLibrary.Web.Helper
 {
     public class ConverterHelper : IConverterHelper
     {
-        public Book ToBook(BookViewModel model, string path, bool isNew)
+        public Book ToBook(BookViewModel model, Guid imageid, bool isNew)
         {
             return new Book
             {
                 Id = isNew ? 0 : model.Id,
-                ImageUrl = path,
+                ImageId = imageid,
                 Title = model.Title,
                 Author = model.Author,
                 Category=model.Category,
                 Synopsis=model.Synopsis,
                 Year=model.Year,
+                StatusBook=model.StatusBook,
+                Quantity=model.Quantity,
                 User=model.User,
             };
         }
@@ -29,19 +31,21 @@ namespace WorldLibrary.Web.Helper
                 Title = book.Title,
                 Author=book.Author,
                 Category=book.Category,
-                ImageUrl=book.ImageUrl,
+                ImageId=book.ImageId,
                 Synopsis=book.Synopsis,
                 Year=book.Year,
+                StatusBook=book.StatusBook,
+                Quantity = book.Quantity,
                 User = book.User,
             };
         }
 
-        public Employee ToEmployee(EmployeeViewModel model, string path, bool isNew)
+        public Employee ToEmployee(EmployeeViewModel model, Guid imageid, bool isNew)
         {
             return new Employee
             {
                 Id = isNew ? 0 : model.Id,
-                ImageUrl = path,
+                ImageId = imageid,
                 Address=model.Address,
                 CellPhone=model.CellPhone,
                 Document=model.Document,
@@ -62,18 +66,18 @@ namespace WorldLibrary.Web.Helper
                 CellPhone=employee.CellPhone,
                 Document=employee.Document,
                 Email=employee.Email,
-                ImageUrl=employee.ImageUrl,
+                ImageId=employee.ImageId,
                 JobPosition=employee.JobPosition,
                 User = employee.User,
             };
         }
 
-        public PhysicalLibrary ToLibrary(PhysicalLibraryViewModel model, string path, bool isNew)
+        public PhysicalLibrary ToLibrary(PhysicalLibraryViewModel model, Guid imageid, bool isNew)
         {
             return new PhysicalLibrary
             {
                 Id = isNew ? 0 : model.Id,
-                ImageUrl= path,
+                ImageId= imageid,
                 Country =model.Country,
                 Email=model.Email,
                 Name= model.Name,
@@ -91,7 +95,7 @@ namespace WorldLibrary.Web.Helper
                 Name=physicalLibrary.Name,
                 Email=physicalLibrary.Email,
                 PhoneNumber=physicalLibrary.PhoneNumber,
-                ImageUrl=physicalLibrary.ImageUrl,
+                ImageId=physicalLibrary.ImageId,
                 User=physicalLibrary.User,
             };
         }
