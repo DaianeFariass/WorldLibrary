@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WorldLibrary.Web.Data;
 
 namespace WorldLibrary.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20231001100246_AddDateToForum")]
+    partial class AddDateToForum
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -249,9 +251,6 @@ namespace WorldLibrary.Web.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("BookId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Document")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -273,8 +272,6 @@ namespace WorldLibrary.Web.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BookId");
 
                     b.HasIndex("UserId");
 
@@ -662,10 +659,6 @@ namespace WorldLibrary.Web.Migrations
 
             modelBuilder.Entity("WorldLibrary.Web.Data.Entities.Customer", b =>
                 {
-                    b.HasOne("WorldLibrary.Web.Data.Entities.Book", null)
-                        .WithMany("Customers")
-                        .HasForeignKey("BookId");
-
                     b.HasOne("WorldLibrary.Web.Data.Entities.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
@@ -766,11 +759,6 @@ namespace WorldLibrary.Web.Migrations
                         .HasForeignKey("ReserveId");
 
                     b.Navigation("Reserve");
-                });
-
-            modelBuilder.Entity("WorldLibrary.Web.Data.Entities.Book", b =>
-                {
-                    b.Navigation("Customers");
                 });
 
             modelBuilder.Entity("WorldLibrary.Web.Data.Entities.Country", b =>

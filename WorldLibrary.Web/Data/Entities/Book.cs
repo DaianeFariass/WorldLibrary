@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 using WorldLibrary.Web.Enums;
@@ -23,6 +24,8 @@ namespace WorldLibrary.Web.Data.Entities
 
         [Required]
         public string Category { get; set; }
+
+        public List<Customer> Customers { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:N2}")]
         public double Quantity { get; set; }

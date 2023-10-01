@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WorldLibrary.Web.Data;
 using WorldLibrary.Web.Data.Entities;
+using WorldLibrary.Web.Enums;
 using WorldLibrary.Web.Helper;
 using WorldLibrary.Web.Models;
 using WorldLibrary.Web.Repositories;
@@ -23,16 +24,19 @@ namespace WorldLibrary.Web.Controllers
         private readonly IUserHelper _userHelper;
         private readonly IBlobHelper _blobHelper;
         private readonly IConverterHelper _converterHelper;
+        private readonly IMailHelper _mailHelper;
 
         public BooksController(IBookRepository bookRepository,
             IUserHelper userHelper,
             IBlobHelper blobHelper,
-            IConverterHelper converterHelper)
+            IConverterHelper converterHelper,
+            IMailHelper mailHelper)
         {
             _bookRepository = bookRepository;
             _userHelper = userHelper;
             _blobHelper= blobHelper;
             _converterHelper=converterHelper;
+            _mailHelper=mailHelper;
         }
 
         // GET: Books
@@ -121,17 +125,30 @@ namespace WorldLibrary.Web.Controllers
             {
                 try
                 {
-                    Guid imageId = model.ImageId;
+                    //Guid imageId = model.ImageId;
 
-                    if (model.ImageFile != null && model.ImageFile.Length > 0)
+                    //if (model.ImageFile != null && model.ImageFile.Length > 0)
+                    //{
+                    //    imageId= await _blobHelper.UploadBlobAsync(model.ImageFile, "books");
+                    //}
+                    //var book = _converterHelper.ToBook(model, imageId, false);
+
+                    //book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel");
+                    //await _bookRepository.UpdateAsync(book);
+                    if (model.Quantity != null && model.StatusBook == StatusBook.Available)
                     {
-                        imageId= await _blobHelper.UploadBlobAsync(model.ImageFile, "books");
+                        var response = await _bookRepository.EditBookAsync(model, this.User.Identity.Name);
+
+                        foreach (var customer in model.Customers)
+                        {
+                            _mailHelper.SendEmail(customer.Email,
+                             "Book Available", $"<h1>Book World Library</h1>" +
+                              $"Dear {customer.FullName}, " +
+                              $"The book {response.Title} is now available again</br></br>"+
+                              "<p>To make a reservation, visit our website</p>");
+                        }
+
                     }
-
-                    var book = _converterHelper.ToBook(model, imageId, false);
-
-                    book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel");
-                    await _bookRepository.UpdateAsync(book);
                 }
                 catch (DbUpdateConcurrencyException)
                 {

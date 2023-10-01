@@ -1,4 +1,7 @@
-﻿namespace WorldLibrary.Web.Data.Entities
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace WorldLibrary.Web.Data.Entities
 {
     public class Forum : IEntity
     {
@@ -7,5 +10,8 @@
         public string Email { get; set; }
         public string Menssage { get; set; }
         public int Assessment { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy }", ApplyFormatInEditMode = false)]
+        public DateTime Date { get; set; }
     }
 }

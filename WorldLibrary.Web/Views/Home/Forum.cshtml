@@ -40,12 +40,27 @@
     <div>
         <br />
         <br />
-        @foreach (var forum in Model)
-        {
-            <div>
-                <p>Name: @forum.Name</p>
-                <p>Menssage: @forum.Menssage</p>
-                <p>Assessment: @forum.Assessment</p>
-            </div>
-        }
+    <table class="table">
+        <tbody>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Message</th>
+                <th>Assessment</th>
+                <th>Date</th>
+
+            </tr>
+        </thead>
+            @foreach (var forum in Model)
+            {
+            <tr>
+                <td>Name: @forum.Name</td>
+                <td>Message: @forum.Menssage</td>
+                <td>Assessment: @forum.Assessment</td>
+                <td>Date:@forum.Date</td>
+            </tr>
+
+            }
+        </tbody>
+    </table>
     </div>

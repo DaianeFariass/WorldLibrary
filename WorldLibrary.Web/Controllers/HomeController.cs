@@ -51,7 +51,8 @@ namespace WorldLibrary.Web.Controllers
                     Name = name,
                     Email = email,
                     Menssage = menssage,
-                    Assessment = assessment
+                    Assessment = assessment,
+                    Date = DateTime.Now,
                 };
                 _context.Forums.Add(forum);
                 await _context.SaveChangesAsync();
@@ -92,7 +93,7 @@ namespace WorldLibrary.Web.Controllers
                     return RedirectToAction("ErroAoEnviarEmail");
                 }
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Forum");
             }
 
             return View();
