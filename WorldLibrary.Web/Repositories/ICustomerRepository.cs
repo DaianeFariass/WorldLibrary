@@ -10,5 +10,6 @@ namespace WorldLibrary.Web.Repositories
         public IQueryable GetAllWithUsers();
 
         IEnumerable<SelectListItem> GetComboCustomers();
+        IEnumerable<SelectListItem> GetComboCustomersEmail();
     }
 }

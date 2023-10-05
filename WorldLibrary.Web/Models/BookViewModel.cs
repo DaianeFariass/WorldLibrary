@@ -9,5 +9,8 @@ namespace WorldLibrary.Web.Models
     {
         [Display(Name = "Image")]
         public IFormFile ImageFile { get; set; }
+
+        [Display(Name = "Book PDF")]
+        public IFormFile BookPdf { get; set; }
     }
 }

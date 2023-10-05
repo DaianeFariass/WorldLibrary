@@ -26,6 +26,9 @@
                     <thead>
                         <tr>
                             <th>
+                                @Html.DisplayNameFor(model => model.ImageId)
+                            </th>
+                            <th>
                                 @Html.DisplayNameFor(model => model.Title)
                             </th>
                             <th>
@@ -41,15 +44,17 @@
                                 @Html.DisplayNameFor(model => model.Category)
                             </th>
                             <th>
+                                @Html.DisplayNameFor(model => model.Assessment)
+                            </th>
+                            <th>
                                 @Html.DisplayNameFor(model => model.Quantity)
                             </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.StatusBook)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.ImageId)
+                                @Html.DisplayNameFor(model => model.BookPdfUrl)
                             </th>
-                            
                             <th></th>
                         </tr>
                     </thead>
@@ -57,6 +62,12 @@
                         @foreach (var item in Model)
                         {
                             <tr>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.ImageFullPath))
+                                    {
+                                        <img src="@Url.Content(item.ImageFullPath)" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto">
+                                    }
+                                </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Title)
                                 </td>
@@ -73,17 +84,18 @@
                                     @Html.DisplayFor(modelItem => item.Category)
                                 </td>
                                 <td>
+                                    @Html.DisplayFor(modelItem => item.Assessment)
+                                </td>
+                                <td>
                                     @Html.DisplayFor(modelItem => item.Quantity)
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.StatusBook)
                                 </td>
                                 <td>
-                                    @if (!string.IsNullOrEmpty(item.ImageFullPath))
-                                    {
-                                        <img src="@Url.Content(item.ImageFullPath)" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto">
-                                    }
+                                    @Html.DisplayFor(modelItem => item.BookPdfUrl)
                                 </td>
+                                
                                 <td>
                                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="far fa-edit"></i></a>
                                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="fas fa-list"></i></a>

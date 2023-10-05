@@ -23,13 +23,15 @@ namespace WorldLibrary.Web.Data
             _userHelper = userHelper;
             _random = new Random();
         }
-        public async Task SeedAsync()
+        public async Task SeedAsync() //Alterar
         {
             await _context.Database.MigrateAsync();
 
             await _userHelper.CheckRoleAsync("Admin");
 
-            await _userHelper.CheckRoleAsync("Employee");
+            await _userHelper.CheckRoleAsync("Librarian");
+
+            await _userHelper.CheckRoleAsync("Assistant");
 
             await _userHelper.CheckRoleAsync("Customer");
 
@@ -75,11 +77,11 @@ namespace WorldLibrary.Web.Data
                 var token = await _userHelper.GenerateEmailConfirmationTokenAsync(userAdmin);
                 await _userHelper.ConfirmEmailAsync(userAdmin, token);
             }
-            var userEmployee = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
+            var userLibrarian = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
 
-            if (userEmployee == null)
+            if (userLibrarian == null)
             {
-                userEmployee = new User
+                userLibrarian = new User
                 {
                     FirstName = "Daiane",
                     LastName = "Farias",
@@ -92,26 +94,54 @@ namespace WorldLibrary.Web.Data
 
                 };
 
-                var result = await _userHelper.AddUserAsync(userEmployee, "123456");
+                var result = await _userHelper.AddUserAsync(userLibrarian, "123456");
 
                 if (result != IdentityResult.Success)
                 {
                     throw new InvalidOperationException("Could not create the user in seeder");
                 }
-                await _userHelper.AddUserToRoleAsync(userEmployee, "Employee");
-                var token = await _userHelper.GenerateEmailConfirmationTokenAsync(userEmployee);
-                await _userHelper.ConfirmEmailAsync(userEmployee, token);
+                await _userHelper.AddUserToRoleAsync(userLibrarian, "Librarian");
+                var token = await _userHelper.GenerateEmailConfirmationTokenAsync(userLibrarian);
+                await _userHelper.ConfirmEmailAsync(userLibrarian, token);
 
             }
-            var userCustomer = await _userHelper.GetUserByEmailAsync("maria.avelar@cinel.pt");
+            var userAssistant = await _userHelper.GetUserByEmailAsync("romeu.pires@yopmail.com");
+
+            if (userAssistant == null)
+            {
+                userAssistant = new User
+                {
+                    FirstName = "Romeu",
+                    LastName = "Pires",
+                    Email = "romeu.pires@yopmail.com",
+                    UserName = "romeu.pires@yopmail.com",
+                    PhoneNumber = GenerateRandomNumbers(9),
+                    Address = GenerateRandomAddress(),
+                    CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
+                    City = _context.Countries.FirstOrDefault().Cities.FirstOrDefault()
+
+                };
+
+                var result = await _userHelper.AddUserAsync(userAssistant, "123456");
+
+                if (result != IdentityResult.Success)
+                {
+                    throw new InvalidOperationException("Could not create the user in seeder");
+                }
+                await _userHelper.AddUserToRoleAsync(userAssistant, "Assistant");
+                var token = await _userHelper.GenerateEmailConfirmationTokenAsync(userAssistant);
+                await _userHelper.ConfirmEmailAsync(userAssistant, token);
+
+            }
+            var userCustomer = await _userHelper.GetUserByEmailAsync("maria.avelar@yopmail.com");
             if (userCustomer == null)
             {
                 userCustomer = new User
                 {
                     FirstName = "Maria",
                     LastName = "Avelar",
-                    Email = "maria.avelar@cinel.pt",
-                    UserName = "maria.avelar@cinel.pt",
+                    Email = "maria.avelar@yopmail.com",
+                    UserName = "maria.avelar@yopmail.com",
                     PhoneNumber = GenerateRandomNumbers(9),
                     Address = GenerateRandomAddress(),
                     CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
@@ -130,7 +160,8 @@ namespace WorldLibrary.Web.Data
 
             }
             var isInRoleAdmin = await _userHelper.IsUserInRoleAsync(userAdmin, "Admin");
-            var isInRoleEmployee = await _userHelper.IsUserInRoleAsync(userEmployee, "Vet");
+            var isInRoleLibrarian = await _userHelper.IsUserInRoleAsync(userLibrarian, "Librarian");
+            var isInRoleAssistant = await _userHelper.IsUserInRoleAsync(userAssistant, "Assistant");
             var isInRoleCustomer = await _userHelper.IsUserInRoleAsync(userCustomer, "Customer");
 
 
@@ -139,9 +170,14 @@ namespace WorldLibrary.Web.Data
                 await _userHelper.AddUserToRoleAsync(userAdmin, "Admin");
 
             }
-            if (!isInRoleEmployee)
+            if (!isInRoleLibrarian)
             {
-                await _userHelper.AddUserToRoleAsync(userEmployee, "Employee");
+                await _userHelper.AddUserToRoleAsync(userLibrarian, "Librarian");
+
+            }
+            if (!isInRoleAssistant)
+            {
+                await _userHelper.AddUserToRoleAsync(userAssistant, "Assistant");
 
             }
             if (!isInRoleCustomer)
@@ -186,20 +222,20 @@ namespace WorldLibrary.Web.Data
             }
             if (!_context.Employees.Any())
             {
-                AddEmployee("Beatriz Fonseca", "Bibliotecario", userEmployee);
-                AddEmployee("Dinis Silva", "Gerente", userEmployee);
-                AddEmployee("Filipa Correa", "Assistente", userEmployee);
-                AddEmployee("Maria Sousa", "Interno", userEmployee);
-                AddEmployee("Rafael Santos", "Bibliotecario", userEmployee);
+                AddEmployee("Beatriz Fonseca", "Librarian", userLibrarian);
+                AddEmployee("Dinis Silva", "Assistant", userAssistant);
+                AddEmployee("Filipa Correa", "Admin", userAdmin);
+                AddEmployee("Maria Sousa", "Assistant", userLibrarian);
+                AddEmployee("Rafael Santos", "Librarian", userLibrarian);
 
                 await _context.SaveChangesAsync();
 
             }
             if (!_context.PhysicalLibraries.Any())
             {
-                AddLibrary("Biblioteca Nacional", "Portugal", userAdmin);
-                AddLibrary("Nacional Library", "London", userAdmin);
-                AddLibrary("Biblioteca Nacional", "España", userAdmin);
+                AddLibrary("Biblioteca Portugal", "Portugal", userAdmin);
+                AddLibrary("Library of London", "London", userAdmin);
+                AddLibrary("Biblioteca Espanã", "España", userAdmin);
 
                 await _context.SaveChangesAsync();
 
@@ -215,7 +251,7 @@ namespace WorldLibrary.Web.Data
                 Name = name,
                 Country = country,
                 PhoneNumber = GenerateRandomNumbers(9),
-                Email = name.Replace(" ", ".") + "@cinel.com",
+                Email = name.Replace(" ", ".") + "@yopmail.com",
                 User= user
             });
         }
@@ -228,7 +264,7 @@ namespace WorldLibrary.Web.Data
                 Document = GenerateRandomNumbers(9),
                 Address= GenerateRandomAddress(),
                 CellPhone= GenerateRandomNumbers(9),
-                Email = name.Replace(" ", "_") + "@cinel.com",
+                Email = name.Replace(" ", "_") + "@yopmail.com",
                 JobPosition = jobPosition,
                 User= user
 
@@ -244,7 +280,7 @@ namespace WorldLibrary.Web.Data
                 Document= GenerateRandomNumbers(9),
                 Address= GenerateRandomAddress(),
                 Phone= GenerateRandomNumbers(9),
-                Email= name.Replace(" ", "_") + "@cinel.com",
+                Email= name.Replace(" ", "_") + "@yopmail.com",
                 User= user
 
             });
@@ -260,7 +296,9 @@ namespace WorldLibrary.Web.Data
                 Year = year,
                 Synopsis = synopsis,
                 Category = category,
+                Assessment = "5 *",
                 Quantity = Convert.ToDouble(GenerateRandomNumbers(1)),
+                BookPdfUrl = "PDF Unvailable",
                 StatusBook = StatusBook.Available,
                 User = user
 

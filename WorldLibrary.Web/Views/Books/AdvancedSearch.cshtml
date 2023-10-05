@@ -46,17 +46,21 @@
                     <th>Author</th>
                     <th>Year</th>
                     <th>Status</th>
+                    <th>Image</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var livro in Model)
+                @foreach (var books in Model)
                 {
                     <tr>
-                        <td>@livro.Category</td>
-                        <td>@livro.Title</td>
-                        <td>@livro.Author</td>
-                        <td>@livro.Year</td>
-                        <td>@livro.StatusBook</td>
+                        <td>@books.Category</td>
+                        <td>@books.Title</td>
+                        <td>@books.Author</td>
+                        <td>@books.Year</td>
+                        <td>@books.StatusBook</td>
+                        <td>
+                         <img src="@books.ImageFullPath" alt="Image" style="width:300px;height:450px;max-width:100%;height:auto;" />
+                        </td>
                         
                     </tr>
                 }

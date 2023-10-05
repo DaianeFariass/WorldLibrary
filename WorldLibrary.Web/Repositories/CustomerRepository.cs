@@ -35,5 +35,37 @@ namespace WorldLibrary.Web.Repositories
 
             return list;
         }
+
+        public IEnumerable<SelectListItem> GetComboCustomersEmail()
+        {
+            var list = _context.Customers.Select(p => new SelectListItem
+            {
+                Text = p.FullName,
+                Value = p.Email,
+
+            }).ToList();
+            var allEmails = "";
+            foreach (var email in list)
+            {
+                if (allEmails != "")
+                {
+                    allEmails = allEmails + ",";
+                }
+                allEmails = allEmails + email.Value.ToString();
+
+            }
+            list.Insert(0, new SelectListItem
+            {
+                Text = "Empty",
+                Value = null
+            });
+            list.Insert(1, new SelectListItem
+            {
+                Text = "All Emails",
+                Value = allEmails
+            });
+
+            return list;
+        }
     }
 }

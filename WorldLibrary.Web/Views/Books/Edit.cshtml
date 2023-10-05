@@ -14,6 +14,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="ImageId" />
+            <input type="hidden" asp-for="BookPdfUrl" />
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
@@ -40,6 +41,11 @@
                 <span asp-validation-for="Category" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Assessment" class="control-label"></label>
+                <input asp-for="Assessment" class="form-control" />
+                <span asp-validation-for="Assessment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Quantity" class="control-label"></label>
                 <input asp-for="Quantity" class="form-control" />
                 <span asp-validation-for="Quantity" class="text-danger"></span>
@@ -49,11 +55,10 @@
                 <input asp-for="StatusBook" class="form-control" />
                 <span asp-validation-for="StatusBook" class="text-danger"></span>
             </div>
-
             <div class="form-group">
-                <label asp-for="ImageFile" class="control-label"></label>
-                <input asp-for="ImageFile" class="form-control" type="file" />
-                <span asp-validation-for="ImageFile" class="text-danger"></span>
+                <label asp-for="BookPdf" class="control-label"></label>
+                <input asp-for="BookPdf" class="form-control" type="file" />
+                <span asp-validation-for="BookPdf" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>Save</button>

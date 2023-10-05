@@ -24,6 +24,7 @@ namespace WorldLibrary.Web.Data.Entities
 
         [Required]
         public string Category { get; set; }
+        public string Assessment { get; set; }
 
         public List<Customer> Customers { get; set; }
 
@@ -35,7 +36,7 @@ namespace WorldLibrary.Web.Data.Entities
 
         [Display(Name = "Image")]
         public Guid ImageId { get; set; }
-
+        public string BookPdfUrl { get; set; }
         public User User { get; set; }
 
         public string ImageFullPath => ImageId == Guid.Empty ?
