@@ -18,21 +18,23 @@ namespace WorldLibrary.Web.Controllers
     public class AccountController : Controller
     {
         private readonly IUserHelper _userHelper;
+        private readonly IMailHelper _mailHelper;
         private readonly ICountryRepository _countryRepository;
         private readonly IConfiguration _configuration;
-        private readonly IMailHelper _mailHelper;
-
+        private readonly IEmployeeRepository _employeeRepository;
         public AccountController(IUserHelper userHelper,
+            IMailHelper mailHelper,
             ICountryRepository countryRepository,
-            IConfiguration configuration,
-            IMailHelper mailHelper)
+            IEmployeeRepository employeeRepository,
+            IConfiguration configuration)
         {
             _userHelper = userHelper;
-            _countryRepository = countryRepository;
-            _configuration = configuration;
             _mailHelper = mailHelper;
+            _countryRepository = countryRepository;
+            _employeeRepository = employeeRepository;
+            _configuration = configuration;
         }
-        
+
         public IActionResult Login()
         {
             if (User.Identity.IsAuthenticated)
@@ -133,6 +135,79 @@ namespace WorldLibrary.Web.Controllers
             return View(model);
         }
 
+        public IActionResult RegisterRole()
+        {
+            var model = new RegisterNewUserViewModel
+            {
+                Countries = _countryRepository.GetComboCountries(),
+                Cities = _countryRepository.GetComboCities(0),
+                Roles = _employeeRepository.GetComboRoles(),
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> RegisterRole(RegisterNewUserViewModel model) //Criar
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userHelper.GetUserByEmailAsync(model.Username);
+                if (user == null)
+                {
+                    var city = await _countryRepository.GetCityAsync(model.CityId);
+                    user = new User
+                    {
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                        Email = model.Username,
+                        UserName = model.Username,
+                        Address = model.Address,
+                        PhoneNumber = model.PhoneNumber,
+                        CityId = model.CityId,
+                        City = city
+                    };
+
+                    var result = await _userHelper.AddUserAsync(user, model.Password);
+                    if (result != IdentityResult.Success)
+                    {
+                        ModelState.AddModelError(string.Empty, "The user couldn't be created.");
+                        return View(model);
+                    }
+                    if (model.RoleId == "Admin")
+                    {
+                        await _userHelper.AddUserToRoleAsync(user, "Admin");
+                    }
+                    if (model.RoleId == "Librarian")
+                    {
+                        await _userHelper.AddUserToRoleAsync(user, "Librarian");
+                    }
+                    if (model.RoleId == "Assistant")
+                    {
+                        await _userHelper.AddUserToRoleAsync(user, "Assistant");
+                    }
+
+                    string myToken = await _userHelper.GenerateEmailConfirmationTokenAsync(user);
+                    string tokenLink = Url.Action("ConfirmEmail", "Account", new
+                    {
+                        userid = user.Id,
+                        token = myToken
+                    }, protocol: HttpContext.Request.Scheme);
+
+                    Response response = _mailHelper.SendEmail(model.Username, "Email confirmation", $"<h1>Email Confirmation</h1>" +
+                      $"To allow the user, " +
+                      $"plase click in this link:</br></br><a href = \"{tokenLink}\">Confirm Email</a>");
+                    if (response.IsSuccess)
+                    {
+                        ViewBag.Message = "The instructions to allow you user has been sent to email";
+                        return View(model);
+
+                    }
+
+                    ModelState.AddModelError(string.Empty, "The user couldn't be logged.");
+                }
+            }
+            return View(model);
+        }
         public async Task<IActionResult> ChangeUser()
         {
             var user = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);

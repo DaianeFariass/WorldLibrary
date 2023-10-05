@@ -34,6 +34,10 @@ namespace WorldLibrary.Web.Models
 
         public IEnumerable<SelectListItem> Countries { get; set; }
 
+        [Display(Name = "Role")]
+        public string RoleId { get; set; }
+
+        public IEnumerable<SelectListItem> Roles { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
