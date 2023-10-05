@@ -25,18 +25,21 @@ namespace WorldLibrary.Web.Controllers
         private readonly IBlobHelper _blobHelper;
         private readonly IConverterHelper _converterHelper;
         private readonly IMailHelper _mailHelper;
+        private readonly DataContext _context;
 
         public BooksController(IBookRepository bookRepository,
             IUserHelper userHelper,
             IBlobHelper blobHelper,
             IConverterHelper converterHelper,
-            IMailHelper mailHelper)
+            IMailHelper mailHelper,
+            DataContext context)
         {
             _bookRepository = bookRepository;
             _userHelper = userHelper;
             _blobHelper= blobHelper;
             _converterHelper=converterHelper;
             _mailHelper=mailHelper;
+            _context=context;
         }
 
         // GET: Books
@@ -214,6 +217,57 @@ namespace WorldLibrary.Web.Controllers
         public IActionResult BookNotFound()
         {
             return View();
+        }
+
+        public IActionResult AdvancedSearch(string category, string title1, string author, string year, string status)
+        {
+            if (!string.IsNullOrEmpty(category) || !string.IsNullOrEmpty(title1) ||!string.IsNullOrEmpty(author) ||!string.IsNullOrEmpty(year) ||!string.IsNullOrEmpty(status))
+            {
+
+                var result = _context.Books.AsQueryable();
+
+                if (!string.IsNullOrEmpty(category))
+                {
+                    result = result.Where(b => b.Category.Contains(category));
+                }
+
+                if (!string.IsNullOrEmpty(title1))
+                {
+                    result = result.Where(b => b.Title.Contains(title1));
+                }
+
+                if (!string.IsNullOrEmpty(author))
+                {
+                    result = result.Where(b => b.Author.Contains(author));
+                }
+
+                if (!string.IsNullOrEmpty(year))
+                {
+                    result = result.Where(b => b.Year == year);
+                }
+
+                if (!string.IsNullOrEmpty(status))
+                {
+                    StatusBook statusValue;
+                    if (Enum.TryParse(status, out statusValue))
+                    {
+                        result = result.Where(b => b.StatusBook == statusValue);
+                    }
+                }
+
+
+                var result2 = result.ToList();
+
+
+                return View(result2);
+            }
+            else
+            {
+
+                var emptyList = new List<Book>();
+                return View(emptyList);
+            }
+
         }
     }
 }

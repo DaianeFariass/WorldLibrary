@@ -1,0 +1,66 @@
+﻿@model List<WorldLibrary.Web.Data.Entities.Book>
+@{
+    ViewData["Title"] = "AdvancedSearch";
+}
+
+<h2>Advanced Search</h2>
+<form class="form-horizontal" role="form">
+    <table class="table">
+
+        <div class="form-group">
+            @Html.Label("Category")
+            @Html.TextBox("category", null, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Title")
+            @Html.TextBox("title1", null, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Author")
+            @Html.TextBox("author", null, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Year")
+            @Html.TextBox("year", null, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Status")
+            @Html.TextBox("status", null, new { @class = "form-control" })
+        </div>
+
+        <button type="submit" class="btn btn-primary">Search</button>
+
+
+    </table>
+</form>
+
+<div>
+    @if (Model.Any())
+    {
+        <h3>Search Result</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Year</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var livro in Model)
+                {
+                    <tr>
+                        <td>@livro.Category</td>
+                        <td>@livro.Title</td>
+                        <td>@livro.Author</td>
+                        <td>@livro.Year</td>
+                        <td>@livro.StatusBook</td>
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
