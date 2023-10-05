@@ -29,16 +29,20 @@ namespace WorldLibrary.Web.Repositories
 
         Task<Reserve> ConfirmReservAsync(string userName);
 
-        Task DeliverReserveAsync(DeliveryViewModel model);
+        Task<Reserve> DeliverReserveAsync(DeliveryViewModel model);
 
         Task<Reserve> GetReserveAsync(int id);
 
-        Task BookReturnAsync(BookReturnViewModel model);
+        Task<Reserve> BookReturnAsync(BookReturnViewModel model);
+
+        Task<Reserve> RenewBookReturnAsync(BookReturnViewModel model);
 
         Task<Reserve> CancelReserveAsync(int id, string username);
 
-        Task<Reserve> EditReserveAsync(ReserveViewModel model, string username);
         Task<Reserve> GetReserveByIdAsync(int id);
+
+        Task<Reserve> EditReserveAsync(ReserveViewModel model, string username);
+
         Task SendReserveNotification(Reserve reserve, string username, NotificationType notificationType);
 
     }

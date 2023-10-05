@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -50,7 +51,7 @@ namespace WorldLibrary.Web
                .AddEntityFrameworkStores<DataContext>();
 
             services.AddAuthentication()
-                .AddCookie()
+                    .AddCookie()
                 .AddJwtBearer(cfg =>
                 {
                     cfg.TokenValidationParameters = new TokenValidationParameters
@@ -61,7 +62,19 @@ namespace WorldLibrary.Web
                             Encoding.UTF8.GetBytes(this.Configuration["Tokens:Key"]))
                     };
 
+                })
+                .AddFacebook(options =>
+                {
+                    options.AppId="616234630717235";
+                    options.AppSecret="a6670e162c79744dad1c754fa21e7356";
                 });
+
+            services.Configure<CookiePolicyOptions>(options =>
+            {                
+                options.CheckConsentNeeded = context => true;
+                
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
 
             services.AddDbContext<DataContext>(cfg =>
             {

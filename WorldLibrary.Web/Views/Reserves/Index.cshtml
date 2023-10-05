@@ -5,14 +5,16 @@
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css" />
 
-
 <br />
 
 <p>
     <a asp-action="Create" class="btn btn-primary"><i class="fa fa-save"></i> Create New</a>
     <a asp-action="Details" class="btn btn-info"><i class="fas fa-list"></i></a>
 </p>
-<flash dismissable="true" />
+
+<flash dismissable="true" /> 
+
+
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
@@ -30,6 +32,9 @@
                                     @Html.DisplayNameFor(model => model.User)
                                 </th>
                             }
+                            <th>
+                                @Html.DisplayNameFor(model => model.PhysicalLibrary)
+                            </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.Customer)
                             </th>
@@ -65,6 +70,9 @@
                         @foreach (var item in Model)
                         {
                             <tr>
+                                <th>
+                                    @Html.DisplayFor(modelItem => item.PhysicalLibrary.Name)
+                                </th>
                                 @if (this.User.IsInRole("Admin") || (this.User.IsInRole("Employee") || (this.User.IsInRole("Customer"))))
                                 {
                                     <th>
@@ -99,9 +107,11 @@
                                     @Html.DisplayFor(modelItem => item.StatusReserve)
                                 </th>
                                 <td>
-                                    <a asp-action="Deliver" asp-route-id="@item.Id" class="btn btn-info" id="btnDeliver">Deliver</a>
-                                    <a asp-action="Cancel" asp-route-id="@item.Id" class="btn btn-danger" id="btnCancel">Cancel</a>
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="far fa-edit"></i>Edit</a>
+                                    <a asp-action="Deliver" asp-route-id="@item.Id" class="btn btn-info" id="btnDeliver"><i class="fas fa-check"></i>Deliver</a>
+                                    <a asp-action="Cancel" asp-route-id="@item.Id" class="btn btn-danger" id="btnCancel"><i class="fas fa-trash"></i>Cancel</a>
                                     <a asp-action="BookReturn" asp-route-id="@item.Id" class="btn btn-info"><i class="fas fa-book"></i>Return</a>
+                                    <a asp-action="RenewBook" asp-route-id="@item.Id" class="btn btn-info"><i class="fas fa-arrow-alt-circle-left"></i>Renew</a>
                                 </td>
                             </tr>
                         }

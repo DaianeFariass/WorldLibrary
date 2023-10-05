@@ -8,6 +8,12 @@ namespace WorldLibrary.Web.Models
 {
     public class ReserveViewModel : Reserve
     {
+        [Display(Name = "Libraries")]
+        [Range(1, int.MaxValue, ErrorMessage = "You must select the Library.")]
+        public int LibraryId { get; set; } 
+
+        public IEnumerable<SelectListItem> Libraries { get; set; } 
+
         [Display(Name = "Customers")]
         [Range(1, int.MaxValue, ErrorMessage = "You must select the Customer.")]
         public int CustomerId { get; set; }

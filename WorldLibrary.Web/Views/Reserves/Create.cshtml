@@ -25,6 +25,9 @@
                     <thead>
                         <tr>
                             <th>
+                                @Html.DisplayNameFor(model => model.PhysicalLibrary)
+                            </th>
+                            <th>
                                 @Html.DisplayNameFor(model => model.User.FullName)
                             </th>
                             <th>
@@ -43,6 +46,9 @@
                         @foreach (var item in Model)
                         {
                             <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PhysicalLibrary.Name)
+                                </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.User.FullName)
                                 </td>

@@ -1,19 +1,19 @@
 ﻿@model WorldLibrary.Web.Models.BookReturnViewModel
 @{
-    ViewData["Title"] = "Cancel";
+    ViewData["Title"] = "RenewBook";
 }
 
-<h1>Cancel Reserve</h1>
+<h2>Renew Book</h2>
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Cancel">
+        <form asp-action="RenewBook">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="BookId" class="control-label"></label>
-                <select asp-for="BookId" asp-items="Model.Books" class="form-control"></select>
-                <span asp-validation-for="BookId" class="text-danger"></span>
+                <label asp-for="ReturnDate" class="control-label"></label>
+                <input asp-for="ReturnDate" class="form-control" id="DateSelected" />
+                <span asp-validation-for="ReturnDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -22,3 +22,10 @@
         </form>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
+

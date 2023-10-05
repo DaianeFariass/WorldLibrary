@@ -8,19 +8,18 @@ namespace WorldLibrary.Web.Data.Entities
     {
         public int Id { get; set; }
 
-        [Required]
         [Display(Name = "User Name ")]
         public User User { get; set; }
 
-        [Required]
+        [Display(Name = "Library ")]
+        public PhysicalLibrary PhysicalLibrary { get; set; } 
+
         [Display(Name = "Customer Name ")]
         public Customer Customer { get; set; }
 
-        [Required]
         public Book Book { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:N2}")]
         public double Quantity { get; set; }
-
     }
 }

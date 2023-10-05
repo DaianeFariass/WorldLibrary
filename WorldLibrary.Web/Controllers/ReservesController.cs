@@ -17,22 +17,27 @@ namespace WorldLibrary.Web.Controllers
         private readonly IReserveRepository _reserveRepository;
         private readonly IBookRepository _bookRepository;
         private readonly ICustomerRepository _customerRepository;
+        private readonly IPhysicalLibraryRepository _physicalLibraryRepository;
         private readonly IFlashMessage _flashMessage;
         private readonly IMailHelper _mailHelper;
         private readonly DataContext _context;
-
+        private readonly IUserHelper _userHelper;
         public ReservesController(IReserveRepository reserveRepository,
             IBookRepository bookRepository,
             ICustomerRepository customerRepository,
+            IPhysicalLibraryRepository physicalLibraryRepository,
             IFlashMessage flashMessage,
             IMailHelper mailHelper,
+            IUserHelper userHelper,
             DataContext context)
         {
             _reserveRepository = reserveRepository;
             _bookRepository = bookRepository;
             _customerRepository = customerRepository;
+            _physicalLibraryRepository = physicalLibraryRepository;
             _flashMessage = flashMessage;
             _mailHelper = mailHelper;
+            _userHelper = userHelper;
             _context = context;
         }
 
@@ -67,6 +72,7 @@ namespace WorldLibrary.Web.Controllers
         {
             var model = new AddReserveViewModel
             {
+                Libraries = _physicalLibraryRepository.GetComboLibraries(), 
                 Customers = _customerRepository.GetComboCustomers(),
                 Books = _bookRepository.GetComboBooks(),
                 BookDate = _reserveRepository.GetBookingDate(),
@@ -92,6 +98,7 @@ namespace WorldLibrary.Web.Controllers
                     _flashMessage.Danger("It is not possible to make another reservation for the same book");
                     model = new AddReserveViewModel
                     {
+                        Libraries = _physicalLibraryRepository.GetComboLibraries(),
                         Customers = _customerRepository.GetComboCustomers(),
                         Books = _bookRepository.GetComboBooks(),
                         BookDate = _reserveRepository.GetBookingDate(),
@@ -114,6 +121,8 @@ namespace WorldLibrary.Web.Controllers
                     _flashMessage.Danger("It is not possible to make another reservation for the same book");
                     model = new AddReserveViewModel
                     {
+
+                        Libraries = _physicalLibraryRepository.GetComboLibraries(), 
                         Customers = _customerRepository.GetComboCustomers(),
                         Books = _bookRepository.GetComboBooks(),
                         BookDate = _reserveRepository.GetBookingDate(),
@@ -194,6 +203,7 @@ namespace WorldLibrary.Web.Controllers
             }
             var model = new AddReserveViewModel
             {
+                Libraries = _physicalLibraryRepository.GetComboLibraries(),
                 Customers = _customerRepository.GetComboCustomers(),
                 Books = _bookRepository.GetComboBooks(),
                 Quantity = reserveToEdit.Quantity,
@@ -217,6 +227,7 @@ namespace WorldLibrary.Web.Controllers
                         _flashMessage.Danger("Quantity Invalid!");
                         model = new AddReserveViewModel
                         {
+                            Libraries = _physicalLibraryRepository.GetComboLibraries(),
                             Customers = _customerRepository.GetComboCustomers(),
                             Books = _bookRepository.GetComboBooks(),
                             BookDate = _reserveRepository.GetBookingDate(),
@@ -230,6 +241,8 @@ namespace WorldLibrary.Web.Controllers
                         _flashMessage.Danger("Quantity Invalid! Only 3 books per customer");
                         model = new AddReserveViewModel
                         {
+
+                            Libraries = _physicalLibraryRepository.GetComboLibraries(),
                             Customers = _customerRepository.GetComboCustomers(),
                             Books = _bookRepository.GetComboBooks(),
                             BookDate = _reserveRepository.GetBookingDate(),
@@ -324,29 +337,7 @@ namespace WorldLibrary.Web.Controllers
             }
             return RedirectToAction("Index");
         }
-        public async Task<IActionResult> Deliver(int? id)
-        {
-            if (id == null)
-            {
-                return new NotFoundViewResult("ReserveNotFound");
-
-            }
-            var reserve = await _reserveRepository.GetReserveAsync(id.Value);
-            if (reserve == null)
-            {
-                return new NotFoundViewResult("ReserveNotFound");
-
-            }
-            var model = new DeliveryViewModel
-            {
-                DeliveryDate = DateTime.Today.Date,
-                ReturnDate = DateTime.Today.Date,
-
-            };
-
-
-            return View(model);
-        }
+        
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -366,6 +357,7 @@ namespace WorldLibrary.Web.Controllers
             {
                 Id = reserveToEdit.Id,
                 Customers = _customerRepository.GetComboCustomers(),
+                Libraries = _physicalLibraryRepository.GetComboLibraries(),
                 Books = _bookRepository.GetComboBooks(),
                 Quantity = reserveToEdit.Quantity,
 
@@ -389,6 +381,7 @@ namespace WorldLibrary.Web.Controllers
                         model = new ReserveViewModel
                         {
                             Id = reserveToEdit.Id,
+                            Libraries = _physicalLibraryRepository.GetComboLibraries(),
                             Customers = _customerRepository.GetComboCustomers(),
                             Books = _bookRepository.GetComboBooks(),
                             Quantity = reserveToEdit.Quantity,
@@ -404,6 +397,7 @@ namespace WorldLibrary.Web.Controllers
                         model = new ReserveViewModel
                         {
                             Id = reserveToEdit.Id,
+                            Libraries = _physicalLibraryRepository.GetComboLibraries(),
                             Customers = _customerRepository.GetComboCustomers(),
                             Books = _bookRepository.GetComboBooks(),
                             Quantity = reserveToEdit.Quantity,
@@ -442,6 +436,30 @@ namespace WorldLibrary.Web.Controllers
             }
             return View(model);
         }
+
+        public async Task<IActionResult> Deliver(int? id)
+        {
+            if (id == null)
+            {
+                return new NotFoundViewResult("ReserveNotFound");
+
+            }
+            var reserve = await _reserveRepository.GetReserveAsync(id.Value);
+            if (reserve == null)
+            {
+                return new NotFoundViewResult("ReserveNotFound");
+
+            }
+            var model = new DeliveryViewModel
+            {
+                DeliveryDate = DateTime.Today.Date,
+                ReturnDate = DateTime.Today.Date,
+
+            };
+
+
+            return View(model);
+        }
         [HttpPost]
         public async Task<IActionResult> Deliver(DeliveryViewModel model)
         {
@@ -456,7 +474,20 @@ namespace WorldLibrary.Web.Controllers
                 }
                 else
                 {
-                    await _reserveRepository.DeliverReserveAsync(model);
+                    var response = await _reserveRepository.DeliverReserveAsync(model);
+                    if (response != null)
+                    {
+                        _mailHelper.SendEmail(response.Customer.Email,
+                         "Check Book Return", $"<h1> World Library</h1>" +
+                          $"Dear {response.Customer.FullName}, " +
+                          $"Please check you Book Return Date! Follow the Return details...</br></br>" +
+                          $"Book:  {response.Book.Title}</br>" +
+                          $"Quantity:  {response.Quantity}</br>" +
+                          $"Delivery: {response.DeliveryDate.Value}</br>" +
+                          $"Return: {response.ReturnDate.Value}</br>" +
+                          $"Status: {response.StatusReserve}</br>");
+                    }
+
 
 
                     return RedirectToAction("Index");
@@ -523,39 +554,60 @@ namespace WorldLibrary.Web.Controllers
                         ActualReturnDate = DateTime.Today.Date,
                         Rate = 0,
 
-
-
                     };
 
                     return View(model);
 
 
                 }
-                else
+                if (model.Quantity > reserve.Quantity)
                 {
-                    if (model.Quantity > 3)
+                    _flashMessage.Danger("Quantity Invalid!");
+                    model = new BookReturnViewModel
                     {
-                        _flashMessage.Danger("Quantity Invalid!");
-                        model = new BookReturnViewModel
-                        {
-                            Id = reserve.Id,
-                            Books = _bookRepository.GetComboBooks(),
-                            ReturnDate = reserve.ReturnDate,
-                            ActualReturnDate = DateTime.Today.Date,
-                            Rate = 0,
+                        Id = reserve.Id,
+                        Books = _bookRepository.GetComboBooks(),
+                        ReturnDate = reserve.ReturnDate,
+                        ActualReturnDate = DateTime.Today.Date,
+                        Rate = 0,
 
 
-                        };
-                        return View(model);
-
-                    }
-
-                    await _reserveRepository.BookReturnAsync(model);
-
-
-                    return RedirectToAction("Index");
+                    };
+                    return View(model);
 
                 }
+                if (model.Quantity > 3)
+                {
+                    _flashMessage.Danger("Quantity Invalid!");
+                    model = new BookReturnViewModel
+                    {
+                        Id = reserve.Id,
+                        Books = _bookRepository.GetComboBooks(),
+                        ReturnDate = reserve.ReturnDate,
+                        ActualReturnDate = DateTime.Today.Date,
+                        Rate = 0,
+
+
+                    };
+                    return View(model);
+
+                }
+                var response = await _reserveRepository.BookReturnAsync(model);
+                if (response != null)
+                {
+                    _mailHelper.SendEmail(response.Customer.Email,
+                     "Book Return! Thank You!!", $"<h1> World Library</h1>" +
+                      $"Dear {response.Customer.FullName}, " +
+                      $"Thank you for Return the book...</br></br>" +
+                      $"Book:  {response.Book.Title}</br>" +
+                      $"Quantity:  {response.Quantity}</br>" +
+                      $"Return: {response.ReturnDate.Value}</br>" +
+                      $"Status: {response.StatusReserve}</br>");
+                }
+
+
+                return RedirectToAction("Index");
+
 
             }
             return View();
@@ -590,7 +642,76 @@ namespace WorldLibrary.Web.Controllers
             return RedirectToAction("Index");
 
         }
-        
+        public async Task<IActionResult> RenewBook(int? id) 
+        {
+            if (id == null)
+            {
+                return new NotFoundViewResult("ReserveNotFound");
+
+            }
+            var reserve = await _reserveRepository.GetReserveAsync(id.Value);
+            if (reserve == null)
+            {
+                return new NotFoundViewResult("ReserveNotFound");
+
+            }
+            if (DateTime.Now.Date < reserve.ReturnDate)
+            {
+                _flashMessage.Warning("You can't renew the book before the Return Date");
+               
+                return RedirectToAction("index");
+
+
+            }
+            var model = new BookReturnViewModel
+            {
+                ReturnDate = reserve.ReturnDate.Value,
+
+            };
+
+
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> RenewBook(BookReturnViewModel model) //Criar
+        {
+            if (ModelState.IsValid)
+            {
+                var reserve = await _reserveRepository.GetReserveAsync(model.Id);
+                if (model.ReturnDate < DateTime.Now.Date)
+                {
+                    _flashMessage.Danger("Date Invalid!");
+
+                    model = new BookReturnViewModel
+                    {
+                        Id = reserve.Id,
+                        ReturnDate = reserve.ReturnDate,
+                    };
+
+                    return View(model);
+
+
+                }
+                var response = await _reserveRepository.RenewBookReturnAsync(model);
+                if (response != null)
+                {
+                    _mailHelper.SendEmail(response.Customer.Email,
+                     "Renew Book Return Date!", $"<h1> World Library</h1>" +
+                      $"Dear {response.Customer.FullName}, " +
+                      $"You renewed the Book Return Date! Please Follow the new Details...</br></br>" +
+                      $"Book:  {response.Book.Title}</br>" +
+                      $"Quantity:  {response.Quantity}</br>" +
+                      $"Return: {response.ReturnDate.Value}</br>" +
+                      $"Status: {response.StatusReserve}</br>");
+                }
+
+
+                return RedirectToAction("Index");
+
+
+            }
+            return View();
+        }
         public IActionResult ReserveNotFound()
         {
 

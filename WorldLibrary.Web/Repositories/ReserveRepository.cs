@@ -38,6 +38,11 @@ namespace WorldLibrary.Web.Repositories
             {
                 return;
             }
+            var library = await _context.PhysicalLibraries.FindAsync(model.LibraryId); //Criar
+            if (library == null)
+            {
+                return;
+            }
             var reserve = await _context.Books.FindAsync(model.BookId);
             if (reserve == null)
             {
@@ -49,12 +54,13 @@ namespace WorldLibrary.Web.Repositories
                 return;
             }
             var reserveDetailTemp = await _context.ReserveDetailsTemp
-            .Where(rdt => rdt.User == user && rdt.Book == reserve && rdt.Customer == customer)
+            .Where(rdt => rdt.User == user && rdt.Book == reserve && rdt.Customer == customer && rdt.PhysicalLibrary == library)
             .FirstOrDefaultAsync();
             if (reserveDetailTemp == null)
             {
                 reserveDetailTemp = new ReserveDetailTemp
                 {
+                    PhysicalLibrary = library, 
                     Customer = customer,
                     Book = reserve,
                     Quantity = model.Quantity,
@@ -68,37 +74,52 @@ namespace WorldLibrary.Web.Repositories
                 _context.ReserveDetailsTemp.Update(reserveDetailTemp);
             }
             await _context.SaveChangesAsync();
+
         }
 
-        public async Task BookReturnAsync(BookReturnViewModel model)
+        public async Task<Reserve> BookReturnAsync(BookReturnViewModel model)
         {
             var reserve = await _context.Reserves.FindAsync(model.Id);
             if (reserve == null)
             {
-                return;
+                return null;
             }
             var book = await _context.Books.FindAsync(model.BookId);
             if (book == null)
             {
-                return;
+                return null;
             }
+            var reserves = _context.Reserves
+               .Include(r => r.PhysicalLibrary)
+               .Include(r => r.Book)
+               .Include(r => r.User)
+               .Include(r => r.Customer)
+               .ToList();
+
+            var details = reserves.Select(r => new ReserveViewModel
+            {
+                PhysicalLibrary = r.PhysicalLibrary,
+                Customer = r.Customer,
+                Book = r.Book,
+                User = r.User
+            });
 
             reserve.Book= book;
             reserve.ActualReturnDate = model.ActualReturnDate;
             reserve.Rate = model.Rate;
-            reserve.ReturnDate = reserve.ReturnDate;
+            reserve.ReturnDate = model.ReturnDate;
 
             if (model.Quantity == reserve.Quantity)
             {
-                book.Quantity += model.Quantity;
-                reserve.Quantity -= model.Quantity;
+                book.Quantity += (double)model.Quantity;
+                reserve.Quantity -= (double)model.Quantity;
                 reserve.StatusReserve = StatusReserve.Concluded;
 
             }
             double sub;
             if (model.Quantity < reserve.Quantity)
             {
-                sub = reserve.Quantity - model.Quantity;
+                sub = reserve.Quantity -(double)model.Quantity;
                 book.Quantity += sub;
                 reserve.Quantity -= sub;
                 if (reserve.Quantity > 1)
@@ -110,27 +131,8 @@ namespace WorldLibrary.Web.Repositories
 
             _context.Reserves.Update(reserve);
             await _context.SaveChangesAsync();
-        }
+            return (reserve);
 
-        public async Task<bool> CancelReserveAsync(BookReturnViewModel model)
-        {
-            var reserve = await _context.Reserves.FindAsync(model.Id);
-            if (reserve == null)
-            {
-                return false;
-
-            }
-            else
-            {
-                var book = _context.Books.FindAsync(model.Id);
-                book.Result.Quantity += reserve.Quantity;
-                reserve.StatusReserve = StatusReserve.Cancelled;
-                _context.Reserves.Update(reserve);
-                _context.Books.Update(book.Result);
-                await _context.SaveChangesAsync();
-            }
-
-            return true;
         }
 
         public async Task<Reserve> CancelReserveAsync(int id, string username)
@@ -152,6 +154,7 @@ namespace WorldLibrary.Web.Repositories
             }
 
             var customers = _context.Reserves
+                .Include(r => r.PhysicalLibrary)
                 .Include(r => r.Book)
                 .Include(r => r.User)
                 .Include(r => r.Customer)
@@ -159,6 +162,7 @@ namespace WorldLibrary.Web.Repositories
 
             var details = customers.Select(r => new ReserveViewModel
             {
+                PhysicalLibrary = reserve.PhysicalLibrary,
                 Book = reserve.Book,
                 User = reserve.User,
                 Customer = reserve.Customer,
@@ -177,6 +181,8 @@ namespace WorldLibrary.Web.Repositories
             return reserve;
         }
 
+
+
         public async Task<Reserve> ConfirmReservAsync(string userName)
         {
             var user = await _userHelper.GetUserByEmailAsync(userName);
@@ -185,6 +191,7 @@ namespace WorldLibrary.Web.Repositories
                 return null;
             }
             var reserveTemp = await _context.ReserveDetailsTemp
+                .Include(r => r.PhysicalLibrary)
                 .Include(r => r.Book)
                 .Include(r => r.Customer)
                 .Where(r => r.User == user)
@@ -196,6 +203,7 @@ namespace WorldLibrary.Web.Repositories
 
             var details = reserveTemp.Select(r => new ReserveDetail
             {
+                PhysicalLibrary = r.PhysicalLibrary,
                 Customer = r.Customer,
                 Book = r.Book,
                 Quantity = r.Quantity,
@@ -205,6 +213,7 @@ namespace WorldLibrary.Web.Repositories
             {
                 reserve = new Reserve
                 {
+                    PhysicalLibrary = reserveDetail.PhysicalLibrary,
                     Customer = reserveDetail.Customer,
                     Book = reserveDetail.Book,
                     BookingDate = DateTime.Now,
@@ -215,7 +224,7 @@ namespace WorldLibrary.Web.Repositories
 
                 };
                 await CreateAsync(reserve);
-                //await SendReserveNotification(reserve, user.UserName, NotificationType.Create);
+                await SendReserveNotification(reserve, user.UserName, NotificationType.Create);
 
             }
             _context.ReserveDetailsTemp.RemoveRange(reserveTemp);
@@ -230,20 +239,45 @@ namespace WorldLibrary.Web.Repositories
             if (reserveDetailTemp == null)
             {
                 return;
-
             }
+            var reserveDetailTemps = await _context.ReserveDetailsTemp
+                .Include(r => r.Book)
+                .ToListAsync();
+            var reserve = reserveDetailTemps.Select(r => new ReserveViewModel
+            {
+                Book = r.Book
+
+            }); ;
+            var book = _context.Books.FindAsync(reserveDetailTemp.Book.Id);
+            book.Result.Quantity += reserveDetailTemp.Quantity;
             _context.ReserveDetailsTemp.Remove(reserveDetailTemp);
             await _context.SaveChangesAsync();
         }
-               
-        public async Task DeliverReserveAsync(DeliveryViewModel model)
+
+        public async Task<Reserve> DeliverReserveAsync(DeliveryViewModel model)
         {
+
             var reserve = await _context.Reserves.FindAsync(model.Id);
 
             if (reserve == null)
             {
-                return;
+                return null;
             }
+
+            var reserves = _context.Reserves
+                .Include(r => r.PhysicalLibrary)
+                .Include(r => r.Book)
+                .Include(r => r.User)
+                .Include(r => r.Customer)
+                .ToList();
+
+            var details = reserves.Select(r => new ReserveViewModel
+            {
+                PhysicalLibrary= r.PhysicalLibrary,
+                Customer = r.Customer,
+                Book = r.Book,
+                User = r.User
+            });
 
             reserve.DeliveryDate = model.DeliveryDate;
             reserve.ReturnDate = model.ReturnDate;
@@ -251,6 +285,7 @@ namespace WorldLibrary.Web.Repositories
 
             _context.Reserves.Update(reserve);
             await _context.SaveChangesAsync();
+            return reserve;
         }
 
         public async Task<Reserve> EditReserveAsync(ReserveViewModel model, string username)
@@ -261,6 +296,11 @@ namespace WorldLibrary.Web.Repositories
             {
                 throw new NotImplementedException();
 
+            }
+            var library = await _context.PhysicalLibraries.FindAsync(model.LibraryId);
+            if (library == null)
+            {
+                throw new NotImplementedException();
             }
             var book = await _context.Books.FindAsync(model.BookId);
             if (book == null)
@@ -307,6 +347,7 @@ namespace WorldLibrary.Web.Repositories
                 throw new NotImplementedException();
             }
             var reserves = _context.Reserves
+                .Include(r => r.PhysicalLibrary)
                 .Include(r => r.Book)
                 .Include(r => r.Customer)
                 .Include(r => r.User)
@@ -316,6 +357,7 @@ namespace WorldLibrary.Web.Repositories
             var details = reserves.Select(r => new ReserveViewModel
             {
                 Id = r.Id,
+                PhysicalLibrary = library,
                 Book = book,
                 Customer = customer,
                 User= user
@@ -324,6 +366,7 @@ namespace WorldLibrary.Web.Repositories
 
             reserve.Result.Id = model.Id;
             reserve.Result.User= user;
+            reserve.Result.PhysicalLibrary = library;
             reserve.Result.Book= book;
             reserve.Result.Customer= customer;
             reserve.Result.Quantity = model.Quantity;
@@ -333,7 +376,7 @@ namespace WorldLibrary.Web.Repositories
 
             _context.Reserves.Update(reserve.Result);
             _context.Books.Update(book);
-            //await SendReserveNotification(reserve.Result, user.UserName, NotificationType.Edit);
+            await SendReserveNotification(reserve.Result, user.UserName, NotificationType.Edit);
             await _context.SaveChangesAsync();
             return reserve.Result;
         }
@@ -345,6 +388,11 @@ namespace WorldLibrary.Web.Repositories
             {
                 return;
 
+            }
+            var library = await _context.PhysicalLibraries.FindAsync(model.LibraryId);
+            if (library == null)
+            {
+                return;
             }
             var book = await _context.Books.FindAsync(model.BookId);
             if (book == null)
@@ -358,6 +406,7 @@ namespace WorldLibrary.Web.Repositories
             }
             var reserveDetailTemp = await _context.ReserveDetailsTemp.FindAsync(model.Id);
 
+            reserveDetailTemp.PhysicalLibrary = library;
             reserveDetailTemp.Customer = customer;
             reserveDetailTemp.User= user;
             reserveDetailTemp.Book= book;
@@ -394,6 +443,7 @@ namespace WorldLibrary.Web.Repositories
                 return null;
             }
             return _context.ReserveDetailsTemp
+                .Include(r => r.PhysicalLibrary)
                 .Include(r => r.Book)
                 .Include(r => r.Customer)
                 .Where(r => r.User == user)
@@ -412,6 +462,7 @@ namespace WorldLibrary.Web.Repositories
 
             {
                 return _context.Reserves
+                    .Include(r => r.PhysicalLibrary)
                     .Include(b => b.User)
                     .Include(c => c.Customer)
                     .Include(i => i.Book)
@@ -419,6 +470,7 @@ namespace WorldLibrary.Web.Repositories
             }
 
             return _context.Reserves
+                    .Include(r => r.PhysicalLibrary)
                     .Include(i => i.Book)
                     .Where(r => r.User == user)
                     .OrderByDescending(m => m.DeliveryDate);
@@ -437,6 +489,34 @@ namespace WorldLibrary.Web.Repositories
         public async Task<ReserveDetailTemp> GetReserveDetailTempAsync(int id)
         {
             return await _context.ReserveDetailsTemp.FindAsync(id);
+        }
+
+        public async Task<Reserve> RenewBookReturnAsync(BookReturnViewModel model)
+        {
+            var reserve = await _context.Reserves.FindAsync(model.Id);
+            if (reserve == null)
+            {
+                return null;
+            }
+            var reserves = _context.Reserves
+               .Include(r => r.PhysicalLibrary)
+               .Include(r => r.Book)
+               .Include(r => r.User)
+               .Include(r => r.Customer)
+               .ToList();
+
+            var details = reserves.Select(r => new ReserveViewModel
+            {
+                PhysicalLibrary = r.PhysicalLibrary,
+                Customer = r.Customer,
+                Book = r.Book,
+                User = r.User
+            });
+
+            reserve.ReturnDate = model.ReturnDate;
+            _context.Reserves.Update(reserve);
+            await _context.SaveChangesAsync();
+            return (reserve);
         }
 
         public async Task SendReserveNotification(Reserve reserve, string username, NotificationType notificationType)

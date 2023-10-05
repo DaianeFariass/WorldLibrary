@@ -9,21 +9,19 @@ namespace WorldLibrary.Web.Data.Entities
 {
     public class Reserve : IEntity
     {
-       
         public int Id { get; set; }
 
-        [Required]
         [Display(Name = "User Name ")]
         public User User { get; set; }
 
-        [Required]
+        [Display(Name = "Library ")]
+        public PhysicalLibrary PhysicalLibrary { get; set; }    //Criar
+
         public Book Book { get; set; }
 
-        [Required]
         [Display(Name = "Customer Name ")]
         public Customer Customer { get; set; }
 
-        [Required]
         [Display(Name = "Booking Date ")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy }", ApplyFormatInEditMode = false)]
         public DateTime BookingDate { get; set; }

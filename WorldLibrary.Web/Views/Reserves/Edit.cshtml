@@ -1,18 +1,18 @@
-﻿@model WorldLibrary.Web.Models.AddReserveViewModel
+﻿@model WorldLibrary.Web.Models.ReserveViewModel
 @{
-    ViewData["Title"] = "AddReserve";
+    ViewData["Title"] = "Edit";
 }
 
-<h2>Add Reserve</h2>
+<h2>Edit</h2>
 
-<h4>Books</h4>
-
+<h4>Appointment</h4>
+<hr />
 <flash dismissable="true" />
-
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="AddReserve">
+        <form asp-action="Edit" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="LibraryId" class="control-label"></label>
                 <select asp-for="LibraryId" asp-items="Model.Libraries" class="form-control"></select>
@@ -34,33 +34,15 @@
                 <span asp-validation-for="Quantity" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-success">Back to List</a>
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-success"><i class="fa fa-chevron-left"></i>Back to List</a>
             </div>
         </form>
     </div>
 </div>
-
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var userLang = navigator.language || navigator.userLanguage;
-            console.log(userLang);
-            var options = $.extend({}, // empty object
-                $.datepicker.regional[pt - Pt], {
-                dateFormat: "dd/MM/yyyy",
-                orientation: "bottom",
-                autoclose = true
-            } // your custom options
-            );
-            $(".date").datepicker(options);
-        });
-    </script>
     }
-
-
 
