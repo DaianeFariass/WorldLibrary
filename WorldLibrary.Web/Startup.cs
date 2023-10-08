@@ -133,6 +133,7 @@ namespace WorldLibrary.Web
             app.UseAuthentication();
 
             app.UseAuthorization();
+            app.UseCookiePolicy();
 
             app.UseEndpoints(endpoints =>
             {

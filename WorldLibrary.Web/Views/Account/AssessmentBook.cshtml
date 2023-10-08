@@ -1,0 +1,20 @@
+﻿@model List<WorldLibrary.Web.Data.AssessmentBookReturn>
+@{
+    ViewData["Title"] = "AssessmentBook";
+}
+
+<h1>Assessment Book</h1>
+
+<h4>Give your rating to the book</h4>
+
+
+<form class="forum" method="post" action="/Account/AssessmentBook">
+<div>
+    <div>
+        <label for="assessment">Assessment (1 to 5 ):</label>
+        <input type="number" name="assessment" id="assessment" min="1" max="5" required>
+    </div>
+    <br />
+    <button class="button_1" type="submit">Send</button>
+</div>
+</form>

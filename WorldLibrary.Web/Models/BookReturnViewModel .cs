@@ -24,6 +24,7 @@ namespace WorldLibrary.Web.Models
 
         [DisplayFormat(DataFormatString = "{0:C2}")]
         public decimal Rate { get; set; }
+        public string Username { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:N2}")]
         public double Quantity { get; set; }

@@ -369,6 +369,28 @@ namespace WorldLibrary.Web.Controllers
             return View();
 
         }
+
+        public async Task <IActionResult> AssessmentBook(string userId, string token)
+        {
+            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
+            {
+                return NotFound();
+            }
+
+            var user = await _userHelper.GetUserByIdAsync(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var result = await _userHelper.ConfirmEmailAsync(user, token);
+            if (!result.Succeeded)
+            {
+
+            }
+
+            return View();
+        }
         public IActionResult RecoverPassword()
         {
             return View();

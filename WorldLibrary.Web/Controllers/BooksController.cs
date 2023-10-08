@@ -128,16 +128,7 @@ namespace WorldLibrary.Web.Controllers
             {
                 try
                 {
-                    //Guid imageId = model.ImageId;
-
-                    //if (model.ImageFile != null && model.ImageFile.Length > 0)
-                    //{
-                    //    imageId= await _blobHelper.UploadBlobAsync(model.ImageFile, "books");
-                    //}
-                    //var book = _converterHelper.ToBook(model, imageId, false);
-
-                    //book.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel");
-                    //await _bookRepository.UpdateAsync(book);
+                   
                     if (model.Quantity != null && model.StatusBook == StatusBook.Available)
                     {
                         var response = await _bookRepository.EditBookAsync(model, this.User.Identity.Name);
