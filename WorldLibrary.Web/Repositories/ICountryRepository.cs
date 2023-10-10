@@ -26,6 +26,6 @@ namespace WorldLibrary.Web.Repositories
         IEnumerable<SelectListItem> GetComboCities(int countryId);
 
         Task<Country> GetCountryAsync(City city);
-
+        Task<IEnumerable<City>> GetAllCities();
     }
 }

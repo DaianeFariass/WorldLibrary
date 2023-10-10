@@ -28,7 +28,10 @@ namespace WorldLibrary.Web.Data
             modelBuilder.Entity<Country>()
                 .HasIndex(c => c.Name)
                 .IsUnique();
-
+            modelBuilder.Entity<User>()
+              .Property(u => u.CityId)
+              .HasColumnName("CityId")
+              .HasColumnType("int");
 
             base.OnModelCreating(modelBuilder);
         }

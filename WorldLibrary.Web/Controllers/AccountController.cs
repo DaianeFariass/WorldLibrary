@@ -12,6 +12,10 @@ using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
 using WorldLibrary.Web.Models;
 using WorldLibrary.Web.Repositories;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.Extensions.Logging;
+
 
 namespace WorldLibrary.Web.Controllers
 {
@@ -22,6 +26,9 @@ namespace WorldLibrary.Web.Controllers
         private readonly ICountryRepository _countryRepository;
         private readonly IConfiguration _configuration;
         private readonly IEmployeeRepository _employeeRepository;
+        private readonly SignInManager<User> _signInManager;
+        private readonly ILogger<LoginViewModel> _logger;
+        private readonly UserManager<User> _userManager;
         public AccountController(IUserHelper userHelper,
             IMailHelper mailHelper,
             ICountryRepository countryRepository,
@@ -33,6 +40,7 @@ namespace WorldLibrary.Web.Controllers
             _countryRepository = countryRepository;
             _employeeRepository = employeeRepository;
             _configuration = configuration;
+           
         }
 
         public IActionResult Login()
@@ -66,6 +74,10 @@ namespace WorldLibrary.Web.Controllers
             this.ModelState.AddModelError(string.Empty, "Failed to login");
             return View(model);
         }
+
+        
+
+
         public async Task<IActionResult> Logout()
         {
             await _userHelper.LogoutAsync();
@@ -219,7 +231,7 @@ namespace WorldLibrary.Web.Controllers
                 model.Address = user.Address;
                 model.PhoneNumber = user.PhoneNumber;
 
-                var city = await _countryRepository.GetCityAsync(user.CityId);
+                var city = await _countryRepository.GetCityAsync((int)user.CityId);
                 if (city != null)
                 {
                     var country = await _countryRepository.GetCountryAsync(city);
@@ -228,7 +240,7 @@ namespace WorldLibrary.Web.Controllers
                         model.CountryId = country.Id;
                         model.Cities = _countryRepository.GetComboCities(country.Id);
                         model.Countries = _countryRepository.GetComboCountries();
-                        model.CityId = user.CityId;
+                        model.CityId = (int)user.CityId;
                     }
                 }
             }
@@ -370,27 +382,7 @@ namespace WorldLibrary.Web.Controllers
 
         }
 
-        public async Task <IActionResult> AssessmentBook(string userId, string token)
-        {
-            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
-            {
-                return NotFound();
-            }
-
-            var user = await _userHelper.GetUserByIdAsync(userId);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            var result = await _userHelper.ConfirmEmailAsync(user, token);
-            if (!result.Succeeded)
-            {
-
-            }
-
-            return View();
-        }
+       
         public IActionResult RecoverPassword()
         {
             return View();

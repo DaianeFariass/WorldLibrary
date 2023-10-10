@@ -598,20 +598,15 @@ namespace WorldLibrary.Web.Controllers
                // var user = await _userHelper.GetUserByEmailAsync(model.Username);
                 if (response != null)
                 {
-                    //string myToken = await _userHelper.GenerateEmailConfirmationTokenAsync(user);
-                    //string tokenLink = Url.Action("AssessmentBook", "Account", new
-                    //{
-                    //    userid = user.Id,
-                    //    token = myToken
-                    //}, protocol: HttpContext.Request.Scheme);
+                    
                     _mailHelper.SendEmail(response.Customer.Email,
                      "Book Return! Thank You!!", $"<h1> World Library</h1>" +
                       $"Dear {response.Customer.FullName}, " +
                       $"Thank you for Return the book...</br></br>" +
                       $"Book:  {response.Book.Title}</br>" +
                       $"Quantity:  {response.Quantity}</br>" +
-                      // $"Return: {response.ReturnDate.Value}</br>" +
-                      $"Return: {(response.ReturnDate.HasValue ? response.ReturnDate.Value.ToString() : "N/A")}</br>" +
+                      $"Return: {response.ReturnDate.Value}</br>" +
+                     // $"Return: {(response.ReturnDate.HasValue ? response.ReturnDate.Value.ToString() : "N/A")}</br>" +
                     $"Status: {response.StatusReserve}</br>");
                     //$"Click on the link to rate your experience with the book:</br></br><a href = \"{tokenLink}\">Assessment Book</a>");
                 }

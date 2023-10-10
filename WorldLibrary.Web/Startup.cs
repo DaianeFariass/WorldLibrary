@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vereyon.Web;
+using WorldLibrary.Web.Areas.Identity.Pages.Account.Manage;
 using WorldLibrary.Web.Data;
 using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
@@ -49,7 +51,7 @@ namespace WorldLibrary.Web
             })
                .AddDefaultTokenProviders()
                .AddEntityFrameworkStores<DataContext>();
-
+            services.AddRazorPages();
             services.AddAuthentication()
                     .AddCookie()
                 .AddJwtBearer(cfg =>
@@ -63,11 +65,12 @@ namespace WorldLibrary.Web
                     };
 
                 })
-                .AddFacebook(options =>
-                {
-                    options.AppId="616234630717235";
-                    options.AppSecret="a6670e162c79744dad1c754fa21e7356";
-                });
+                 .AddGoogle(options =>
+                 {
+                     options.ClientId = "216200050374-e1uc1qp5a17troh8kkm9s7u2dggtpclr.apps.googleusercontent.com";
+                     options.ClientSecret = "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";
+                 });
+                
 
             services.Configure<CookiePolicyOptions>(options =>
             {                
@@ -92,6 +95,8 @@ namespace WorldLibrary.Web
             services.AddScoped<IReserveRepository, ReserveRepository>();
             services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddScoped<INotificationRepository, NotificationRepository>();
+
+            services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddScoped<IImageHelper, ImageHelper>();
             services.AddScoped<IConverterHelper, ConverterHelper>();
@@ -137,6 +142,7 @@ namespace WorldLibrary.Web
 
             app.UseEndpoints(endpoints =>
             {
+               endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

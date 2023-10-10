@@ -46,6 +46,11 @@ namespace WorldLibrary.Web.Repositories
             return country.Id;
         }
 
+        public async Task<IEnumerable<City>> GetAllCities()
+        {
+            return await _context.Cities.ToListAsync();
+        }
+
         public async Task<City> GetCityAsync(int id)
         {
             return await _context.Cities.FindAsync(id);
