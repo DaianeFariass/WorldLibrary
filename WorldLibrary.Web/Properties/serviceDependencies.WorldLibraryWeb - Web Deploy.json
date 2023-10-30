@@ -5,6 +5,13 @@
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/worldlibraryweb-dbserver/databases/WorldLibrary.Web_db",
       "type": "mssql.azure",
       "connectionId": "ConnectionStrings:DefaultConnection2"
+    },
+    "storage1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/worldlibraryweb",
+      "type": "storage.azure",
+      "connectionId": "Blob:ConnectionString",
+      "dynamicId": null
     }
   }
 }

@@ -1,25 +1,31 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Vereyon.Web;
-using WorldLibrary.Web.Areas.Identity.Pages.Account.Manage;
 using WorldLibrary.Web.Data;
 using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
 using WorldLibrary.Web.Repositories;
+using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
+using static System.Web.Razor.Parser.SyntaxConstants;
+using Microsoft.Extensions.Azure;
+using Azure.Storage.Queues;
+using Azure.Storage.Blobs;
+using Azure.Core.Extensions;
 
 namespace WorldLibrary.Web
 {
@@ -51,38 +57,67 @@ namespace WorldLibrary.Web
             })
                .AddDefaultTokenProviders()
                .AddEntityFrameworkStores<DataContext>();
-            services.AddRazorPages();
-            services.AddAuthentication()
-                    .AddCookie()
-                .AddJwtBearer(cfg =>
-                {
-                    cfg.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidIssuer = this.Configuration["Token:Issuer"],
-                        ValidAudience = this.Configuration["Token:Audience"],
-                        IssuerSigningKey = new SymmetricSecurityKey(
-                            Encoding.UTF8.GetBytes(this.Configuration["Tokens:Key"]))
-                    };
 
-                })
-                 .AddGoogle(options =>
-                 {
-                     options.ClientId = "216200050374-e1uc1qp5a17troh8kkm9s7u2dggtpclr.apps.googleusercontent.com";
-                     options.ClientSecret = "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";
-                 });
+            
+
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
                 
+            })
+               //.AddGoogle(GoogleDefaults.AuthenticationScheme, googleOptions =>
+               //{
+               //    googleOptions.ClientId = Configuration["Google:ClientId"];
+               //    googleOptions.ClientSecret = Configuration["Google:ClientSecret"];
+               //    googleOptions.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                   
 
+               //})
+                  .AddCookie()
+               .AddJwtBearer(cfg =>
+               {
+                   cfg.TokenValidationParameters = new TokenValidationParameters
+                   {
+                       ValidIssuer = this.Configuration["Token:Issuer"],
+                       ValidAudience = this.Configuration["Token:Audience"],
+                       IssuerSigningKey = new SymmetricSecurityKey(
+                           Encoding.UTF8.GetBytes(this.Configuration["Tokens:Key"]))
+                   };
+
+               });
             services.Configure<CookiePolicyOptions>(options =>
-            {                
+            {
                 options.CheckConsentNeeded = context => true;
-                
+
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
             services.AddDbContext<DataContext>(cfg =>
             {
                 cfg.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection2"));
             });
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("Admin", policy =>
+                {
+                    // Defina as regras de autorização aqui, por exemplo:
+                    policy.RequireRole("Admin");
+                });
+
+                options.AddPolicy("LibrarianOrAssistant", policy =>
+                {
+                    // Defina as regras de autorização aqui:
+                    policy.RequireRole("Librarian", "Assistant");
+                });
+
+                options.AddPolicy("Customer", policy =>
+                {
+                    // Defina as regras de autorização aqui, por exemplo:
+                    policy.RequireRole("Customer");
+                });
+            });
+            
 
             services.AddFlashMessage();
 
@@ -95,8 +130,8 @@ namespace WorldLibrary.Web
             services.AddScoped<IReserveRepository, ReserveRepository>();
             services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddScoped<INotificationRepository, NotificationRepository>();
+            services.AddScoped<IAssessmentRepository, AssessmentRepository>();
 
-            services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddScoped<IImageHelper, ImageHelper>();
             services.AddScoped<IConverterHelper, ConverterHelper>();
@@ -112,6 +147,12 @@ namespace WorldLibrary.Web
             });
 
             services.AddControllersWithViews();
+            services.AddAzureClients(builder =>
+            {
+                builder.AddBlobServiceClient(Configuration["Blob:ConnectionString:blob"], preferMsi: true);
+                builder.AddQueueServiceClient(Configuration["Blob:ConnectionString:queue"], preferMsi: true);
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -127,6 +168,7 @@ namespace WorldLibrary.Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            
 
             app.UseStatusCodePagesWithReExecute("/error/{0}");
 
@@ -139,14 +181,43 @@ namespace WorldLibrary.Web
 
             app.UseAuthorization();
             app.UseCookiePolicy();
-
+        
             app.UseEndpoints(endpoints =>
             {
-               endpoints.MapRazorPages();
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+
             });
         }
     }
+    internal static class StartupExtensions
+    {
+        public static IAzureClientBuilder<BlobServiceClient, BlobClientOptions> AddBlobServiceClient(this AzureClientFactoryBuilder builder, string serviceUriOrConnectionString, bool preferMsi)
+        {
+            if (preferMsi && Uri.TryCreate(serviceUriOrConnectionString, UriKind.Absolute, out Uri serviceUri))
+            {
+                return builder.AddBlobServiceClient(serviceUri);
+            }
+            else
+            {
+                return builder.AddBlobServiceClient(serviceUriOrConnectionString);
+            }
+        }
+        public static IAzureClientBuilder<QueueServiceClient, QueueClientOptions> AddQueueServiceClient(this AzureClientFactoryBuilder builder, string serviceUriOrConnectionString, bool preferMsi)
+        {
+            if (preferMsi && Uri.TryCreate(serviceUriOrConnectionString, UriKind.Absolute, out Uri serviceUri))
+            {
+                return builder.AddQueueServiceClient(serviceUri);
+            }
+            else
+            {
+                return builder.AddQueueServiceClient(serviceUriOrConnectionString);
+            }
+        }
+    }
+
 }

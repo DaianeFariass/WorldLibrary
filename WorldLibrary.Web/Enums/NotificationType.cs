@@ -6,5 +6,6 @@
         Edit,
         Cancel,
         Conclude,
+        Premium,
     }
 }

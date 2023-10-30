@@ -1,24 +1,27 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
 using System;
+using System.Data;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Vereyon.Web;
 using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
 using WorldLibrary.Web.Models;
 using WorldLibrary.Web.Repositories;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.Extensions.Logging;
-
 
 namespace WorldLibrary.Web.Controllers
 {
+
     public class AccountController : Controller
     {
         private readonly IUserHelper _userHelper;
@@ -26,23 +29,25 @@ namespace WorldLibrary.Web.Controllers
         private readonly ICountryRepository _countryRepository;
         private readonly IConfiguration _configuration;
         private readonly IEmployeeRepository _employeeRepository;
-        private readonly SignInManager<User> _signInManager;
-        private readonly ILogger<LoginViewModel> _logger;
-        private readonly UserManager<User> _userManager;
+        private readonly IFlashMessage _flashMessage;
+
         public AccountController(IUserHelper userHelper,
             IMailHelper mailHelper,
             ICountryRepository countryRepository,
             IEmployeeRepository employeeRepository,
-            IConfiguration configuration)
+            IConfiguration configuration,
+            IFlashMessage flashMessage)
         {
             _userHelper = userHelper;
             _mailHelper = mailHelper;
             _countryRepository = countryRepository;
             _employeeRepository = employeeRepository;
             _configuration = configuration;
-           
-        }
+            _flashMessage = flashMessage;
 
+
+        }
+        [Route("login")]
         public IActionResult Login()
         {
             if (User.Identity.IsAuthenticated)
@@ -51,6 +56,7 @@ namespace WorldLibrary.Web.Controllers
             }
             return View();
         }
+        [Route("login")]
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
@@ -75,16 +81,38 @@ namespace WorldLibrary.Web.Controllers
             return View(model);
         }
 
-        
+        public async Task GoogleLogin()
+        {
+            await HttpContext.ChallengeAsync(GoogleDefaults.AuthenticationScheme,
+                new AuthenticationProperties()
+                {
+                    RedirectUri = Url.Action("GoogleResponse")
 
+                });
+        }
+        public async Task<IActionResult> GoogleResponse()
+        {
+            var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            var claims = result.Principal.Identities.FirstOrDefault()
+                .Claims.Select(claim => new
+                {
+                    claim.Issuer,
+                    claim.OriginalIssuer,
+                    claim.Type,
+                    claim.Value
+                });
 
+            return Json(claims);
+        }
+        [Route("logout")]
         public async Task<IActionResult> Logout()
         {
             await _userHelper.LogoutAsync();
+            await HttpContext.SignOutAsync();
             return RedirectToAction("Index", "Home");
 
         }
-
+        [Route("register")]
         public IActionResult Register()
         {
             var model = new RegisterNewUserViewModel
@@ -96,10 +124,12 @@ namespace WorldLibrary.Web.Controllers
         }
 
         [HttpPost]
+        [Route("register")]
         public async Task<IActionResult> Register(RegisterNewUserViewModel model)
         {
             if (ModelState.IsValid)
             {
+               
                 var user = await _userHelper.GetUserByEmailAsync(model.Username);
                 if (user == null)
                 {
@@ -146,7 +176,8 @@ namespace WorldLibrary.Web.Controllers
             }
             return View(model);
         }
-
+        [Route("registerrole")]
+        [Authorize(Roles = "Admin")]
         public IActionResult RegisterRole()
         {
             var model = new RegisterNewUserViewModel
@@ -159,11 +190,13 @@ namespace WorldLibrary.Web.Controllers
             return View(model);
         }
         [HttpPost]
+        [Route("registerrole")]
         public async Task<IActionResult> RegisterRole(RegisterNewUserViewModel model) //Criar
         {
+            var user = await _userHelper.GetUserByEmailAsync(model.Username);
             if (ModelState.IsValid)
             {
-                var user = await _userHelper.GetUserByEmailAsync(model.Username);
+               
                 if (user == null)
                 {
                     var city = await _countryRepository.GetCityAsync(model.CityId);
@@ -218,8 +251,22 @@ namespace WorldLibrary.Web.Controllers
                     ModelState.AddModelError(string.Empty, "The user couldn't be logged.");
                 }
             }
+            if (model.RoleId == "Admin")
+            {
+                await _userHelper.AddUserToRoleAsync(user, "Admin");
+            }
+            if (model.RoleId == "Librarian")
+            {
+                await _userHelper.AddUserToRoleAsync(user, "Librarian");
+            }
+            if (model.RoleId == "Assistant")
+            {
+                await _userHelper.AddUserToRoleAsync(user, "Assistant");
+            }
+
             return View(model);
         }
+        [Route("changeuser")]
         public async Task<IActionResult> ChangeUser()
         {
             var user = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
@@ -251,6 +298,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         [HttpPost]
+        [Route("changeuser")]
         public async Task<IActionResult> ChangeUser(ChangeUserViewModel model)
         {
             if (ModelState.IsValid)
@@ -282,7 +330,7 @@ namespace WorldLibrary.Web.Controllers
 
             return View(model);
         }
-
+        [Route("changepassword")]
         public IActionResult ChangePassword()
         {
             return View();
@@ -290,6 +338,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         [HttpPost]
+        [Route("changepassword")]
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
         {
             if (ModelState.IsValid)
@@ -359,6 +408,7 @@ namespace WorldLibrary.Web.Controllers
 
             return BadRequest();
         }
+        [Route("confirmemail")]
         public async Task<IActionResult> ConfirmEmail(string userId, string token)
         {
             if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
@@ -381,13 +431,13 @@ namespace WorldLibrary.Web.Controllers
             return View();
 
         }
-
-       
+        [Route("recoverpassword")]
         public IActionResult RecoverPassword()
         {
             return View();
         }
         [HttpPost]
+        [Route("recoverpassword")]
         public async Task<IActionResult> RecoverPassword(RecoverPasswordViewModel model)
         {
             if (this.ModelState.IsValid)
@@ -421,14 +471,13 @@ namespace WorldLibrary.Web.Controllers
 
             return this.View(model);
         }
-
+        [Route("resetpassword")]
         public IActionResult ResetPassword(string token)
         {
             return View();
         }
-
-
         [HttpPost]
+        [Route("resetpassword")]
         public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
         {
             var user = await _userHelper.GetUserByEmailAsync(model.Username);
@@ -448,6 +497,7 @@ namespace WorldLibrary.Web.Controllers
             this.ViewBag.Message = "User not found.";
             return View(model);
         }
+        [Route("notauthorized")]
         public IActionResult NotAuthorized()
         {
             return View();
@@ -462,5 +512,7 @@ namespace WorldLibrary.Web.Controllers
             return Json(country.Cities.OrderBy(c => c.Name));
 
         }
+
+
     }
 }

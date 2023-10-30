@@ -14,7 +14,7 @@ using WorldLibrary.Web.Data.Entities;
 
 namespace WorldLibrary.Web.Models
 {
-    public class LoginViewModel : PageModel
+    public class LoginViewModel 
     {
 
         [Required]

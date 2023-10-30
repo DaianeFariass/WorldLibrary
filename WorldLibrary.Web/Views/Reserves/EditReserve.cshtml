@@ -1,14 +1,17 @@
 ﻿@model WorldLibrary.Web.Models.AddReserveViewModel
 @{
     ViewData["Title"] = "EditAppointment";
+    Layout = "_Layout"; // Especifica o layout a ser usado
 }
-
-<h1>Edit</h1>
-
-<h4>Appointment</h4>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <hr />
 <flash dismissable="true" />
-<div class="row">
+<div class="row justify-content-center">
     <div class="col-md-4">
         <form asp-action="EditReserve" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -43,6 +46,10 @@
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
     }
-    }
+}
 

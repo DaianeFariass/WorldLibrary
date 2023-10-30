@@ -6,12 +6,42 @@ namespace WorldLibrary.Web.Helper
 {
     public class ConverterHelper : IConverterHelper
     {
-        public Book ToBook(BookViewModel model, Guid imageid, bool isNew)
+        public Customer ToCustomer(CustomerViewModel model, Guid imageId, bool isNew)
+        {
+            return new Customer
+            {
+                Id = isNew ? 0 : model.Id,
+                FullName = model.FullName,
+                Address = model.Address,
+                Phone = model.Phone,
+                Document = model.Document,
+                Email = model.Email,
+                ImageId = imageId,
+                User = model.User,
+            };
+
+        }
+        public CustomerViewModel ToCustomerViewModel(Customer customer)
+        {
+            return new CustomerViewModel 
+            {
+                Id = customer.Id,
+                FullName = customer.FullName,
+                Address = customer.Address,
+                Phone = customer.Phone,
+                Document = customer.Document,
+                Email = customer.Email,
+                ImageId = customer.ImageId,
+                User = customer.User,
+            };
+
+        }
+        public Book ToBook(BookViewModel model, Guid imageId, Guid imagePdf, bool isNew)
         {
             return new Book
             {
                 Id = isNew ? 0 : model.Id,
-                ImageId = imageid,
+                ImageId = imageId,
                 Title = model.Title,
                 Author = model.Author,
                 Category=model.Category,
@@ -19,7 +49,9 @@ namespace WorldLibrary.Web.Helper
                 Year=model.Year,
                 StatusBook=model.StatusBook,
                 Quantity=model.Quantity,
+                Assessment=model.AssessmentId.ToString(),
                 User=model.User,
+                ImagePdf = imagePdf
             };
         }
 
@@ -37,6 +69,7 @@ namespace WorldLibrary.Web.Helper
                 StatusBook=book.StatusBook,
                 Quantity = book.Quantity,
                 User = book.User,
+                ImagePdf = book.ImagePdf
             };
         }
 

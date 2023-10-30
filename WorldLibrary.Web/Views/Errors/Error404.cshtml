@@ -2,6 +2,12 @@
 @{
     ViewData["Title"] = "Error404";
 }
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 <h1 class="erro_h1">404 Error Page #3</h1>
 <p class="zoom-area"><b>CSS</b> animations to make a cool 404 page. </p>
@@ -13,4 +19,13 @@
 <div class="link-container">
     <a target="_blank" href="https://www.silocreativo.com/en/creative-examples-404-error-css/" class="more-link">Visit the original article</a>
 </div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    }
+}
 

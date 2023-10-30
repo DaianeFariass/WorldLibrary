@@ -44,6 +44,6 @@ namespace WorldLibrary.Web.Repositories
         Task<Reserve> EditReserveAsync(ReserveViewModel model, string username);
 
         Task SendReserveNotification(Reserve reserve, string username, NotificationType notificationType);
-
+        Task<AddReserveViewModel> ReturnReserveViewModel(string userName);
     }
 }

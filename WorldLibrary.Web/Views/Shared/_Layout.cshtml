@@ -1,112 +1,210 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+   
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - World Library</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/lib/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>World Library</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:500,800" rel="stylesheet">
-    <link rel="stylesheet" href="~/css/site.css" />
     
+
+@*    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>*@
+
+
 </head>
-<body>
+
+<body class="main-layout home_page">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <!-- header inner -->
+        <div class="header">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WorldLibrary</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Forum">Forum</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Books" asp-action="Index">Books</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="Index">Employees</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="RegisterRole">Register New Role</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Notifications" asp-action="Index">Notifications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="PhysicalLibraries" asp-action="Index">Physical Libraries</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Form </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Contacts" asp-action="Index">Internal contact</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Contacts" asp-action="ExternalContact">External contact</a></li>
-                            </ul>
-                        </li>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo"> <a href="index.html"><img src="images/wl-logo.png" alt="#"></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+                                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                        <li><a asp-controller="Home" asp-action="About">About</a></li>
+                                        <li><a asp-controller="Books" asp-action="Index">Books</a></li>
+                                        <li><a asp-controller="PhysicalLibraries" asp-action="Index">Physical Libraries</a></li>
+                                        <li><a asp-controller="Contacts" asp-action="Contact">Contact</a></li>
+                                        <li><a asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                                        @if (this.User.Identity.IsAuthenticated && this.User.IsInRole("Admin"))
+                                        {
+                                            <li>
+                                                <a style="color:white">Admin</a>
+                                                <ul class="submenu">
+                                                    <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="Index">Employees</a>
+                                                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="RegisterRole">Register New Role</a>
+                                                    <a class="nav-link text-dark" asp-area="" asp-controller="PhysicalLibraries" asp-action="Index">Physical Libraries</a>
+                                                    <li><a class="dropdown-item" asp-area="" asp-controller="Countries" asp-action="Index">Countries and Cities</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Form </a>
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                    <li><a class="dropdown-item" asp-area="" asp-controller="Contacts" asp-action="Index">Internal contact</a></li>
+                                                    <li><a class="dropdown-item" asp-area="" asp-controller="Contacts" asp-action="ExternalContact">External contact</a></li>
+                                                </ul>
+                                            </li>
+                                        }
+                                        @if (this.User.Identity.IsAuthenticated && this.User.IsInRole("Librarian"))
+                                        {
+                                            <li>
+                                                <a style="color:white">Librarian</a>
+                                                <ul class="submenu">
+                                                    <a class="nav-link text-dark" asp-area="" asp-controller="Notifications" asp-action="Index">Notifications</a>
+                                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Forum">Forum</a>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Form </a>
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                    <li><a class="dropdown-item" asp-area="" asp-controller="Contacts" asp-action="Index">Internal contact</a></li>
+                                                    <li><a class="dropdown-item" asp-area="" asp-controller="Contacts" asp-action="ExternalContact">External contact</a></li>
+                                                </ul>
+                                            </li>
+                                        }
+                                        @if (this.User.Identity.IsAuthenticated && this.User.IsInRole("Assistant"))
+                                        {
+                                            <li>
+                                                <a style="color:white">Assistant</a>
+                                                <ul class="submenu">
+                                                    <a class="nav-link text-dark" asp-area="" asp-controller="Notifications" asp-action="Index">Notifications</a>
+                                                   
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Form </a>
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                    <li><a class="dropdown-item" asp-area="" asp-controller="Contacts" asp-action="Index">Internal contact</a></li>
+                                                    <li><a class="dropdown-item" asp-area="" asp-controller="Contacts" asp-action="ExternalContact">External contact</a></li>
+                                                </ul>
+                                            </li>
+                                        }
+                                       
 
-                        @if (this.User.Identity.IsAuthenticated && this.User.IsInRole("Admin"))
-                        {
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="" asp-action="">Users</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="" asp-action="">Roles</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Countries" asp-action="Index">Countries and Cities</a></li>
-                                </ul>
-                            </li>
-                        }
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        @if (this.User.Identity.IsAuthenticated)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Reserves" asp-action="Index">Reserves</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="ChangeUser">@this.User.Identity.Name</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <partial name="_LoginPartial" />
-                            </li>
+                                        @if (this.User.Identity.IsAuthenticated)
+                                        {
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Forum">Forum</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-area="" asp-controller="Reserves" asp-action="Index">Reserves</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="ChangeUser">@this.User.Identity.Name</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                                            </li>
 
-                        }
-                    </ul>
+
+                                        }
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <!-- end header inner -->
+  
+    @RenderBody()
+    @RenderSection("content", required: false)
+   
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - World Library - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row pdn-top-30">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <div class="Follow">
+                            <h3>Follow Us</h3>
+                        </div>
+                        <ul class="location_icon">
+                            <li> <a href="https://www.facebook.com"><img src="icon/facebook.png"></a></li>
+                            <li> <a href="https://www.twitter.com"><img src="icon/Twitter.png"></a></li>
+                            <li> <a href="https://www.linkedin.com"><img src="icon/linkedin.png"></a></li>
+                            <li> <a href="https://www.instagram.com"><img src="icon/instagram.png"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                        <div class="Follow">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <input class="Newsletter" placeholder="Enter your email" type="Enter your email">
+                        <button class="Subscribe">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <partial name="_CookieConsentPartial" />
+                <p>Version 1.0 2023 by Daiane Farias &amp; Evelyn Nunes </a></p>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    
+    <!-- Javascript files-->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/jquery-3.0.0.min.js"></script>
+    <script src="~/js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/js/custom.js"></script>
+     
+  @await RenderSectionAsync("Scripts", required: false)
+   
 </body>
 </html>

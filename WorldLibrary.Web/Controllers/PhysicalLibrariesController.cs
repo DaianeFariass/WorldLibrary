@@ -40,6 +40,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: PhysicalLibraries/Details/5
+        [Route("detailslibrary")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -57,6 +58,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: PhysicalLibraries/Create
+        [Route("createlibrary")]
         public IActionResult Create()
         {
             return View();
@@ -67,6 +69,7 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Route("createlibrary")]
         public async Task<IActionResult> Create(PhysicalLibraryViewModel model)
         {
             if (ModelState.IsValid)
@@ -75,20 +78,21 @@ namespace WorldLibrary.Web.Controllers
 
                 if (model.ImageFile != null && model.ImageFile.Length > 0)
                 {
-                    imageid =  await _blobHelper.UploadBlobAsync(model.ImageFile, "libraries");
+                    imageid =  await _blobHelper.UploadBlobAsync(model.ImageFile, "physics");
                 }
 
                 var physicalLibrary = _converterHelper.ToLibrary(model, imageid, true);
 
-                physicalLibrary.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
+                physicalLibrary.User = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
                 await _physicalLibraryRepository.CreateAsync(physicalLibrary);
                 return RedirectToAction(nameof(Index));
             }
             return View(model);
         }
 
-       
+
         // GET: PhysicalLibraries/Edit/5
+        [Route("editlibrary")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -112,6 +116,7 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Route("editlibrary")]
         public async Task<IActionResult> Edit(PhysicalLibraryViewModel model)
         {
 
@@ -124,12 +129,12 @@ namespace WorldLibrary.Web.Controllers
 
                     if (model.ImageFile != null && model.ImageFile.Length > 0)
                     {
-                        imageid =  await _blobHelper.UploadBlobAsync(model.ImageFile, "libraries");
+                        imageid =  await _blobHelper.UploadBlobAsync(model.ImageFile, "physics");
                     }
 
                     var physicalLibrary = _converterHelper.ToLibrary(model, imageid, false);
 
-                    physicalLibrary.User = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
+                    physicalLibrary.User = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
                     await _physicalLibraryRepository.UpdateAsync(physicalLibrary);
                 }
                 catch (DbUpdateConcurrencyException)
@@ -149,6 +154,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: PhysicalLibraries/Delete/5
+        [Route("deletelibrary")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -168,6 +174,7 @@ namespace WorldLibrary.Web.Controllers
         // POST: PhysicalLibraries/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Route("deletelibrary")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var physicalLibrary = await _physicalLibraryRepository.GetByIdAsync(id);
@@ -190,7 +197,7 @@ namespace WorldLibrary.Web.Controllers
                 return View("Error");
             }
         }
-
+        [Route("librarynotfound")]
         public IActionResult LibraryNotFound()
         {
             return View();

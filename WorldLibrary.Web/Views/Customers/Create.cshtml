@@ -1,17 +1,24 @@
-﻿@model WorldLibrary.Web.Data.Entities.Customer
+﻿@model WorldLibrary.Web.Models.CustomerViewModel
 
 @{
     ViewData["Title"] = "Create";
+    Layout = "_Layout"; // Especifica o layout a ser usado
 }
-
-<h1>Create</h1>
-
-<h4>Customer</h4>
-<hr />
-<div class="row">
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="row justify-content-center">
     <div class="col-md-4">
         <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" class="form-control" type="file" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="FullName" class="control-label"></label>
                 <input asp-for="FullName" class="form-control" />
@@ -45,9 +52,15 @@
         </form>
     </div>
 </div>
-
+<br />
+<br />
+<br />
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
     }
-    }
+}

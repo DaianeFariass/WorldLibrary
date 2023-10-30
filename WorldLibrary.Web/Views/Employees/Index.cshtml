@@ -2,18 +2,22 @@
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "_Layout"; // Especifica o layout a ser usado
 }
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css" />
-
-
+<br />
+<br />
+<br />
+<br />
+<br />
 <br />
 
 <p>
     <a asp-action="Create" class="btn btn-primary"><i class="fa fa-save"></i> Create New</a>
 </p>
 
-<div class="row">
+<div class="container justify-content-center">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -23,6 +27,9 @@
                 <table class="table table-hover table-responsive table-striped" id="MyTable">
                     <thead>
                         <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ImageId)
+                            </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.FullName)
                             </th>
@@ -42,6 +49,7 @@
                                 @Html.DisplayNameFor(model => model.JobPosition)
                             </th>
                             
+                            
                             <th></th>
                         </tr>
                     </thead>
@@ -49,6 +57,12 @@
                         @foreach (var item in Model)
                         {
                             <tr>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.ImageFullPath))
+                                    {
+                                        <img src="@Url.Content(item.ImageFullPath)" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto;" />
+                                    }
+                                </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.FullName)
                                 </td>
@@ -68,12 +82,6 @@
 
                                 <td>
                                     @Html.DisplayFor(modelItem => item.JobPosition)
-                                </td>
-                                <td>
-                                    @if (!string.IsNullOrEmpty(item.ImageFullPath))
-                                    {
-                                        <img src="@Url.Content(item.ImageFullPath)" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto">
-                                    }
                                 </td>
                                 <td>
                                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="far fa-edit"></i></a>

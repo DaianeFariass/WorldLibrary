@@ -2,48 +2,63 @@
 
 @{
     ViewData["Title"] = "Details";
+    Layout = "_Layout"; // Especifica o layout a ser usado
 }
 
-<h1>Details</h1>
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <div>
-    <h4>Customer</h4>
+    <h4>Employee</h4>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Document)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Document)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Phone)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-    </dl>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <dl class="container justify-content-center">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.FullName)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.FullName)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Document)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Document)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Phone)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Phone)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dd class="col-sm-9">
+
+                    <img src="@Url.Content(Model.ImageFullPath)" alt="Image" style="width:300px;height:450px;max-width:100%;height:auto">
+
+                </dd>
+                <dd class="col-sm-9">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"><i class="far fa-edit"></i>Edit</a>
+                    <a asp-action="Index" class="btn btn-success"><i class="fa fa-chevron-left"></i>Back to List</a>
+                </dd>
+            </dl>
+        </div>       
+    </div>
 </div>
 
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"><i class="far fa-edit"></i>Edit</a>
-    <a asp-action="Index" class="btn btn-success"><i class="fa fa-chevron-left"></i>Back to List</a>
-</div>
+

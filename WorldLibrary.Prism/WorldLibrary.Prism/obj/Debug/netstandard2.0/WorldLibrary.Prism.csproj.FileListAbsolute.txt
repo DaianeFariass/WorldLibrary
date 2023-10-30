@@ -1,0 +1,39 @@
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\bin\Debug\netstandard2.0\WorldLibrary.Prism.deps.json
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\bin\Debug\netstandard2.0\WorldLibrary.Prism.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\bin\Debug\netstandard2.0\WorldLibrary.Prism.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.csproj.AssemblyReference.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.AssemblyInfoInputs.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.AssemblyInfo.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.csproj.CoreCompileInputs.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\bin\Debug\netstandard2.0\WorldLibrary.Prism.deps.json
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\bin\Debug\netstandard2.0\WorldLibrary.Prism.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\bin\Debug\netstandard2.0\WorldLibrary.Prism.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.csproj.AssemblyReference.cache
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.AssemblyInfoInputs.cache
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.AssemblyInfo.cs
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.csproj.CoreCompileInputs.cache
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\bin\Debug\netstandard2.0\WorldLibrary.Prism.deps.json
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\bin\Debug\netstandard2.0\WorldLibrary.Prism.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\bin\Debug\netstandard2.0\WorldLibrary.Prism.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.csproj.AssemblyReference.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.GeneratedMSBuildEditorConfig.editorconfig
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.AssemblyInfoInputs.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.AssemblyInfo.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.csproj.CoreCompileInputs.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\XamlC.stamp
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism\obj\Debug\netstandard2.0\WorldLibrary.Prism.pdb

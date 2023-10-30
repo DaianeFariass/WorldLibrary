@@ -19,5 +19,7 @@ namespace WorldLibrary.Web.Models
         public int? EmployeeId { get; set; }
 
         public IEnumerable<SelectListItem> Employees { get; set; }
+
+        public string Phone { get; set; }
     }
 }

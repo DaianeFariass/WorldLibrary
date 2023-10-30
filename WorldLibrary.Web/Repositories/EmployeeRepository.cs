@@ -16,11 +16,21 @@ namespace WorldLibrary.Web.Repositories
             _context = context;
         }
 
+        /// <summary>
+        /// Métodod que mostra todos os funcionários 
+        /// </summary>
+        /// <returns>Employees>returns>
+
         public IQueryable GetAllWithUsers()
         {
             return _context.Employees.Include(p => p.User);
         }
 
+
+        /// <summary>
+        /// Método que preenche o combobox com o nome dos funcionários 
+        /// </summary>
+        /// <returns>Employees</returns>
         public IEnumerable<SelectListItem> GetComboEmployees()
         {
             var list = _context.Employees.Select(c => new SelectListItem
@@ -37,6 +47,11 @@ namespace WorldLibrary.Web.Repositories
 
             return list;
         }
+
+        /// <summary>
+        /// Método que preenche o combobox com elai dos funcionários 
+        /// </summary>
+        /// <returns>Employees Email</returns>
 
         public IEnumerable<SelectListItem> GetComboEmployeesEmail()
         {
@@ -65,6 +80,10 @@ namespace WorldLibrary.Web.Repositories
             return list;
         }
 
+        /// <summary>
+        /// Método que preenche a combobox para escolha dos roles
+        /// </summary>
+        /// <returns>Roles</returns>
         public IEnumerable<SelectListItem> GetComboRoles()
         {
             var model = new RegisterNewUserViewModel

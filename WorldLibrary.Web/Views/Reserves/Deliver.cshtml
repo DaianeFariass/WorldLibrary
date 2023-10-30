@@ -2,10 +2,13 @@
 @{
     ViewData["Title"] = "Deliver";
 }
-
-<h2>Deliver</h2>
-
-<div class="row">
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="row justify-content-center">
     <div class="col-md-4">
         <form asp-action="Deliver">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -31,20 +34,9 @@
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
     }
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var userLang = navigator.language || navigator.userLanguage;
-            console.log(userLang);
-            var options = $.extend({}, // empty object
-                $.datepicker.regional[pt - Pt], {
-                dateFormat: "dd/MM/yyyy",
-                orientation: "bottom",
-                autoclose = true
-            } // your custom options
-            );
-            $(".date").datepicker(options);
-        });
-    </script>
-    }
+}

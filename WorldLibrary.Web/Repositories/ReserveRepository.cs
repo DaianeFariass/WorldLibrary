@@ -16,21 +16,33 @@ namespace WorldLibrary.Web.Repositories
         private readonly DataContext _context;
         private readonly IUserHelper _userHelper;
         private readonly IBookRepository _bookRepository;
+        private readonly IPhysicalLibraryRepository _physicalLibraryRepository;
+        private readonly ICustomerRepository _customerRepository;
         private readonly IFlashMessage _flashMessage;
         private readonly IConverterHelper _converterHelper;
         public ReserveRepository(DataContext context,
             IUserHelper userHelper,
             IBookRepository bookRepository,
             IFlashMessage flashMessage,
-            IConverterHelper converterHelper) : base(context)
+            IConverterHelper converterHelper,
+            IPhysicalLibraryRepository physicalLibraryRepository,
+            ICustomerRepository customerRepository) : base(context)
         {
             _context = context;
             _userHelper = userHelper;
             _bookRepository= bookRepository;
+            _physicalLibraryRepository= physicalLibraryRepository;
+            _customerRepository= customerRepository;
             _flashMessage = flashMessage;
             _converterHelper=converterHelper;
         }
 
+        /// <summary>
+        /// Método que adiciona a reserva 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="username"></param>
+        /// <returns>Reserva</returns>
         public async Task AddItemReserveAsync(AddReserveViewModel model, string username)
         {
             var user = await _userHelper.GetUserByEmailAsync(username);
@@ -77,6 +89,11 @@ namespace WorldLibrary.Web.Repositories
 
         }
 
+        /// <summary>
+        /// Método que adiciona o book a reserva 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>Books</returns>
         public async Task<Reserve> BookReturnAsync(BookReturnViewModel model)
         {
             var reserve = await _context.Reserves.FindAsync(model.Id);
@@ -96,6 +113,8 @@ namespace WorldLibrary.Web.Repositories
                .Include(r => r.Customer)
                .ToList();
 
+            
+           
             var details = reserves.Select(r => new ReserveViewModel
             {
                 PhysicalLibrary = r.PhysicalLibrary,
@@ -135,6 +154,12 @@ namespace WorldLibrary.Web.Repositories
 
         }
 
+        /// <summary>
+        /// ´Método que cancela a reserva 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="username"></param>
+        /// <returns>Reserva</returns>
         public async Task<Reserve> CancelReserveAsync(int id, string username)
         {
             var reserve = await _context.Reserves.FindAsync(id);
@@ -181,7 +206,11 @@ namespace WorldLibrary.Web.Repositories
             return reserve;
         }
 
-
+        /// <summary>
+        /// Método que confirma a reserva 
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns>Reserva</returns>
 
         public async Task<Reserve> ConfirmReservAsync(string userName)
         {
@@ -233,6 +262,11 @@ namespace WorldLibrary.Web.Repositories
             return reserve;
         }
 
+        /// <summary>
+        /// Métyodod que deleta a reserva temporária
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Reserva Temporária</returns>
         public async Task DeleteDetailTempAsync(int id)
         {
             var reserveDetailTemp = await _context.ReserveDetailsTemp.FindAsync(id);
@@ -254,6 +288,11 @@ namespace WorldLibrary.Web.Repositories
             await _context.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Métodod que adicona a data de entrega do livro
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>Data</returns>
         public async Task<Reserve> DeliverReserveAsync(DeliveryViewModel model)
         {
 
@@ -288,6 +327,13 @@ namespace WorldLibrary.Web.Repositories
             return reserve;
         }
 
+        /// <summary>
+        /// Método que edita e atualiza a reserva
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="username"></param>
+        /// <returns>Reserva<returns>
+        /// <exception cref="NotImplementedException"></exception>
         public async Task<Reserve> EditReserveAsync(ReserveViewModel model, string username)
         {
             _converterHelper.ToReserve(model, false);
@@ -381,6 +427,13 @@ namespace WorldLibrary.Web.Repositories
             return reserve.Result;
         }
 
+
+        /// <summary>
+        /// Método que edita a reserva temporária
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="username"></param>
+        /// <returns>Rerserva Temporária</returns>
         public async Task EditReserveDetailTempAsync(AddReserveViewModel model, string username)
         {
             var user = await _userHelper.GetUserByEmailAsync(username);
@@ -450,6 +503,11 @@ namespace WorldLibrary.Web.Repositories
                 .OrderBy(r => r.Customer.FullName);
         }
 
+        /// <summary>
+        /// Método que busca a reserva pelo Id 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Reserva</returns>
         public async Task<IQueryable<Reserve>> GetReserveAsync(string userName)
         {
             var user = await _userHelper.GetUserByEmailAsync(userName);
@@ -471,26 +529,53 @@ namespace WorldLibrary.Web.Repositories
 
             return _context.Reserves
                     .Include(r => r.PhysicalLibrary)
+                    .Include(r=>r.Customer)
                     .Include(i => i.Book)
                     .Where(r => r.User == user)
                     .OrderByDescending(m => m.DeliveryDate);
         }
 
+        /// <summary>
+        /// Método que busca a reserva pelo Id incluindo o livro
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Reserva</returns>
         public async Task<Reserve> GetReserveAsync(int id)
         {
             return await _context.Reserves.FindAsync(id);
         }
 
+
+        /// <summary>
+        /// Método que busca a reserva temporária pelo Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Reserva Temporaria</returns>
         public async Task<Reserve> GetReserveByIdAsync(int id)
         {
-            return await _context.Reserves.FindAsync(id);
+            await _context.Reserves.FindAsync(id);
+            return _context.Reserves
+                .Include(r => r.Book)
+                .Where(r => r.Id == id)
+                .FirstOrDefault();
         }
 
+        /// <summary>
+        /// Método que busca a reserva temporária pelo Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Reserva Temporaria</returns>
         public async Task<ReserveDetailTemp> GetReserveDetailTempAsync(int id)
         {
             return await _context.ReserveDetailsTemp.FindAsync(id);
         }
 
+
+        /// <summary>
+        /// Método que faz a renovação do livro
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>Data</returns>
         public async Task<Reserve> RenewBookReturnAsync(BookReturnViewModel model)
         {
             var reserve = await _context.Reserves.FindAsync(model.Id);
@@ -519,6 +604,13 @@ namespace WorldLibrary.Web.Repositories
             return (reserve);
         }
 
+        /// <summary>
+        /// Método que envia a notificação da reserva 
+        /// </summary>
+        /// <param name="reserve"></param>
+        /// <param name="username"></param>
+        /// <param name="notificationType"></param>
+        /// <returns>notificação</returns>
         public async Task SendReserveNotification(Reserve reserve, string username, NotificationType notificationType)
         {
             var user = await _userHelper.GetUserByEmailAsync(username);
@@ -527,16 +619,7 @@ namespace WorldLibrary.Web.Repositories
                 return;
 
             }
-            var hasCustomerRole = await _userHelper.IsUserInRoleAsync(user, "Customer");
-            var hasEmployeeRole = await _userHelper.IsUserInRoleAsync(user, "Employee");
-
-
-            if (hasCustomerRole == false && hasEmployeeRole == false)
-            {
-                return;
-            }
-
-
+        
             var notification = new Notification
             {
                 Reserve = reserve,
@@ -548,5 +631,45 @@ namespace WorldLibrary.Web.Repositories
 
             await _context.SaveChangesAsync();
         }
+
+
+        /// <summary>
+        /// Método que preenche o combobox apenas customer que esta logado
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public async Task<AddReserveViewModel> ReturnReserveViewModel(string userName)
+        {
+
+            var user = await _userHelper.GetUserByEmailAsync(userName);
+
+            bool role = await _userHelper.IsUserInRoleAsync(user, "Customer");
+            if (role)
+            {
+                var view = new AddReserveViewModel
+                {
+                    Libraries = _physicalLibraryRepository.GetComboLibraries(),
+                    Customers = _customerRepository.GetComboCustomerLogged(userName),
+                    Books = _bookRepository.GetComboBooks(),
+
+                };
+                return view;
+
+
+
+            }
+
+            var model = new AddReserveViewModel
+            {
+                Libraries = _physicalLibraryRepository.GetComboLibraries(),
+                Customers = _customerRepository.GetComboCustomers(),
+                Books = _bookRepository.GetComboBooks(),
+
+
+
+            };
+            return model;
+        }
+
     }
 }

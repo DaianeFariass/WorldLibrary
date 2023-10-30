@@ -1,0 +1,213 @@
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.exe
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\DryIoc.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.DryIoc.Forms.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.DryIoc.Forms.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.Forms.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.Forms.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Essential.Interfaces.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ar\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ca\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\cs\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\da\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\de\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\el\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\es\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\fi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\fr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\he\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\hi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\hr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\hu\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\id\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\it\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ja\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ko\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ms\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\nb\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\nl\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\pl\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\pt-BR\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\pt\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ro\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ru\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\sk\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\sv\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\th\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\tr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\uk\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\vi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\zh-HK\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\zh-Hans\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_ProcessedImageAssetsPath.items
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\ibtool\_ProcessedInterfaceDefinitionsPath.items
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_ProcessedCoreMLModelsPath.items
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\_ProcessedBundleResourcesPath.items
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\_ProcessedContentPath.items
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.csproj.AssemblyReference.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.csproj.CoreCompileInputs.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.csproj.CopyComplete
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.exe
+C:\Projetos\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.exe
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\DryIoc.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.DryIoc.Forms.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.DryIoc.Forms.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.Forms.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.Forms.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Essential.Interfaces.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ar\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ca\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\cs\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\da\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\de\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\el\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\es\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\fi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\fr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\he\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\hi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\hr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\hu\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\id\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\it\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ja\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ko\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ms\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\nb\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\nl\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\pl\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\pt-BR\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\pt\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ro\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ru\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\sk\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\sv\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\th\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\tr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\uk\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\vi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\zh-HK\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\zh-Hans\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.dll
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.pdb
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_ProcessedImageAssetsPath.items
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\ibtool\_ProcessedInterfaceDefinitionsPath.items
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_ProcessedCoreMLModelsPath.items
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\_ProcessedBundleResourcesPath.items
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\_ProcessedContentPath.items
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.csproj.AssemblyReference.cache
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.csproj.CoreCompileInputs.cache
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.csproj.CopyComplete
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.exe
+C:\Users\daia_\Downloads\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.exe
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\DryIoc.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.DryIoc.Forms.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.DryIoc.Forms.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.Forms.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Prism.Forms.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Essential.Interfaces.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ar\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ca\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\cs\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\da\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\de\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\el\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\es\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\fi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\fr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\he\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\hi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\hr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\hu\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\id\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\it\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ja\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ko\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ms\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\nb\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\nl\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\pl\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\pt-BR\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\pt\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ro\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\ru\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\sk\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\sv\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\th\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\tr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\uk\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\vi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\zh-HK\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\zh-Hans\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\bin\iPhoneSimulator\Debug\WorldLibrary.Prism.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_ProcessedImageAssetsPath.items
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\ibtool\_ProcessedInterfaceDefinitionsPath.items
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_ProcessedCoreMLModelsPath.items
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\_ProcessedBundleResourcesPath.items
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\_ProcessedContentPath.items
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.csproj.AssemblyReference.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.csproj.CoreCompileInputs.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.csproj.CopyComplete
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.exe
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Prism\WorldLibrary.Prism.iOS\obj\iPhoneSimulator\Debug\WorldLibrary.Prism.iOS.pdb

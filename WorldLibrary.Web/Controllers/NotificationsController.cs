@@ -25,7 +25,7 @@ namespace WorldLibrary.Web.Controllers
             var model = _notificationRepository.GetNotificationsAsync();
             return View(model);
         }
-
+      
         public async Task<IActionResult> DeleteConfirmed(int? id)
         {
             if (id == null)

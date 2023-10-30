@@ -18,6 +18,7 @@ namespace WorldLibrary.Web.Data
         public DbSet<Forum> Forums { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Assessment> Assessments { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
@@ -28,10 +29,7 @@ namespace WorldLibrary.Web.Data
             modelBuilder.Entity<Country>()
                 .HasIndex(c => c.Name)
                 .IsUnique();
-            modelBuilder.Entity<User>()
-              .Property(u => u.CityId)
-              .HasColumnName("CityId")
-              .HasColumnType("int");
+           
 
             base.OnModelCreating(modelBuilder);
         }

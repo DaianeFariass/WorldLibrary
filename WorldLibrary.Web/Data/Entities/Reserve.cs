@@ -15,7 +15,7 @@ namespace WorldLibrary.Web.Data.Entities
         public User User { get; set; }
 
         [Display(Name = "Library ")]
-        public PhysicalLibrary PhysicalLibrary { get; set; }    //Criar
+        public PhysicalLibrary PhysicalLibrary { get; set; }    
 
         public Book Book { get; set; }
 

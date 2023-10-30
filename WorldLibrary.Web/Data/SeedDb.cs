@@ -23,7 +23,7 @@ namespace WorldLibrary.Web.Data
             _userHelper = userHelper;
             _random = new Random();
         }
-        public async Task SeedAsync() //Alterar
+        public async Task SeedAsync() 
         {
             await _context.Database.MigrateAsync();
 
@@ -51,7 +51,7 @@ namespace WorldLibrary.Web.Data
                 await _context.SaveChangesAsync();
             }
 
-            var userAdmin = await _userHelper.GetUserByEmailAsync("evelyn.nunes@cinel.pt");
+            var userAdmin = await _userHelper.GetUserByEmailAsync("evelynnunes@yopmail.com");
 
             if (userAdmin == null)
             {
@@ -59,8 +59,8 @@ namespace WorldLibrary.Web.Data
                 {
                     FirstName = "Evelyn",
                     LastName = "Nunes",
-                    Email = "evelyn.nunes@cinel.pt",
-                    UserName = "evelyn.nunes@cinel.pt",
+                    Email = "evelynnunes@yopmail.com",
+                    UserName = "evelynnunes@yopmail.com",
                     PhoneNumber = GenerateRandomNumbers(9),
                     Address = GenerateRandomAddress(),
                     CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
@@ -77,7 +77,7 @@ namespace WorldLibrary.Web.Data
                 var token = await _userHelper.GenerateEmailConfirmationTokenAsync(userAdmin);
                 await _userHelper.ConfirmEmailAsync(userAdmin, token);
             }
-            var userLibrarian = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
+            var userLibrarian = await _userHelper.GetUserByEmailAsync("daianefarias@yopmail.com");
 
             if (userLibrarian == null)
             {
@@ -85,8 +85,8 @@ namespace WorldLibrary.Web.Data
                 {
                     FirstName = "Daiane",
                     LastName = "Farias",
-                    Email = "daiane.farias@cinel.pt",
-                    UserName = "daiane.farias@cinel.pt",
+                    Email = "daianefarias@yopmail.com",
+                    UserName = "daianefarias@yopmail.com",
                     PhoneNumber = GenerateRandomNumbers(9),
                     Address = GenerateRandomAddress(),
                     CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
@@ -105,7 +105,7 @@ namespace WorldLibrary.Web.Data
                 await _userHelper.ConfirmEmailAsync(userLibrarian, token);
 
             }
-            var userAssistant = await _userHelper.GetUserByEmailAsync("romeu.pires@yopmail.com");
+            var userAssistant = await _userHelper.GetUserByEmailAsync("romeupires@yopmail.com");
 
             if (userAssistant == null)
             {
@@ -113,15 +113,15 @@ namespace WorldLibrary.Web.Data
                 {
                     FirstName = "Romeu",
                     LastName = "Pires",
-                    Email = "romeu.pires@yopmail.com",
-                    UserName = "romeu.pires@yopmail.com",
+                    Email = "romeupires@yopmail.com",
+                    UserName = "romeupires@yopmail.com",
                     PhoneNumber = GenerateRandomNumbers(9),
                     Address = GenerateRandomAddress(),
                     CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
                     City = _context.Countries.FirstOrDefault().Cities.FirstOrDefault()
 
                 };
-
+               
                 var result = await _userHelper.AddUserAsync(userAssistant, "123456");
 
                 if (result != IdentityResult.Success)
@@ -133,15 +133,15 @@ namespace WorldLibrary.Web.Data
                 await _userHelper.ConfirmEmailAsync(userAssistant, token);
 
             }
-            var userCustomer = await _userHelper.GetUserByEmailAsync("maria.avelar@yopmail.com");
+            var userCustomer = await _userHelper.GetUserByEmailAsync("mariaavelar@yopmail.com");
             if (userCustomer == null)
             {
                 userCustomer = new User
                 {
                     FirstName = "Maria",
                     LastName = "Avelar",
-                    Email = "maria.avelar@yopmail.com",
-                    UserName = "maria.avelar@yopmail.com",
+                    Email = "mariaavelar@yopmail.com",
+                    UserName = "mariaavelar@yopmail.com",
                     PhoneNumber = GenerateRandomNumbers(9),
                     Address = GenerateRandomAddress(),
                     CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
@@ -211,11 +211,11 @@ namespace WorldLibrary.Web.Data
             }
             if (!_context.Customers.Any())
             {
-                AddCustomer("Arhur Reis", userCustomer);
-                AddCustomer("Clara Dias", userCustomer);
-                AddCustomer("Mariana Oliveira", userCustomer);
-                AddCustomer("Olivia Borba", userCustomer);
-                AddCustomer("Romeu Pires", userCustomer);
+                AddCustomer("Arhur Reis", userLibrarian);
+                AddCustomer("Clara Dias", userLibrarian);
+                AddCustomer("Mariana Oliveira", userLibrarian);
+                AddCustomer("Olivia Borba", userLibrarian);
+                AddCustomer("Romeu Pires", userLibrarian);
 
                 await _context.SaveChangesAsync();
 
@@ -281,6 +281,7 @@ namespace WorldLibrary.Web.Data
                 Address= GenerateRandomAddress(),
                 Phone= GenerateRandomNumbers(9),
                 Email= name.Replace(" ", "_") + "@yopmail.com",
+                Premium = false,
                 User= user
 
             });
@@ -298,11 +299,10 @@ namespace WorldLibrary.Web.Data
                 Category = category,
                 Assessment = "5 *",
                 Quantity = Convert.ToDouble(GenerateRandomNumbers(1)),
-                BookPdfUrl = "PDF Unvailable",
                 StatusBook = StatusBook.Available,
                 User = user
 
-            });
+            }) ;
 
         }
         private string GenerateRandomNumbers(int value)

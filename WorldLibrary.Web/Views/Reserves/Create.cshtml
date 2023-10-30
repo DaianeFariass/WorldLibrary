@@ -2,11 +2,15 @@
 
 @{
     ViewData["Title"] = "Create";
+
 }
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css" />
-
-
+<br />
+<br />
+<br />
+<br />
+<br />
 <br />
 
 <p>
@@ -14,7 +18,7 @@
     <a asp-action="ConfirmReserve" class="btn btn-primary" id="btnConfirm">Confirm Reservation</a>
 </p>
 
-<div class="row">
+<div class="container justify-content-center">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -111,7 +115,11 @@
         </div>
     </div>
 </div>
-@section Scripts{
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript">
@@ -148,4 +156,5 @@
             });
         });
     </script>
-    }
+}
+

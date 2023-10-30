@@ -36,12 +36,21 @@ namespace WorldLibrary.Web.Data.Entities
 
         [Display(Name = "Image")]
         public Guid ImageId { get; set; }
-        public string BookPdfUrl { get; set; }
+
+        [Display(Name = "PDF")]
+        public Guid ImagePdf { get; set; }
+      
         public User User { get; set; }
+
+ 
 
         public string ImageFullPath => ImageId == Guid.Empty ?
         $"https://worldlibraryweb.blob.core.windows.net/books/noimage.png"
         : $"https://worldlibraryweb.blob.core.windows.net/books/{ImageId}";
+
+        public string ImagePdfFullPath => ImagePdf == Guid.Empty ?
+        $"https://worldlibraryweb.blob.core.windows.net/pdfs/noimage.png"
+        : $"https://worldlibraryweb.blob.core.windows.net/pdfs/{ImagePdf}";
 
 
     }

@@ -11,11 +11,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.3.0" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.1.0" />
+    <PackageReference Include="Azure.Storage.Queues" Version="12.2.0" />
     <PackageReference Include="MailKit" Version="4.1.0" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="5.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.17" />
@@ -25,6 +29,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Vereyon.Web.FlashMessage" Version="2.0.0" />
     <PackageReference Include="WindowsAzure.Storage" Version="5.0.2" />

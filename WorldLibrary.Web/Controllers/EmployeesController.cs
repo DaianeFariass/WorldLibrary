@@ -40,6 +40,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: Employees/Details/5
+        [Route("detailsemployees")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -57,6 +58,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: Employees/Create
+        [Route("createemployees")]
         public IActionResult Create()
         {
             return View();
@@ -67,6 +69,7 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Route("createemployees")]
         public async Task<IActionResult> Create(EmployeeViewModel model)
         {
             if (ModelState.IsValid)
@@ -80,15 +83,15 @@ namespace WorldLibrary.Web.Controllers
 
                 var employee = _converterHelper.ToEmployee(model, imageid, true);
 
-                employee.User = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
+                employee.User = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
                 await _employeeRepository.CreateAsync(employee);
                 return RedirectToAction(nameof(Index));
             }
             return View(model);
         }
 
-       
         // GET: Employees/Edit/5
+        [Route("editemployees")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -112,6 +115,7 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Route("editemployees")]
         public async Task<IActionResult> Edit(EmployeeViewModel model)
         {
 
@@ -128,7 +132,7 @@ namespace WorldLibrary.Web.Controllers
 
                     var employee = _converterHelper.ToEmployee(model, imageid, false);
 
-                    employee.User = await _userHelper.GetUserByEmailAsync("daiane.farias@cinel.pt");
+                    employee.User = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
                     await _employeeRepository.UpdateAsync(employee);
                 }
                 catch (DbUpdateConcurrencyException)
@@ -148,6 +152,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: Employees/Delete/5
+        [Route("deleteemployees")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -167,6 +172,7 @@ namespace WorldLibrary.Web.Controllers
         // POST: Employees/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Route("deleteemployees")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var employee = await _employeeRepository.GetByIdAsync(id);
@@ -189,7 +195,7 @@ namespace WorldLibrary.Web.Controllers
 
             }
         }
-
+        [Route("employeenotfound")]
         public IActionResult EmployeeNotFound()
         {
             return View();

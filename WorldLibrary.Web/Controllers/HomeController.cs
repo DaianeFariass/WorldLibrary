@@ -1,47 +1,79 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Net.Mail;
-using System.Net;
-using System.Threading.Tasks;
-using WorldLibrary.Web.Data.Entities;
-using WorldLibrary.Web.Models;
 using WorldLibrary.Web.Data;
+using WorldLibrary.Web.Data.Entities;
+using System;
+using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using WorldLibrary.Web.Models;
+using WorldLibrary.Web.Helper;
+using Vereyon.Web;
 
 namespace WorldLibrary.Web.Controllers
 {
+   
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly DataContext _context;
+        private readonly IMailHelper _mailHelper;
+        private readonly IFlashMessage _flashMessage;
         public HomeController(ILogger<HomeController> logger,
-            DataContext context)
+            DataContext context,
+            IMailHelper mailHelper,
+            IFlashMessage flashMessage)
         {
             _logger = logger;
             _context = context;
+            _mailHelper = mailHelper;
+            _flashMessage = flashMessage;
         }
-
+   
         public IActionResult Index()
         {
             return View();
         }
+        [HttpPost]
+        [Route("contactindex")]
+        public IActionResult ContactIndex(ContactViewModel model)
+        {
 
+            Response response = _mailHelper.SendEmail("romeupires@yopmail.com", model.Subject, model.Message);
+
+            _context.Contacts.Add(model);
+            _context.SaveChangesAsync();
+            if (response.IsSuccess)
+            {
+
+                _flashMessage.Confirmation("The email was sent successfully!!!");
+                return RedirectToAction("Index");
+
+            }
+
+            return RedirectToAction("Index");
+        }
+        [Route("about")]
+        public IActionResult About()
+        {
+            return View();
+        }
+        [Route("privacy")]
         public IActionResult Privacy()
         {
             return View();
         }
-
+        [Route("forum")]
         public IActionResult Forum()
         {
             var contactos = _context.Forums.ToList(); 
             return View(contactos);
         }
-
+       
         [HttpPost]
+        [Route("forum")]
         public async Task<IActionResult> Forum(string name, string email, string menssage, int assessment)
         {
             if (ModelState.IsValid)
@@ -87,7 +119,7 @@ namespace WorldLibrary.Web.Controllers
                 {
                     smtpClient.Send(mailMessage);
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
 
                     return RedirectToAction("ErroAoEnviarEmail");

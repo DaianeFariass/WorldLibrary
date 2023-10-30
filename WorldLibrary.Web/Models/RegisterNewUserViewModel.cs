@@ -50,5 +50,7 @@ namespace WorldLibrary.Web.Models
         [Required]
         [Compare("Password")]
         public string Confirm { get; set; }
+      
+        public bool Privacy { get; set; }
     }
 }

@@ -1,70 +1,110 @@
 ﻿@model List<WorldLibrary.Web.Data.Entities.Book>
 @{
     ViewData["Title"] = "AdvancedSearch";
+    Layout = "_Layout"; // Especifica o layout a ser usado
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="col-md-5 offset-md-4 ">
+                    <div class="widget p-5" style="background-color: #D9BAC9">
+                        <form class="form-horizontal" role="form">
+                            <table class="table">
+
+                                <div class="form-group">
+                                    @Html.Label("Category")
+                                    @Html.TextBox("category", null, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.Label("Title")
+                                    @Html.TextBox("title1", null, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.Label("Author")
+                                    @Html.TextBox("author", null, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.Label("Year")
+                                    @Html.TextBox("year", null, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.Label("Status")
+                                    @Html.TextBox("status", null, new { @class = "form-control" })
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Search</button>
+
+
+                            </table>
+                          
+                        </form>
+                       
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+   
+    <div>
+        @if (Model.Any())
+        {
+            <h3>Search Result</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Year</th>
+                        <th>Status</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var books in Model)
+                    {
+                        <tr>
+                            <td>@books.Category</td>
+                            <td>@books.Title</td>
+                            <td>@books.Author</td>
+                            <td>@books.Year</td>
+                            <td>@books.StatusBook</td>
+                            <td>
+                                <img src="@books.ImageFullPath" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto" />
+                            </td>
+                            <td>
+                                <a asp-controller="Books" asp-action="Details" asp-route-id="@books.Id" class="btn btn-link">@books.Title</a>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+    <br />
+    <br />
+</body>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+    }
 }
 
-<h2>Advanced Search</h2>
-<form class="form-horizontal" role="form">
-    <table class="table">
-
-        <div class="form-group">
-            @Html.Label("Category")
-            @Html.TextBox("category", null, new { @class = "form-control" })
-        </div>
-        <div class="form-group">
-            @Html.Label("Title")
-            @Html.TextBox("title1", null, new { @class = "form-control" })
-        </div>
-        <div class="form-group">
-            @Html.Label("Author")
-            @Html.TextBox("author", null, new { @class = "form-control" })
-        </div>
-        <div class="form-group">
-            @Html.Label("Year")
-            @Html.TextBox("year", null, new { @class = "form-control" })
-        </div>
-        <div class="form-group">
-            @Html.Label("Status")
-            @Html.TextBox("status", null, new { @class = "form-control" })
-        </div>
-
-        <button type="submit" class="btn btn-primary">Search</button>
-
-
-    </table>
-</form>
-
-<div>
-    @if (Model.Any())
-    {
-        <h3>Search Result</h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Year</th>
-                    <th>Status</th>
-                    <th>Image</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var books in Model)
-                {
-                    <tr>
-                        <td>@books.Category</td>
-                        <td>@books.Title</td>
-                        <td>@books.Author</td>
-                        <td>@books.Year</td>
-                        <td>@books.StatusBook</td>
-                        <td>
-                         <img src="@books.ImageFullPath" alt="Image" style="width:300px;height:450px;max-width:100%;height:auto;" />
-                        </td>
-                        
-                    </tr>
-                }
-            </tbody>
-        </table>
-    }
-</div>

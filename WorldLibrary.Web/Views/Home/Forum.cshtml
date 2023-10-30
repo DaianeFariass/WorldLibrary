@@ -1,45 +1,47 @@
-﻿@model List<WorldLibrary.Web.Data.Entities.Forum>
+﻿@model IEnumerable<WorldLibrary.Web.Data.Entities.Forum>
 
 
 @{
     ViewData["Title"] = "Forum";
 }
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
-    <h1>Forum</h1>
-    <h4>Leave your comment or a suggestion</h4>
-    <body>
-        <div>
-            <aside id="sidebar">
-                <div class="dark">
-                    <form class="forum" method="post" action="/Home/Forum">
-
-                        <div>
-                            <label for="name">Name:</label><br />
-                            <input type="text" name="name" id="name" required>
-                        </div>
-                        <div>
-                            <label for="email">Email:</label><br />
-                            <input type="email" name="email" id="email" required>
-                        </div>
-                        <div>
-                            <label for="menssage">Menssage:</label><br />
-                            <textarea name="menssage" id="mensagem" required></textarea>
-                        </div>
-                        <div>
-                            <label for="assessment">Assessment (1 a 5 stars):</label>
-                            <input type="number" name="assessment" id="assessment" min="1" max="5" required>
-                        </div>
-                        <br />
-                        <button class="button_1" type="submit">Send Message</button>
-
-                    </form>
-                </div>
-            </aside>
-        </div>
-    </body>
-    <div>
-        <br />
-        <br />
+ <div class="container justify-content-center">
+        <h1>Forum</h1>
+        <h4>Leave your comment or a suggestion</h4>
+        <aside id="sidebar">
+            <div class="dark">
+            <form asp-action="Forum" class="forum" method="post" enctype="multipart/form-data">
+                    <div>
+                        <label for="name">Name:</label><br />
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label><br />
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="menssage">Menssage:</label><br />
+                        <textarea name="menssage" id="mensagem" required></textarea>
+                    </div>
+                    <div>
+                        <label for="assessment">Assessment (1 a 5 stars):</label>
+                        <input type="number" name="assessment" id="assessment" min="1" max="5" required>
+                    </div>
+                    <br />
+                    <button type="submit" class="send-btn">Send</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+<div>
+    <br />
+    <br />
     <table class="table">
         <tbody>
         <thead>
@@ -63,4 +65,13 @@
             }
         </tbody>
     </table>
-    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    }
+}

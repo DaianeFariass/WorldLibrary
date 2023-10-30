@@ -1,38 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using WorldLibrary.Web.Data;
-using WorldLibrary.Web.Data.Entities;
 using WorldLibrary.Web.Helper;
+using WorldLibrary.Web.Models;
 using WorldLibrary.Web.Repositories;
 
 namespace WorldLibrary.Web.Controllers
 {
-    
+
     public class CustomersController : Controller
     {
         private readonly ICustomerRepository _customerRepository;
+        private readonly IBlobHelper _blobHelper;
+        private readonly IConverterHelper _converterHelper;
         private readonly IUserHelper _userHelper;
 
         public CustomersController(ICustomerRepository customerRepository,
+            IBlobHelper blobHelper,
+            IConverterHelper converterHelper,
             IUserHelper userHelper)
         {
             _customerRepository = customerRepository;
+            _blobHelper = blobHelper;
+            _converterHelper = converterHelper;
             _userHelper = userHelper;
         }
 
         // GET: Customers
-        public  IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(_customerRepository.GetAll().OrderBy(c => c.FullName));
+            //Mudar
+            var model = await _customerRepository.GetCustomerAsync(this.User.Identity.Name);
+            return View(model); 
         }
 
         // GET: Customers/Details/5
+        [Route("detailscustomers")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -50,6 +55,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: Customers/Create
+        [Route("createcustomers")]
         public IActionResult Create()
         {
             return View();
@@ -60,18 +66,29 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Customer customer)
+        [Route("createcustomers")]
+        public async Task<IActionResult> Create(CustomerViewModel model)
         {
             if (ModelState.IsValid)
             {
-                customer.User = await _userHelper.GetUserByEmailAsync("livania.viegas@cinel.pt");
+                Guid imageId = Guid.Empty;
+
+                if (model.ImageFile != null && model.ImageFile.Length > 0)
+                {
+                    imageId = await _blobHelper.UploadBlobAsync(model.ImageFile, "customers");
+
+                }
+
+                var customer = _converterHelper.ToCustomer(model, imageId, true);
+                customer.User = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
                 await _customerRepository.CreateAsync(customer);
                 return RedirectToAction(nameof(Index));
             }
-            return View(customer);
+            return View(model);
         }
 
         // GET: Customers/Edit/5
+        [Route("editcustomers")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -84,7 +101,8 @@ namespace WorldLibrary.Web.Controllers
             {
                 return new NotFoundViewResult("CustomerNotFound");
             }
-            return View(customer);
+            var model = _converterHelper.ToCustomerViewModel(customer);
+            return View(model);
         }
 
         // POST: Customers/Edit/5
@@ -92,23 +110,29 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Customer customer)
+        [Route("editcustomers")]
+        public async Task<IActionResult> Edit(CustomerViewModel model)
         {
-            if (id != customer.Id)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try
                 {
-                    customer.User = await _userHelper.GetUserByEmailAsync("livania.viegas@cinel.pt");
+                    Guid imageId = Guid.Empty;
+
+                    if (model.ImageFile != null && model.ImageFile.Length > 0)
+                    {
+
+                        imageId = await _blobHelper.UploadBlobAsync(model.ImageFile, "customers");
+
+                    }
+
+                    var customer = _converterHelper.ToCustomer(model, imageId, false);
+                    customer.User = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
                     await _customerRepository.UpdateAsync(customer);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!await _customerRepository.ExistAsync(customer.Id))
+                    if (!await _customerRepository.ExistAsync(model.Id))
                     {
                         return new NotFoundViewResult("CustomerNotFound");
                     }
@@ -119,10 +143,11 @@ namespace WorldLibrary.Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(customer);
+            return View(model);
         }
 
         // GET: Customers/Delete/5
+        [Route("deletecustomers")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -142,6 +167,7 @@ namespace WorldLibrary.Web.Controllers
         // POST: Customers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Route("deletecustomers")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var customer = await _customerRepository.GetByIdAsync(id);
@@ -165,7 +191,7 @@ namespace WorldLibrary.Web.Controllers
                 return View("Error");
             }
         }
-
+        [Route("customernotfound")]
         public IActionResult CustomerNotFound()
         {
             return View();

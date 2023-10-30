@@ -1,22 +1,29 @@
 ﻿@model WorldLibrary.Web.Models.ContactViewModel
 @{
     ViewData["Title"] = "ExternalContact";
+ 
 }
-
-<h1>External Contact</h1>
-
-<section class="contact-section">
-    <div class="container">
-        <div class="d-none d-sm-block mb-5 pb-4">
-            <br />
-            <flash dismissable="true" />
+<br />
+<br />
+<body class="main-layout contact-page">
+    <div class="about-bg">
+        <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h2 class="contact-title">Get in Touch</h2>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="abouttitle">
+                        <h2>External Contact Form</h2>
+                    </div>
                 </div>
-                <br />
-                <div class="col-lg-8">
-                    <form class="form-contact contact_form" asp-action="SendMail" autocomplete="off" method="post" id="contactForm" novalidate="novalidate">
+            </div>
+        </div>
+    </div>
+    <flash dismissable="true" />
+    <!-- Contact -->
+    <div class="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <form class="form-contact contact_form" asp-action="ExternalContact" autocomplete="off" method="post" id="contactForm" novalidate="novalidate">
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
@@ -30,15 +37,15 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="control-label">Email Customers</label>
+                                    <label class="control-label" style="font-size:x-large; color:white">Email Customers</label>
                                     <select asp-for="Email" asp-items="Model.Customers" class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Select email address'" placeholder="Customer Email"></select>
 
                                 </div>
                             </div>
-                           
                         </div>
-                        <div class="form-group mt-3">
-                            <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                        <div>
+                           
+                            <button type="submit" class="send-btn">Send</button>
                         </div>
                     </form>
 
@@ -46,5 +53,17 @@
             </div>
         </div>
     </div>
+</body>
+<!-- end Contact -->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
 
-</section>
+    }
+}
+
+

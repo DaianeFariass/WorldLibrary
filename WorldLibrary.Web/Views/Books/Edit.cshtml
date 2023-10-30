@@ -2,19 +2,27 @@
 
 @{
     ViewData["Title"] = "Edit";
+    Layout = "_Layout"; // Especifica o layout a ser usado
 }
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
-<h1>Edit</h1>
-
-<h4>Book</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 offset-md-4">
         <form asp-action="Edit" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="ImageId" />
-            <input type="hidden" asp-for="BookPdfUrl" />
+            <input type="hidden" asp-for="BookPdf" />
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" class="form-control" type="file" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
@@ -41,19 +49,23 @@
                 <span asp-validation-for="Category" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Assessment" class="control-label"></label>
-                <input asp-for="Assessment" class="form-control" />
-                <span asp-validation-for="Assessment" class="text-danger"></span>
+                <label asp-for="AssessmentId" class="control-label"></label>
+                <select asp-for="AssessmentId" asp-items="Model.Assessments" class="form-control"></select>
+                <span asp-validation-for="AssessmentId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Quantity" class="control-label"></label>
                 <input asp-for="Quantity" class="form-control" />
                 <span asp-validation-for="Quantity" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="StatusBook" class="control-label"></label>
-                <input asp-for="StatusBook" class="form-control" />
-                <span asp-validation-for="StatusBook" class="text-danger"></span>
+             <div class="form-group">
+                <label asp-for="StatusBook" class="control-label"></label> <br />
+                <label>
+                    <input asp-for="StatusBook" value="Available" type="radio" /> Available
+                </label>
+                <label>
+                    <input asp-for="StatusBook" value="Unvailable" type="radio" /> Unvailable
+                </label>
             </div>
             <div class="form-group">
                 <label asp-for="BookPdf" class="control-label"></label>
@@ -66,6 +78,13 @@
             </div>
         </form>
     </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+      
     <div class="col-md-4">
        
             <img src="@Url.Content(Model.ImageFullPath)" alt="Image" style="width:300px;height:450px;max-width:100%;height:auto">
@@ -73,11 +92,13 @@
     </div>
 </div>
 
-
-
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
     }
-    }
+}
 

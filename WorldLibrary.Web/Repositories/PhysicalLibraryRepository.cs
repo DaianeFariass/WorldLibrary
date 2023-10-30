@@ -15,10 +15,19 @@ namespace WorldLibrary.Web.Repositories
             _context = context;
         }
 
+        /// <summary>
+        /// Métodod que busca todos as livrarias físicas 
+        /// </summary>
+        /// <returns>Libraries</returns>
         public IQueryable GetAllWithUsers()
         {
             return _context.PhysicalLibraries.Include(p => p.User);
         }
+
+        /// <summary>
+        /// Método que preeenche o combobox com a lista de livrarias 
+        /// </summary>
+        /// <returns>Libraries</returns>
 
         public IEnumerable<SelectListItem> GetComboLibraries()
         {

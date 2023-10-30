@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "XDuWn1GrNg82Pg/EluHeZqq/GkqVA5sOYqorhbrgVa7cRb4KturJcglBE2EVR+T14+9afYe7v2bcbeszYAiXhA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\daia_\\Downloads\\WorldLibrary-Versão1.0 Daiane e Evelyn 18-10-2023\\WorldLibrary (2)\\WorldLibrary\\WorldLibrary.Prism\\WorldLibrary.Prism.iOS\\WorldLibrary.Prism.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\daia_\\.nuget\\packages\\dryioc.dll\\4.7.7\\dryioc.dll.4.7.7.nupkg.sha512",
+    "C:\\Users\\daia_\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\daia_\\.nuget\\packages\\prism.dryioc.forms\\8.1.97\\prism.dryioc.forms.8.1.97.nupkg.sha512",
+    "C:\\Users\\daia_\\.nuget\\packages\\prism.forms\\8.1.97\\prism.forms.8.1.97.nupkg.sha512",
+    "C:\\Users\\daia_\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\daia_\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "C:\\Users\\daia_\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\daia_\\.nuget\\packages\\xamarin.essentials.interfaces\\1.7.0\\xamarin.essentials.interfaces.1.7.0.nupkg.sha512",
+    "C:\\Users\\daia_\\.nuget\\packages\\xamarin.forms\\5.0.0.2291\\xamarin.forms.5.0.0.2291.nupkg.sha512"
+  ],
+  "logs": []
+}

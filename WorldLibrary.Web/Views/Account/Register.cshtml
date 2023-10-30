@@ -1,76 +1,107 @@
 ﻿@model WorldLibrary.Web.Models.RegisterNewUserViewModel
 @{
     ViewData["Title"] = "Register";
+    Layout = "_Layout"; // Especifica o layout a ser usado
 }
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="col-md-5 offset-md-4 ">
+                    <div class="widget p-5" style="background-color: #D9BAC9">
+                        <form method="post">
+                            <div asp-validation-summary="ModelOnly"></div>
+                            <div class="form-group">
+                                <label asp-for="FirstName">First Name</label>
+                                <input asp-for="FirstName" class="form-control" />
+                                <span asp-validation-for="FirstName" class="text-warning"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="LastName">Last Name</label>
+                                <input asp-for="LastName" class="form-control" />
+                                <span asp-validation-for="LastName" class="text-warning"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Username">Username</label>
+                                <input asp-for="Username" class="form-control" />
+                                <span asp-validation-for="Username" class="text-warning"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CountryId" class="control-label"></label>
+                                <select asp-for="CountryId" asp-items="Model.Countries" class="form-control"></select>
+                                <span asp-validation-for="CountryId" class="text-danger"></span>
+                            </div>
 
-<h2>Register</h2>
+                            <div class="form-group" id="cityDropDown">
+                                <label asp-for="CityId" class="control-label"></label>
+                                <select asp-for="CityId" asp-items="Model.Cities" class="form-control"></select>
+                                <span asp-validation-for="CityId" class="text-danger"></span>
+                            </div>
 
-<div class="row">
-    <div class="col-md-4 offset-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly"></div>
-            <div class="form-group">
-                <label asp-for="FirstName">First Name</label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-warning"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastName">Last Name</label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-warning"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Username">Username</label>
-                <input asp-for="Username" class="form-control" />
-                <span asp-validation-for="Username" class="text-warning"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CountryId" class="control-label"></label>
-                <select asp-for="CountryId" asp-items="Model.Countries" class="form-control"></select>
-                <span asp-validation-for="CountryId" class="text-danger"></span>
-            </div>
+                            <div class="form-group">
+                                <label asp-for="Address">Address</label>
+                                <input asp-for="Address" class="form-control" />
+                                <span asp-validation-for="Address" class="text-warning"></span>
+                            </div>
 
-            <div class="form-group">
-                <label asp-for="CityId" class="control-label"></label>
-                <select asp-for="CityId" asp-items="Model.Cities" class="form-control"></select>
-                <span asp-validation-for="CityId" class="text-danger"></span>
-            </div>
+                            <div class="form-group">
+                                <label asp-for="PhoneNumber">Phone Number</label>
+                                <input asp-for="PhoneNumber" class="form-control" />
+                                <span asp-validation-for="PhoneNumber" class="text-warning"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password">Password</label>
+                                <input asp-for="Password" type="password" class="form-control" />
+                                <span asp-validation-for="Password" class="text-warning"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Confirm">Confirm</label>
+                                <input asp-for="Confirm" type="password" class="form-control" />
+                                <span asp-validation-for="Confirm" class="text-warning"></span>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="Privacy" type="radio" value="true" id="idRadio" class="form-control" />I have read and accept the privacy policy.
+                                <span asp-validation-for="Privacy" class="text-danger"></span>
+                            </div>
+                             <div class="form-group">
+                                
+                                <a asp-controller="Home" asp-action="Privacy" class="btn btn-link">Read Privacy Policy</a>
+                              
+                            </div>
+                            <div class="form-group">
+                                <input style="margin-right: 16px;" type="submit" value="Register New User" class="btn btn-primary" />
+                            </div>
 
-            <div class="form-group">
-                <label asp-for="Address">Address</label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-warning"></span>
-            </div>
+                            <div class="text-success">
+                                <p>
+                                    @ViewBag.Message
+                                </p>
+                            </div>
 
-            <div class="form-group">
-                <label asp-for="PhoneNumber">Phone Number</label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-warning"></span>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Password">Password</label>
-                <input asp-for="Password" type="password" class="form-control" />
-                <span asp-validation-for="Password" class="text-warning"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Confirm">Confirm</label>
-                <input asp-for="Confirm" type="password" class="form-control" />
-                <span asp-validation-for="Confirm" class="text-warning"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Register New User" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
-</div>
-<div class="text-success">
-    <p>
-        @ViewBag.Message
-    </p>
-</div>
+    <br />
+    <br />
+</body>
+
+
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
     }
     <script type="text/javascript">
         $(document).ready(function () {
@@ -99,5 +130,16 @@
             })
         });
     </script>
+ <script>
+        $(document).ready(function () {
+            // Manipulando o evento de mudança de valor dos RadioButtons
+            $("input[type='radio']").change(function () {
+                // Desmarca todos os outros RadioButtons que não são o selecionado
+                $("input[type='radio']").not(this).prop('checked', false);
+            });
+        });
+    </script>
 
     }
+
+

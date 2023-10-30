@@ -1,8 +1,14 @@
 {
   "dependencies": {
+    "storage1": {
+      "type": "storage",
+      "connectionId": "Blob:ConnectionString",
+      "dynamicId": null
+    },
     "mssql1": {
       "type": "mssql",
-      "connectionId": "ConnectionStrings:DefaultConnection2"
+      "connectionId": "ConnectionStrings:DefaultConnection2",
+      "dynamicId": null
     }
   }
 }

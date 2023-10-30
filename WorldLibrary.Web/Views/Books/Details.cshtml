@@ -2,16 +2,20 @@
 
 @{
     ViewData["Title"] = "Details";
+    Layout = "_Layout"; // Especifica o layout a ser usado
 }
 
-<h1>Details</h1>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 <div>
-    <h4>Book</h4>
-    <hr />
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-8">
-            <dl class="row">
+            <dl class="container justify-content-center">
                 <dt class="col-sm-3">
                     @Html.DisplayNameFor(model => model.Title)
                 </dt>
@@ -54,19 +58,42 @@
                 <dd class="col-sm-9">
                     @Html.DisplayFor(model => model.StatusBook)
                 </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.ImagePdfFullPath)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.ImagePdfFullPath)
+                </dd>
+                <dd class="col-sm-9">
+
+                    <img src="@Url.Content(Model.ImageFullPath)" alt="Image" style="width:300px;height:450px;max-width:100%;height:auto">
+
+                </dd>
+                @if (this.User.IsInRole("Librarian") || this.User.IsInRole("Assistant"))
+                {
+
+                    <dd class="col-sm-9">
+                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"><i class="far fa-edit"></i>Edit</a>
+                    </dd>
+
+                }
+                @if(this.User.Identity.IsAuthenticated)
+                {
+                    <dd class="col-sm-9">
+                        <a asp-action="DownloadPdf" asp-route-id="@Model.Id" class="btn btn-primary" target="_blank"><i class="far fa-eye"></i>Read Now</a>
+                    </dd>
+                   
+                    
+                }
+                <dd class="col-sm-9">
+
+                    <a asp-action="Index" class="btn btn-success"><i class="fa fa-chevron-left"></i>Back to List</a>
+                   
+                </dd>
             </dl>
-        </div>
-        <div class="col-md-4">
-            
-                <img src="@Url.Content(Model.ImageFullPath)" alt="Image" style="width:300px;height:450px;max-width:100%;height:auto;" />
-            
         </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"><i class="far fa-edit"></i>Edit</a>
-    <a asp-action="Index" class="btn btn-success"><i class="fa fa-chevron-left"></i>Back to List</a>
-    <a class="btn btn-primary" href="@Model.BookPdfUrl" target="_blank"><i class="far fa-eye"></i>Read Now</a>
 
-</div>
+

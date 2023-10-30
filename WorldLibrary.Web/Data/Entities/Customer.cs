@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
 namespace WorldLibrary.Web.Data.Entities
@@ -26,5 +27,14 @@ namespace WorldLibrary.Web.Data.Entities
         public string Document { get; set; }
 
         public User User { get; set; }
+
+        public bool? Premium { get; set; }
+
+        [Display(Name = "Image")]
+        public Guid ImageId { get; set; }
+
+        public string ImageFullPath => ImageId == Guid.Empty ?
+        $"https://worldlibraryweb.blob.core.windows.net/customers/noimage.png"
+        : $"https://worldlibraryweb.blob.core.windows.net/customers/{ImageId}";
     }
 }

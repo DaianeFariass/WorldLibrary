@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using WorldLibrary.Web.Data.Entities;
 
 namespace WorldLibrary.Web.Models
@@ -12,5 +13,12 @@ namespace WorldLibrary.Web.Models
 
         [Display(Name = "Book PDF")]
         public IFormFile BookPdf { get; set; }
+
+        [Display(Name = "Assessment")]
+        public string AssessmentId { get; set; }
+
+        public IEnumerable<SelectListItem> Assessments { get; set; }
+
+
     }
 }

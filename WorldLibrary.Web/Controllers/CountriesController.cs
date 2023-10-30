@@ -25,11 +25,11 @@ namespace WorldLibrary.Web.Controllers
             _flashMessage = flashMessage;
         }
         // GET: Countries
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View(_countryRepository.GetCountriesWithCities());
         }
-
+        
         public async Task<IActionResult> DeleteCity(int? id)
         {
             if (id == null)
@@ -46,7 +46,7 @@ namespace WorldLibrary.Web.Controllers
             var countryId = await _countryRepository.DeleteCityAsync(city);
             return this.RedirectToAction($"Details", new { id = countryId });
         }
-
+        [Route("editcity")]
         public async Task<IActionResult> EditCity(int? id)
         {
             if (id == null)
@@ -64,6 +64,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         [HttpPost]
+        [Route("editcity")]
         public async Task<IActionResult> EditCity(City city)
         {
             if (this.ModelState.IsValid)
@@ -77,6 +78,7 @@ namespace WorldLibrary.Web.Controllers
 
             return this.View(city);
         }
+        [Route("addcity")]
         public async Task<IActionResult> AddCity(int? id)
         {
             if (id == null)
@@ -95,6 +97,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         [HttpPost]
+        [Route("addcity")]
         public async Task<IActionResult> AddCity(CityViewModel model)
         {
             if (this.ModelState.IsValid)
@@ -107,6 +110,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: Countries/Details/5
+        [Route("detailscountries")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -124,6 +128,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: Countries/Create
+        [Route("createcountry")]
         public IActionResult Create()
         {
             return View();
@@ -134,6 +139,7 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Route("createcountry")]
         public async Task<IActionResult> Create([Bind("Id,Name")] Country country)
         {
             if (ModelState.IsValid)
@@ -155,6 +161,7 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: Countries/Edit/5
+        [Route("editcountry")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -175,6 +182,7 @@ namespace WorldLibrary.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Route("editcountry")]
         public async Task<IActionResult> Edit(Country country)
         {
             if (ModelState.IsValid)
@@ -187,37 +195,40 @@ namespace WorldLibrary.Web.Controllers
         }
 
         // GET: Countries/Delete/5
+     
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-
             var country = await _countryRepository.GetByIdAsync(id.Value);
             if (country == null)
             {
                 return NotFound();
             }
+            try
+            {
 
-            await _countryRepository.DeleteAsync(country);
-            return RedirectToAction(nameof(Index));
+                await _countryRepository.DeleteAsync(country);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+
+                if (ex.InnerException != null && ex.InnerException.Message.Contains("DELETE"))
+                {
+                    ViewBag.ErrorTitle = $"{country.Name} probably has cities!!!";
+                    ViewBag.ErrorMessage = $"{country.Name} can not be deleted because there are foreign key with cities.</br></br>" +
+                        $"First delete all the cities of this country" +
+                        $" and please try again to delete it!";
+
+                }
+
+                return View("Error");
+            }
+          
         }
 
-        //// POST: Countries/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> DeleteConfirmed(int id)
-        //{
-        //    var country = await _context.Countries.FindAsync(id);
-        //    _context.Countries.Remove(country);
-        //    await _context.SaveChangesAsync();
-        //    return RedirectToAction(nameof(Index));
-        //}
-
-        //private bool CountryExists(int id)
-        //{
-        //    return _context.Countries.Any(e => e.Id == id);
-        //}
     }
 }

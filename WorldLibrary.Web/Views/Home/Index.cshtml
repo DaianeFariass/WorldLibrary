@@ -1,8 +1,221 @@
-﻿@{
+﻿@model WorldLibrary.Web.Models.ContactViewModel
+@{
     ViewData["Title"] = "Home Page";
+    Layout = "_Layout"; // Especifica o layout a ser usado
+}
+@section content {
+    <section class="slider_section">
+        <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="first-slide" src="images/banner.jpg" alt="First slide">
+                    <div class="container">
+                        <div class="carousel-caption relative">
+                            <h1>The Best Libraries That<br> Every Book Lover Must<br> Visit!</h1>
+                            <p>Over 11 million learners come to our website every year to explore a wealth of subjects from Gothic literature and medieval history to First World War propaganda and feminism. Our free learning resources allow users to access thousands of digitised treasures from our collection as well as hundreds of fascinating interpretative essays, films, animations and teachers’ notes<br> Unique collection items and expert commentary related to History, English, Religious Studies and Citizenship </p>
+                            <div class="button_section"> <a class="main_bt" asp-controller="Home" asp-action="About">Read More</a>  </div>
+                            <ul class="locat_icon">
+                                <li> <a href="https://www.facebook.com"><img src="icon/facebook.png"></a></li>
+                                <li> <a href="https://www.twitter.com"><img src="icon/Twitter.png"></a></li>
+                                <li> <a href="https://www.linkedin.com"><img src="icon/linkedin.png"></a></li>
+                                <li> <a href="https://www.instagram.com"><img src="icon/instagram.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="second-slide" src="images/banner.jpg" alt="Second slide">
+                    <div class="container">
+                        <div class="carousel-caption relative">
+                            <h1>School groups and teachers<br> Every Book Lover Must<br> Visit!</h1>
+                            <p>Each year, over 30,000 students and teachers take part in our schools programme. Our free, curriculum-linked workshops for learners aged 7–18 open a window onto our unique collection and encourage curiosity, creativity and discovery. Led by a team of specialist educators and delivered onsite in our Learning Centre and exhibition spaces, sessions for school groups span a variety of subject areas and encourage the development of a wide range of skills. Supporting Continuing Professional Development, our conferences and twilight events will help teachers hone specialist knowledge and reinvigorate classroom practice. </p>
+                            <div class="button_section"> <a class="main_bt" asp-controller="Home" asp-action="About">Read More</a>  </div>
+                            <ul class="locat_icon">
+                                <li> <a href="https://www.facebook.com"><img src="icon/facebook.png"></a></li>
+                                <li> <a href="https://www.twitter.com"><img src="icon/Twitter.png"></a></li>
+                                <li> <a href="https://www.linkedin.com"><img src="icon/linkedin.png"></a></li>
+                                <li> <a href="https://www.instagram.com"><img src="icon/instagram.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="third-slide" src="images/banner.jpg" alt="Third slide">
+                    <div class="container">
+                        <div class="carousel-caption relative">
+                            <h1>Families<br> Every Book Lover Must<br> Visit!</h1>
+                            <p>Families are welcome throughout the year to engage in creative activities inspired by our collection and exhibitions. We playfully support families to explore and re-imagine our collections through interactive workshops, Family Takeovers, large scale Family Days and activity trails. Through family projects and local partnerships, we strive to ensure our programme is fully accessible and responsive to the needs of our diverse family audience. Our hope is for the Library to be a fun, welcoming and family-friendly place to visit. </p>
+                            <div class="button_section"> <a class="main_bt" asp-controller="Home" asp-action="About">Read More</a>  </div>
+                            <ul class="locat_icon">
+                                <li> <a href="https://www.facebook.com"><img src="icon/facebook.png"></a></li>
+                                <li> <a href="https://www.twitter.com"><img src="icon/Twitter.png"></a></li>
+                                <li> <a href="https://www.linkedin.com"><img src="icon/linkedin.png"></a></li>
+                                <li> <a href="https://www.instagram.com"><img src="icon/instagram.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <!-- about -->
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="aboutheading">
+                        <h2>About <strong class="black">Us</strong></h2>
+                        <span>International</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                    <div class="about-box">
+                        <p> The World Library’s first  website Discovering Literature is a rich digital learning resource, introducing more than 500 digitised literary treasures from the Library’s literary collections, as well as over 100 in-depth interpretative articles in Simplified and Traditional Chinese and English. With new articles written by Chinese scholars or from the cultural exchange perspective, we aim to explore unique histories and the relationship between English and Chinese literature. We also engage with our audience across China on the social media platforms WeChat and Weibo.</p>
+                        <a asp-controller="Home" asp-action="About">Read More</a>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                    <div class="about-box">
+                        <figure><img src="images/about.png" alt="img" /></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end about -->
+    <!-- Library -->
+    <div class="Library">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="titlepage">
+                        <h2>Our <strong class="black">Library </strong></h2>
+                        <span>We're open for everyone...You can use our St Pancras Reading Rooms and public desks and visit all our galleries, including the free Treasures Gallery. We’ve also got events, courses, activities for schools, our Business and IP Centre. </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="Library-box">
+                            <figure><img src="images/Library-.jpg" alt="#" /></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="read-more">
+                        <a asp-controller="PhysicalLibraries" asp-action="Index">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Library -->
+    <!--Books -->
+    <div class="Books">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="titlepage">
+                        <h2>Our <strong class="black">Books </strong></h2>
+                        <span>Check out these new and engaging books! There are Graphix book for every reader!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row box">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    <div class="book-box">
+                        <figure><img src="images/book-1.jpg" alt="img" /></figure>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="book-box">
+                        <figure><img src="images/book-2.jpg" alt="img" /></figure>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    <div class="book-box">
+                        <figure><img src="images/book-1.jpg" alt="img" /></figure>
+                    </div>
+                </div>
+                <div class="col-md-6 offset-md-3">
+                    <p>
+                        This is a growing collection of contemporary open access e-books. The books in this collection cover a wide range of subjects, including history, music, poetry, technology, and works of fiction. Most of the books in this collection were published in English, but there are some titles in other languages. All of the books in this collection were published under open access licenses and may be read online or downloaded as a PDF or as an EPUB.
+
+                        All books added to this collection underwent a selection process whereby subject matter experts from across the Library of Congress determined which works were in scope based on the Library's Collections Policy Statements. Although the Library of Congress holds print copies of some of the open access books in this collection, these openly licensed works can be made more accessible in their digital form. By collecting the e-books in addition to the print books, the Library commits to preserving and providing lasting access to this digital content.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="read-more">
+                            <a asp-controller="Books" asp-action="Index">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Books -->
+    <!-- Contact -->
+    <div class="Contact">
+        <div class="container">
+            <div class="row">
+                <flash dismissable="true" />
+                <div class="col-md-12">
+                    <div class="titlepage3">
+                        <h2>Contact</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <form asp-controller="Home" asp-action="ContactIndex" method="post">                     
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                                <input asp-for="Name" class="form-control" placeholder="Name" type="Name">
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                                <input asp-for="Subject" class="form-control" placeholder="Subject" type="Subject">
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                                <input <input asp-for="Email" class="form-control" placeholder="Email" type="Email">
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                                <textarea asp-for="Message" class="textarea" placeholder="Message">Message</textarea>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="send-btn">Send</button>
+                        </div>
+                    </form>        
+                </div>                
+            </div>
+        </div>
+    </div>
+    <!-- end Contact -->
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">Aqui vai ser a nossa livraria</a>.</p>
-</div>
+
+
+
+
+

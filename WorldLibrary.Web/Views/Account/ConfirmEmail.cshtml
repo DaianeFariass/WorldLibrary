@@ -1,13 +1,38 @@
 ﻿
 @{
     ViewData["Title"] = "ConfirmEmail";
+    Layout = "_Layout"; // Especifica o layout a ser usado
 }
-
-<h2>@ViewData["Title"]</h2>
-<div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1>@ViewData["Title"]</h1>
+<body>
+    <div>
     <p>
         Thank you for confirming your email. Now you can login into the system.
     </p>
 </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+    }
+}
 
 

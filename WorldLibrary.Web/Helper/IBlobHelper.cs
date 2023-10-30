@@ -11,5 +11,10 @@ namespace WorldLibrary.Web.Helper
         Task<Guid> UploadBlobAsync(byte[] file, string containerName);
 
         Task<Guid> UploadBlobAsync(string image, string containerName);
+
+        //criar
+        Task<byte[]> DownloadBlobPdfAsString(int id);
+
+
     }
 }

@@ -1,7 +1,14 @@
 ﻿
 @{
     ViewData["Title"] = "Not Authorized";
+    Layout = "_Layout"; // Especifica o layout a ser usado
 }
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 <use>
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve" class="whistle">
@@ -12,3 +19,14 @@
 </use>
 <h1 class="h1-forbidden">403</h1>
 <h2 class="h2-forbidden">Not this time, access forbidden!</h2>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+    }
+}

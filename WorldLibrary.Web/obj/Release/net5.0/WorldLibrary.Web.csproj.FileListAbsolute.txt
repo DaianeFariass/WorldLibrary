@@ -1,0 +1,1127 @@
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\appsettings.Development.json
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\appsettings.json
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\libman.json
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.exe
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.deps.json
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.runtimeconfig.json
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.runtimeconfig.dev.json
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authentication.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authorization.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Components.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Components.Forms.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Components.Server.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Components.Web.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Cors.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.DataProtection.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Diagnostics.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Diagnostics.HealthChecks.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.HostFiltering.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Hosting.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.Connections.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.Features.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.HttpOverrides.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.HttpsPolicy.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Identity.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Localization.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Localization.Routing.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Metadata.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Localization.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Razor.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.RazorPages.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Razor.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Razor.Runtime.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.ResponseCaching.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.ResponseCompression.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Rewrite.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Routing.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.HttpSys.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.IIS.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.IISIntegration.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.Kestrel.Core.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.Kestrel.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Session.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.SignalR.Core.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.SignalR.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.StaticFiles.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.WebSockets.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.WebUtilities.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.CSharp.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Caching.Memory.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.Binder.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.Ini.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.Json.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.Xml.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Hosting.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Http.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Localization.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.Configuration.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.Console.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.Debug.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.EventLog.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.EventSource.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.TraceSource.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.ObjectPool.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Options.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Primitives.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.WebEncoders.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.JSInterop.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Net.Http.Headers.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.VisualBasic.Core.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.VisualBasic.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Win32.Primitives.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Win32.Registry.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\mscorlib.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\netstandard.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.AppContext.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Buffers.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Collections.Concurrent.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Collections.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Collections.Immutable.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Collections.NonGeneric.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Collections.Specialized.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.Annotations.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.DataAnnotations.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.EventBasedAsync.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.Primitives.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.TypeConverter.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Configuration.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Console.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Core.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Data.Common.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Data.DataSetExtensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Data.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.Contracts.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.Debug.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.EventLog.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.FileVersionInfo.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.Process.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.StackTrace.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.TextWriterTraceListener.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.Tools.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.TraceSource.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.Tracing.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Drawing.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Drawing.Primitives.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Dynamic.Runtime.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Globalization.Calendars.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Globalization.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Globalization.Extensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Compression.Brotli.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Compression.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Compression.FileSystem.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Compression.ZipFile.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.FileSystem.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.FileSystem.DriveInfo.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.FileSystem.Primitives.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.FileSystem.Watcher.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.IsolatedStorage.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.MemoryMappedFiles.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Pipelines.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Pipes.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.UnmanagedMemoryStream.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Linq.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Linq.Expressions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Linq.Parallel.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Linq.Queryable.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Memory.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Http.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Http.Json.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.HttpListener.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Mail.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.NameResolution.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.NetworkInformation.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Ping.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Primitives.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Requests.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Security.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.ServicePoint.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Sockets.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.WebClient.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.WebHeaderCollection.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.WebProxy.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.WebSockets.Client.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.WebSockets.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Numerics.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Numerics.Vectors.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ObjectModel.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.DispatchProxy.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Emit.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Emit.ILGeneration.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Emit.Lightweight.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Extensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Metadata.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Primitives.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.TypeExtensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Resources.Reader.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Resources.ResourceManager.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Resources.Writer.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.CompilerServices.VisualC.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Extensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Handles.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.InteropServices.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Intrinsics.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Loader.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Numerics.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Serialization.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Serialization.Formatters.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Serialization.Json.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Serialization.Primitives.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Serialization.Xml.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.AccessControl.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Claims.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Algorithms.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Cng.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Csp.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Encoding.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Primitives.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.X509Certificates.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Xml.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Permissions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Principal.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Principal.Windows.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.SecureString.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ServiceModel.Web.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ServiceProcess.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Text.Encoding.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Text.Encoding.Extensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Text.Encodings.Web.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Text.Json.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Text.RegularExpressions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Channels.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Overlapped.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Tasks.Dataflow.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Tasks.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Tasks.Extensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Tasks.Parallel.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Thread.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.ThreadPool.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Timer.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Transactions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Transactions.Local.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ValueTuple.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Web.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Web.HttpUtility.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Windows.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Windows.Extensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.Linq.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.ReaderWriter.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.Serialization.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.XDocument.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.XmlDocument.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.XmlSerializer.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.XPath.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.XPath.XDocument.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\WindowsBase.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.Views.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.Views.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\BouncyCastle.Cryptography.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Humanizer.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\MailKit.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.CodeAnalysis.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Data.SqlClient.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Identity.Client.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\dotnet-aspnet-codegenerator-design.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\MimeKit.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Newtonsoft.Json.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Newtonsoft.Json.Bson.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Composition.AttributedModel.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Composition.Convention.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Composition.Hosting.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Composition.Runtime.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Composition.TypedParts.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Formats.Asn1.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Runtime.Caching.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Security.Cryptography.Pkcs.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Text.Encoding.CodePages.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Vereyon.Web.FlashMessage.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.csproj.AssemblyReference.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.AssemblyInfoInputs.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.AssemblyInfo.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.csproj.CoreCompileInputs.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.RazorAssemblyInfo.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.RazorAssemblyInfo.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\scopedcss\bundle\WorldLibrary.Web.styles.css
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\staticwebassets\WorldLibrary.Web.StaticWebAssets.Manifest.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.TagHelpers.input.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.TagHelpers.output.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.RazorCoreGenerate.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\ChangePassword.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\ChangeUser.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\NotAuthorized.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\RecoverPassword.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\ResetPassword.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\BookNotFound.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\Create.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\Delete.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\Details.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\Edit.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\Index.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\AddCity.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\Create.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\Details.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\Edit.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\EditCity.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\Index.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\Create.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\CustomerNotFound.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\Delete.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\Details.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\Edit.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\Index.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\Create.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\Delete.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\Details.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\Edit.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\EmployeeNotFound.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\Index.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Errors\Error.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Errors\Error404.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Home\Forum.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Notifications\Index.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\Create.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\Delete.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\Details.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\Edit.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\Index.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\LibraryNotFound.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\AddReserve.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\BookReturn.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\Create.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\Deliver.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\EditReserve.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\Index.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\ReserveNotFound.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.RazorTargetAssemblyInfo.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.RazorTargetAssemblyInfo.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.Views.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.csproj.CopyComplete
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\refint\WorldLibrary.Web.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.pdb
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.genruntimeconfig.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\ref\WorldLibrary.Web.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Azure.KeyVault.Core.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Data.Edm.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Data.OData.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Data.Services.Client.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Spatial.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.WindowsAzure.Storage.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.Data.Edm.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.Data.Edm.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.Data.Edm.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.Data.Edm.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.Data.Edm.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.Data.Edm.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.Data.Edm.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.Data.OData.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.Data.OData.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.Data.OData.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.Data.OData.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.Data.OData.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.Data.OData.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.Data.OData.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.Data.Services.Client.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.Data.Services.Client.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.Data.Services.Client.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\System.Spatial.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\System.Spatial.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\System.Spatial.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\System.Spatial.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\System.Spatial.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\System.Spatial.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\System.Spatial.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\System.Spatial.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\System.Spatial.resources.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.StaticWebAssets.xml
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.Mvc.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.Razor.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.Helpers.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.WebPages.Deployment.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.WebPages.Razor.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.WebPages.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Web.Infrastructure.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.Properties.Resources.resources
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.csproj.GenerateResource.cache
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\staticwebassets\WorldLibrary.Web.StaticWebAssets.xml
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\AssessmentBook.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\RegisterRole.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\AdvancedSearch.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Contacts\ExternalContact.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Contacts\Index.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Notifications\NotificationNotFound.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\Edit.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\RenewBook.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Core.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Identity.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Storage.Blobs.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Storage.Common.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Storage.Files.Shares.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Storage.Queues.dll
+C:\Projetos\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.Azure.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\appsettings.Development.json
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\appsettings.json
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\libman.json
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.StaticWebAssets.xml
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.exe
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.deps.json
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.runtimeconfig.json
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.runtimeconfig.dev.json
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authentication.Core.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authentication.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authorization.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Components.Authorization.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Components.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Components.Forms.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Components.Server.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Components.Web.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Cors.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.DataProtection.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Diagnostics.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Diagnostics.HealthChecks.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.HostFiltering.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Hosting.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.Connections.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.Extensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Http.Features.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.HttpOverrides.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.HttpsPolicy.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Identity.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Localization.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Localization.Routing.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Metadata.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Core.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Localization.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.Razor.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.RazorPages.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Razor.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Razor.Runtime.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.ResponseCaching.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.ResponseCompression.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Rewrite.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Routing.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.HttpSys.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.IIS.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.IISIntegration.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.Kestrel.Core.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.Kestrel.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.Session.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.SignalR.Common.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.SignalR.Core.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.SignalR.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.StaticFiles.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.WebSockets.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.AspNetCore.WebUtilities.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.CSharp.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Caching.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Caching.Memory.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.Binder.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.Ini.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.Json.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Configuration.Xml.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Hosting.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Http.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Localization.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.Configuration.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.Console.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.Debug.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.EventLog.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.EventSource.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Logging.TraceSource.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.ObjectPool.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Options.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.Primitives.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Extensions.WebEncoders.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.JSInterop.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Net.Http.Headers.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.VisualBasic.Core.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.VisualBasic.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Win32.Primitives.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\Microsoft.Win32.Registry.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\mscorlib.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\netstandard.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.AppContext.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Buffers.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Collections.Concurrent.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Collections.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Collections.Immutable.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Collections.NonGeneric.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Collections.Specialized.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.Annotations.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.DataAnnotations.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.EventBasedAsync.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.Primitives.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ComponentModel.TypeConverter.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Configuration.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Console.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Core.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Data.Common.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Data.DataSetExtensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Data.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.Contracts.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.Debug.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.EventLog.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.FileVersionInfo.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.Process.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.StackTrace.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.TextWriterTraceListener.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.Tools.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.TraceSource.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Diagnostics.Tracing.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Drawing.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Drawing.Primitives.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Dynamic.Runtime.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Globalization.Calendars.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Globalization.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Globalization.Extensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Compression.Brotli.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Compression.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Compression.FileSystem.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Compression.ZipFile.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.FileSystem.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.FileSystem.DriveInfo.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.FileSystem.Primitives.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.FileSystem.Watcher.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.IsolatedStorage.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.MemoryMappedFiles.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Pipelines.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.Pipes.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.IO.UnmanagedMemoryStream.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Linq.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Linq.Expressions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Linq.Parallel.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Linq.Queryable.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Memory.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Http.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Http.Json.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.HttpListener.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Mail.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.NameResolution.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.NetworkInformation.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Ping.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Primitives.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Requests.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Security.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.ServicePoint.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.Sockets.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.WebClient.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.WebHeaderCollection.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.WebProxy.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.WebSockets.Client.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Net.WebSockets.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Numerics.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Numerics.Vectors.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ObjectModel.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.DispatchProxy.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Emit.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Emit.ILGeneration.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Emit.Lightweight.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Extensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Metadata.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.Primitives.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Reflection.TypeExtensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Resources.Reader.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Resources.ResourceManager.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Resources.Writer.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.CompilerServices.VisualC.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Extensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Handles.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.InteropServices.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Intrinsics.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Loader.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Numerics.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Serialization.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Serialization.Formatters.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Serialization.Json.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Serialization.Primitives.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Runtime.Serialization.Xml.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.AccessControl.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Claims.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Algorithms.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Cng.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Csp.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Encoding.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Primitives.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.X509Certificates.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Cryptography.Xml.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Permissions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Principal.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.Principal.Windows.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Security.SecureString.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ServiceModel.Web.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ServiceProcess.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Text.Encoding.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Text.Encoding.Extensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Text.Encodings.Web.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Text.Json.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Text.RegularExpressions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Channels.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Overlapped.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Tasks.Dataflow.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Tasks.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Tasks.Extensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Tasks.Parallel.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Thread.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.ThreadPool.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Threading.Timer.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Transactions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Transactions.Local.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.ValueTuple.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Web.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Web.HttpUtility.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Windows.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Windows.Extensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.Linq.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.ReaderWriter.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.Serialization.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.XDocument.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.XmlDocument.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.XmlSerializer.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.XPath.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\System.Xml.XPath.XDocument.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\refs\WindowsBase.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.Views.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\WorldLibrary.Web.Views.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Core.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Identity.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Storage.Blobs.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Storage.Common.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Storage.Files.Shares.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Azure.Storage.Queues.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\BouncyCastle.Cryptography.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Humanizer.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\MailKit.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.Mvc.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.Razor.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.Helpers.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.WebPages.Deployment.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.WebPages.Razor.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Web.WebPages.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Authentication.Facebook.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Authentication.Google.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Azure.KeyVault.Core.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.CodeAnalysis.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.CodeAnalysis.Razor.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Data.Edm.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Data.OData.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Data.Services.Client.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Data.SqlClient.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.Azure.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Identity.Client.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\dotnet-aspnet-codegenerator-design.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.Web.Infrastructure.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\MimeKit.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Newtonsoft.Json.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Newtonsoft.Json.Bson.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Composition.AttributedModel.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Composition.Convention.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Composition.Hosting.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Composition.Runtime.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Composition.TypedParts.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Configuration.ConfigurationManager.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Formats.Asn1.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Runtime.Caching.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Security.Cryptography.Pkcs.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Spatial.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\System.Text.Encoding.CodePages.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Vereyon.Web.FlashMessage.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\Microsoft.WindowsAzure.Storage.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.Data.Edm.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.Data.Edm.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.Data.Edm.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.Data.Edm.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.Data.Edm.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.Data.Edm.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.Data.Edm.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.Data.OData.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.Data.OData.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.Data.OData.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.Data.OData.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.Data.OData.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.Data.OData.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.Data.OData.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\Microsoft.Data.Services.Client.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\Microsoft.Data.Services.Client.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\Microsoft.Data.Services.Client.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\Microsoft.Data.Services.Client.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\Microsoft.Data.Services.Client.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\Microsoft.Data.Services.Client.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\Microsoft.Data.Services.Client.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\de\System.Spatial.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\es\System.Spatial.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\fr\System.Spatial.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\it\System.Spatial.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ja\System.Spatial.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ko\System.Spatial.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\ru\System.Spatial.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hans\System.Spatial.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\zh-Hant\System.Spatial.resources.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.csproj.AssemblyReference.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.Properties.Resources.resources
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.csproj.GenerateResource.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.AssemblyInfoInputs.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.AssemblyInfo.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.csproj.CoreCompileInputs.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.RazorAssemblyInfo.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.RazorAssemblyInfo.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\scopedcss\bundle\WorldLibrary.Web.styles.css
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\staticwebassets\WorldLibrary.Web.StaticWebAssets.Manifest.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\staticwebassets\WorldLibrary.Web.StaticWebAssets.xml
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.TagHelpers.input.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.TagHelpers.output.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.RazorCoreGenerate.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\ChangePassword.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\ChangeUser.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\NotAuthorized.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\RecoverPassword.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\RegisterRole.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Account\ResetPassword.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\AdvancedSearch.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\BookNotFound.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\Create.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\Delete.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\Details.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\DownloadPdf.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\Edit.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Books\Index.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Contacts\Contact.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Contacts\ExternalContact.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Contacts\Index.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\AddCity.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\Create.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\Details.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\Edit.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\EditCity.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Countries\Index.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\Create.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\CustomerNotFound.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\Delete.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\Details.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\Edit.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Customers\Index.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\Create.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\Delete.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\Details.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\Edit.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\EmployeeNotFound.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Employees\Index.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Errors\Error.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Errors\Error404.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Home\About.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Home\Forum.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Notifications\Index.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Notifications\NotificationNotFound.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\Create.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\Delete.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\Details.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\Edit.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\Index.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\PhysicalLibraries\LibraryNotFound.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\AddReserve.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\AssessmentBook.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\BookReturn.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\Create.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\Deliver.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\Edit.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\EditReserve.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\Index.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\RenewBook.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Reserves\ReserveNotFound.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.RazorTargetAssemblyInfo.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.RazorTargetAssemblyInfo.cs
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.Views.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.csproj.CopyComplete
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\refint\WorldLibrary.Web.dll
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.pdb
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\WorldLibrary.Web.genruntimeconfig.cache
+C:\BibliotecaDai\WorldLibrary (2)\WorldLibrary\WorldLibrary.Web\obj\Release\net5.0\ref\WorldLibrary.Web.dll
